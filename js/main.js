@@ -9,7 +9,7 @@
     
     const cfg = {
                 scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc' // mailchimp url
+                mailChimpURL   : '' // mailchimp url
                 };
     const $WIN = $(window);
 
@@ -78,7 +78,7 @@
     * ------------------------------------------------------ */
     const ssFinalCountdown = function() {
 
-        const finalDate = '2023/01/01';
+        const finalDate = '2024/10/01';
 
         $('.counter').countdown(finalDate)
         .on('update.countdown finish.countdown', function(event) {

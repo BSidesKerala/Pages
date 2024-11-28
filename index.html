@@ -1,214 +1,350 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <title>BSides Kerala</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>BSides Kerala 2024</title>
-    <meta name="description" content="Security BSides Kerala Edition">
-    <meta name="author" content="BSides Kerala">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
-</head>
-
-<body id="top">
-
-<!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-
-    <!-- site header
-    ================================================== -->
-    <header class="s-header">
-
-        <div class="header-logo">
-            <a class="site-logo" href="index.html">
-                <img src="images/bsides.png" alt="Homepage">
-            </a>
-        </div>
-
-        <div class="header-email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"/></svg>
-            <a href="mailto:hello@bsideskerala.in">hello@bsideskerala.in</a>
-        </div>
-
-    </header> <!-- end s-header -->
-
-
-    <!-- intro
-    ================================================== -->
-    <section id="intro" class="s-intro s-intro--slides">
-
-        <div class="intro-slider">
-            <div class="intro-slider-img bg-opacity-40" style="background-image: url(images/slides/slide-01.jpg);"></div>
-            <div class="intro-slider-img" style="background-image: url(images/slides/slide-02.jpg);"></div>
-            <div class="intro-slider-img" style="background-image: url(images/slides/slide-03.jpg);"></div>
-			<div class="intro-slider-img" style="background-image: url(images/slides/slide-04.jpg);"></div>
-            <div class="intro-slider-img" style="background-image: url(images/slides/slide-05.jpg);"></div>
-        </div>
-
-        <div class="grid-overlay">
-            <div></div>
-        </div> 
-
-        <div class="row intro-content">
-
-            <div class="column">
-
-                <div class="intro-content__text">
-
-                    <h3>
-                    BSides Kerala Coming Soon
-                    </h3>
-                    
-                    <h1>
-                    Get ready everyone!<br>
-                   Security BSides <br>
-                   Coming to Kerala.
-                   
-                    </h1>
-
-                </div> <!-- end intro-content__text -->
-
-                <div class="intro-content__bottom">
-
-                    <div class="intro-content__counter-wrap">
-                        <h4>Webpage Launching in</h4>
-            
-                        <div class="counter">
-                            <div class="counter__time days">
-                                365
-                                <span>D</span>
-                            </div>
-                            <div class="counter__time hours">
-                                09
-                                <span>H</span>
-                            </div>
-                            <div class="counter__time minutes">
-                                54
-                                <span>M</span>
-                            </div>
-                            <div class="counter__time seconds">
-                                57
-                                <span>S</span>
-                            </div>
-                        </div>  <!-- end counter -->
-                    </div> <!-- end intro-content__counter-wrap -->
-
-                
-    
-                </div> <!-- end intro-content__bottom -->
-
-            </div> <!-- end column -->
-
-        </div> <!--  end intro-content -->
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="fonts/line-icons.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
  
+</head>
 
-        <ul class="intro-social">
-           
-            <li><a href="https://twitter.com/bsideskerala" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.instagram.com/bsideskerala" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-			 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-        
-        </ul> <!-- end intro social -->
+<body>
 
-        <div class="intro-scroll">
-            <a href="#info" class="scroll-link smoothscroll">
-                Scroll For More
-            </a>
-        </div> <!-- end intro scroll -->
+  <header id="header">
+    <div class="container">
 
-    </section> <!-- end s-intro -->
+      <div id="logo" class="pull-left">
+ 
+         <h1 style="font-size:25px;"><a href="#main">BSides Kerala</a></h1>
+        <!--  <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
 
-    <!-- info
-    ================================================== -->
-    <section id="info" class="s-info">
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="call-for-papers/index.html">CFP</a></li>
+          <li><a href="#tranings">Trainings</a></li>
+          <li><a href="speakers/index.html">Speakers</a></li>
+          <li><a href="schedules/index.html">Schedule</a></li>
+          <li class="#contact"><a href="contact/index.html">Contact</a></li>
+          <li class="#about"><a href="about/index.html">About Us</a></li>
+          <li class="buy-tickets"><a href="#buy">Buy Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">Security<span> BSides</span></br> coming to Kerala!</h1>
+      <p class="mb-4 pb-0">09-11 January 2025, Jain University, Kochi.</p>
+     
+      <a href="about/" class="about-btn scrollto">Know more!</a>
+    </div>
+  </section>
 
-        <div class="vert-line"></div>
-        
-        <div class="row info-content">
-            <div class="column large-full">
-                
-              
+  <main id="main">
+    <section class="countdown-timer section-padding">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="heading-count">
+              <h2 class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">BSides Kerala Will Start In</h2>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row time-countdown justify-content-center wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+              <div id="clock" class="time-count"><div class="time-entry days"><span>10</span> Days</div> <div class="time-entry hours"><span>00</span> Hours</div> <div class="time-entry minutes"><span>00</span> Minutes</div> <div class="time-entry seconds"><span>00</span> Seconds</div> </div>
+            </div>
+            <a href="#" class="btn btn-common wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">Add to My Calender</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="tab-content">
-  <div class="row tab-content__item-header">
-                            <div class="column">
-                                <h1>About BSides Kerala.</h1>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="column">
-                                <p class="lead">Security BSides is the first grass roots, DIY, open security conference in the world! </br>
-                               Each BSides is a community-driven framework for building events for and by information security community members.   
-                                </p>
+    <section class="counter-section section-padding" style="background: #040919; font-family: Raleway;">
+      <div class="container">
+        <div class="row">
+          <!-- Counter Item -->
+          <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+            <div class="counter wow fadeInRight animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+              <div class="icon"><i class="lni-map"></i></div>
+              <p>Jain University</p>
+              <span>Kochi, Kerala.</span>
+            </div>
+          </div>
+          <!-- Counter Item -->
+          <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+            <div class="counter wow fadeInRight animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
+              <div class="icon"><i class="lni-timer"></i></div>
+              <p>09-11 January, 2025</p>
+              <span>Thursday, Friday, Saturday</span>
+            </div>
+          </div>
+          <!-- Counter Item -->
+          <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+            <div class="counter wow fadeInRight animated" data-wow-delay="0.9s" style="visibility: visible;-webkit-animation-delay: 0.9s; -moz-animation-delay: 0.9s; animation-delay: 0.9s;">
+              <div class="icon"><i class="lni-users"></i></div>
+              <p> Tickets are open</p>       
+              <span>Hurryup! few tickets are left</span>
+            </div>
+          </div>
+          <!-- Counter Item -->
+          <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+            <div class="counter wow fadeInRight animated" data-wow-delay="1.2s" style="visibility: visible;-webkit-animation-delay: 1.2s; -moz-animation-delay: 1.2s; animation-delay: 1.2s;">
+              <div class="icon"><i class="lni-coffee-cup"></i></div>
+              <p>Free Lunch &amp; Snacks</p>
+              <span>Don’t miss it</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                                <p>The goal is to expand the spectrum of conversation beyond the traditional confines of space and time. 
-                                It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration. It is an intense event with discussions, demos, and interaction from participants. It is where conversations for the next-big-thing are happening. 
-                                </p>
 
-                              
-                            </div>
-                        </div>
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Buy Tickets</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" style="flex: 0 0 24.333333%;">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Student</h5>
+                <h6 class="card-price text-center">₹1500</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" style="flex: 0 0 24.333333%;">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Regular</h5>
+                <h6 class="card-price text-center">₹2500</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier -->
+          <div class="col-lg-4" style="flex: 0 0 24.333333%;">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Corporate</h5>
+                <h6 class="card-price text-center">₹3500</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" style="flex: 0 0 24.333333%;">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Training</h5>
+                <h6 class="card-price text-center">₹5500</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Training access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
                  
-                
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                </div>
 
-                </div> <!-- end tab content -->
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <footer>
+      </div>
+    </section>
 
-                    <div class="ss-copyright">
-                        <span>© Copyright BSides Kerala 2024</span> 
-                        <span>Powered by <a href="https://bsides.org">Security BSides.</a></span>
-                    </div>
+    <section id="venue" class="wow fadeInUp">
 
-                    <div class="ss-go-top">
-                        <a class="smoothscroll" title="Back to Top" href="#top">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"></path></svg>
-                        </a>
-                    </div>
-                    
-                </footer>
+      <div class="container-fluid">
 
-            </div> <!-- end column -->
-        </div> <!-- end row -->
+        <div class="section-header">
+          <h2>Conference Venue</h2>
+          <p>The location details</p>
+        </div>
 
-    </section> <!-- end s-info -->
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.118847577891!2d76.36303197503129!3d10.00704079009871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080b676551a0f9%3A0x7ba2e677814fd36!2sJain%20University%20Kochi!5e0!3m2!1sen!2sin!4v1732080307667!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>Jain University Campus, Kochi</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </section>
+    <section id="sponsors" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+
+   
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="img/logo.png" alt="">
+            <p>
+              BSides Kerala is all about building a vibrant cybersecurity community where learning, sharing, and connecting comes first.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Conference 2025</h4>
+            <ul>
+            
+              <li><i class="fa fa-angle-right"></i> <a href="#">Conference</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Security BSides</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Security BSides</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">All events</a></li>
+        
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <br>
+              <strong>Phone:</strong> +91 <br>
+              <strong>email:</strong> hello@bsideskerala.in<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>BSides Kerala 2025</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+    
+        With love to the security community!
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/countdown.js"></script>
 </body>
+
+</html>

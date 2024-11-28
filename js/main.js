@@ -1,219 +1,147 @@
-/* ===================================================================
+jQuery(document).ready(function( $ ) {
 
- *
- * ------------------------------------------------------------------- */
-
-(function($) {
-
-    "use strict";
-    
-    const cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : '' // mailchimp url
-                };
-    const $WIN = $(window);
-
-    // Add the User Agent to the <html>
-    // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
-    const doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
-
-
-   /* preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
-
-        $("html").addClass('ss-preload');
-
-        $WIN.on('load', function() {
-
-            // force page scroll position to top at page refresh
-            // $('html, body').animate({ scrollTop: 0 }, 'normal');
-
-            // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
-                // will fade out the whole DIV that covers the website.
-                $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
-            // for hero content animations 
-            $("html").removeClass('ss-preload');
-            $("html").addClass('ss-loaded');
-
-        });
-    };
-
-
-   /* pretty print
-    * -------------------------------------------------- */
-    const ssPrettyPrint = function() {
-        $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
-            prettyPrint();
-        });
-    };
-
-
-   /* slick slider
-    * ------------------------------------------------------ */
-    const ssSlickSlider = function() {
-            
-        $('.intro-slider').slick({
-            arrows: false,
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            fade: true,
-            speed: 3000
-        });
-    };
-
-
-   /* modal
-    * ---------------------------------------------------- */ 
-
-
-
-   /* final countdown
-    * ------------------------------------------------------ */
-    const ssFinalCountdown = function() {
-
-        const finalDate = '2024/10/01';
-
-        $('.counter').countdown(finalDate)
-        .on('update.countdown finish.countdown', function(event) {
-
-            const str = '<div class=\"counter__time days\">%D&nbsp;<span>D</span></div>' +
-                        '<div class=\"counter__time hours\">%H&nbsp;<span>H</span></div>' +
-                        '<div class=\"counter__time minutes\">%M&nbsp;<span>M</span></div>' +
-                        '<div class=\"counter__time seconds\">%S&nbsp;<span>S</span></div>';
-                    
-            $(this).html(event.strftime(str));
-
-        });
-    };
-
-
-   /* tabs
-    * ---------------------------------------------------- */ 
-    const ssTabs = function() {
-
-        const $tabNavListItems = $("ul.tab-nav__list li");
-        const $tabContentItem  = $(".tab-content__item");
-
-        $tabContentItem.hide().first().show();
-
-        $tabNavListItems.on('click', function () {
-
-            $tabNavListItems.removeClass("active");
-            $(this).addClass("active");
-            $tabContentItem.hide();
-
-            const activeTab = $(this).attr("data-id");
-            $("#" + activeTab).fadeIn(1000);
-
-        });
+  // Back to top button
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.back-to-top').fadeIn('slow');
+    } else {
+      $('.back-to-top').fadeOut('slow');
     }
+  });
+  $('.back-to-top').click(function(){
+    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+    return false;
+  });
 
+  // Header fixed on scroll
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#header').addClass('header-scrolled');
+    } else {
+      $('#header').removeClass('header-scrolled');
+    }
+  });
 
-   /* alert boxes
-    * ------------------------------------------------------ */
-    const ssAlertBoxes = function() {
+  if ($(window).scrollTop() > 100) {
+    $('#header').addClass('header-scrolled');
+  }
 
-        $('.alert-box').on('click', '.alert-box__close', function() {
-            $(this).parent().fadeOut(500);
-        }); 
+  // Real view height for mobile devices
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    $('#intro').css({ height: $(window).height() });
+  }
 
-    };
+  // Initiate the wowjs animation library
+  new WOW().init();
 
-    
-   /* smooth scrolling
-    * ------------------------------------------------------ */
-    const ssSmoothScroll = function() {
-        
-        $('.smoothscroll').on('click', function (e) {
-            const target = this.hash;
-            const $target = $(target);
-            
-            e.preventDefault();
-            e.stopPropagation();
+  // Initialize Venobox
+  $('.venobox').venobox({
+    bgcolor: '',
+    overlayColor: 'rgba(6, 12, 34, 0.85)',
+    closeBackground: '',
+    closeColor: '#fff'
+  });
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
-                window.location.hash = target;
-            });
-        });
+  // Initiate superfish on nav menu
+  $('.nav-menu').superfish({
+    animation: {
+      opacity: 'show'
+    },
+    speed: 400
+  });
 
-    };
+  // Mobile Navigation
+  if ($('#nav-menu-container').length) {
+    var $mobile_nav = $('#nav-menu-container').clone().prop({
+      id: 'mobile-nav'
+    });
+    $mobile_nav.find('> ul').attr({
+      'class': '',
+      'id': ''
+    });
+    $('body').append($mobile_nav);
+    $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
+    $('body').append('<div id="mobile-body-overly"></div>');
+    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
 
+    $(document).on('click', '.menu-has-children i', function(e) {
+      $(this).next().toggleClass('menu-item-active');
+      $(this).nextAll('ul').eq(0).slideToggle();
+      $(this).toggleClass("fa-chevron-up fa-chevron-down");
+    });
 
-   /* back to top
-    * ------------------------------------------------------ */
-    const ssBackToTop = function() {
-        
-        const pxShow      = 500;
-        const $goTopButton = $(".ss-go-top")
+    $(document).on('click', '#mobile-nav-toggle', function(e) {
+      $('body').toggleClass('mobile-nav-active');
+      $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+      $('#mobile-body-overly').toggle();
+    });
 
-        // Show or hide the button
-        if ($(window).scrollTop() >= pxShow) $goTopButton.addClass('link-is-visible');
-
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() >= pxShow) {
-                if(!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
-            } else {
-                $goTopButton.removeClass('link-is-visible')
-            }
-        });
-    };
-
-
-   /* ajaxchimp
-    * ------------------------------------------------------ */
-    const ssAjaxChimp = function() {
-            
-        $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
-        });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
-        $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
-            0: '<i class="fas fa-check"></i> We have sent you a confirmation email',
-            1: '<i class="fas fa-exclamation-triangle"></i> You must enter a valid e-mail address.',
-            2: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            3: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            4: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            5: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.'
+    $(document).click(function(e) {
+      var container = $("#mobile-nav, #mobile-nav-toggle");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        if ($('body').hasClass('mobile-nav-active')) {
+          $('body').removeClass('mobile-nav-active');
+          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+          $('#mobile-body-overly').fadeOut();
         }
-    };
+      }
+    });
+  } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
+    $("#mobile-nav, #mobile-nav-toggle").hide();
+  }
 
+  // Smooth scroll for the menu and links with .scrollto classes
+  $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      if (target.length) {
+        var top_space = 0;
 
-   /* initialize
-    * ------------------------------------------------------ */
-    (function ssInit() {
+        if ($('#header').length) {
+          top_space = $('#header').outerHeight();
 
-        ssPreloader();
-        ssPrettyPrint();
-        ssSlickSlider();
-        ssFinalCountdown();
-        ssTabs();
-        ssAlertBoxes();
-        ssSmoothScroll();
-        ssBackToTop();
-        ssAjaxChimp();
+          if( ! $('#header').hasClass('header-fixed') ) {
+            top_space = top_space - 20;
+          }
+        }
 
-    })();
+        $('html, body').animate({
+          scrollTop: target.offset().top - top_space
+        }, 1500, 'easeInOutExpo');
 
-})(jQuery);
+        if ($(this).parents('.nav-menu').length) {
+          $('.nav-menu .menu-active').removeClass('menu-active');
+          $(this).closest('li').addClass('menu-active');
+        }
+
+        if ($('body').hasClass('mobile-nav-active')) {
+          $('body').removeClass('mobile-nav-active');
+          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+          $('#mobile-body-overly').fadeOut();
+        }
+        return false;
+      }
+    }
+  });
+
+  // Gallery carousel (uses the Owl Carousel library)
+  $(".gallery-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    center:true,
+    responsive: { 0: { items: 1 }, 768: { items: 3 }, 992: { items: 4 }, 1200: {items: 5}
+    }
+  });
+
+  // Buy tickets select the ticket type on click
+  $('#buy-ticket-modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var ticketType = button.data('ticket-type');
+    var modal = $(this);
+    modal.find('#ticket-type').val(ticketType);
+  })
+
+// custom code
+
+});

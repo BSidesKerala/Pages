@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const targetDate = new Date("2025-01-09T00:00:00"); // Replace with your target date and time
+    const targetDate = new Date("2025-01-11T00:00:00"); // Replace with your target date and time
     function updateCountdown() {
         const now = new Date();
         const timeDifference = targetDate - now;

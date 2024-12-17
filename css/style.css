@@ -1569,9 +1569,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #sponsors .sponsors-wrap {
-  border-top: 1px solid #e0e5fa;
-  border-left: 1px solid #e0e5fa;
-  margin-bottom: 30px;
+  /*! border-top: 1px solid #e0e5fa; */
+  /*! border-left: 1px solid #e0e5fa; */
+  /*! margin-bottom: 30px; */
 }
 
 #sponsors .sponsor-logo {
@@ -1585,10 +1585,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-right: 1px solid #e0e5fa;
-  border-bottom: 1px solid #e0e5fa;
+  /*! border-right: 1px solid #e0e5fa; */
+  /*! border-bottom: 1px solid #e0e5fa; */
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
+  /*! background: rgba(255, 255, 255, 0.5); */
   height: 160px;
 }
 

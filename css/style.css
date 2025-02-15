@@ -120,6 +120,14 @@ Here's a disabled button style added to your existing button styles:
   transition: none;
 }
 
+.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+  transition: none;
+}
+
 .btn-border {
   color: #fff;
   background-color: transparent;

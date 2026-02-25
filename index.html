@@ -1,329 +1,270 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security BSides Kerala 2026</title>
+<link rel="stylesheet" href="css/style-2026.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <head>
-    <meta charset="utf-8">
-    <title>Security BSides Kerala 2026</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-    <meta name="description" content="Security BSides Kerala">
-    <meta name="author" content="BSides Kerala">
-    <meta name="keywords" content="BSides, Kerala, cyber security, conference">
+</head>
+<body>
 
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="BSides Kerala 2026">
-    <meta property="og:description" content="Security BSides Kerala 2026">
-    <meta property="og:type" content="website, conference, cyber security">
-    <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-og-image.jpg"/>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="img/logo.png" alt="BSides Kerala">
+    <b>BSides <em>Kerala</em></b>
+  </a>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="call-for-papers">CFP</a></li>
+    <li><a href="trainings">Trainings</a></li>
+    <li><a href="speakers">Speakers</a></li>
+    <li><a href="schedule">Schedule</a></li>
+    <li><a href="capture-the-flag">Capture-the-flag</a></li>
+    <li><a href="about-us">About Us</a></li>
+    <li><a href="contact">Contact</a></li>
+    <li><a href="https://konfhub.com/bsides-kerala-2025" class="cta-link">Register</a></li>
+  </ul>
+  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+</nav>
 
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><div class="c1"></div><div class="c2"></div><div class="lines"></div></div>
+  <div class="hero-content">
+    <div class="hero-chip"></div>
+    <h1><span class="block">BSides</span><span class="block red">Kerala 2026</span></h1>
+    <p class="hero-text"><strong>Security BSides Kerala Hacking and Cyber Security Community Conference</strong></p>
+    <p class="hero-loc" style="color:white;">7-9 May 2026, Kochi Marriot Hotel, Kerala.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn btn-primary">Registration will Open Soon</a>
+      <a href="archives/bsides-kerala-2025/" class="btn btn-secondary">BSides Kerala 2025 Archive</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+<div class="cd-wrap">
+  <h2 class="cd-title">BSides Kerala Will <em>Start In</em></h2>
+  <div class="cd-grid">
+    <div class="cd-item"><div class="val" id="cd-d">--</div><div class="lbl">Days</div></div>
+    <div class="cd-item"><div class="val" id="cd-h">--</div><div class="lbl">Hours</div></div>
+    <div class="cd-item"><div class="val" id="cd-m">--</div><div class="lbl">Minutes</div></div>
+    <div class="cd-item"><div class="val" id="cd-s">--</div><div class="lbl">Seconds</div></div>
+  </div>
+</div>
 
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="fonts/line-icons.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+<section class="conf-info">
+  <div class="conf-split">
 
-  
-  </head>
-
-  <body>
-
-    <header id="header">
-      <div class="container">
-
-        <div id="logo" class="pull-left">
-  
-          <h1 style="font-size:25px;"><a href="./">BSides Kerala</a></h1>
-          <!--  <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
-        </div>
-
-        <nav id="nav-menu-container">
-          <ul class="nav-menu">
-            <li class="menu-active"><a href="./">Home</a></li>
-            <li><a href="call-for-papers">CFP</a></li>
-            <li><a href="trainings">Trainings</a></li>
-            <li><a href="speakers">Speakers</a></li>
-            <li><a href="schedule">Schedule</a></li>
-            <li><a href="capture-the-flag">Capture-the-flag</a></li>
-            <li><a href="about-us">About Us</a></li>
-            <li><a href="contact">Contact</a></li>
-          <!--   <li class="buy-tickets"><a href="https://konfhub.com/bsides-kerala-2025" style="cursor: not-allowed;  pointer-events: none;">Buy Tickets</a></li> -->
-          </ul>
-        </nav>
+   
+    <div class="conf-terminal">
+      <div class="term-bar">
+        <span class="term-dot r"></span>
+        <span class="term-dot y"></span>
+        <span class="term-dot g"></span>
+        <span>bsides@kerala:~</span>
       </div>
-    </header>
-    <section id="intro" > 
-      <div class="intro-container wow fadeIn" style="padding-top:10%; padding-bottom:70px;">
-        
-
-        <h1 class="mb-4 pb-0">BSides<span style="color:#5cfb00;"> Kerala</span> 2026  </br>Coming Soon!</h1>
-        
-        <p class="mb-4 pb-0" style="padding-bottom: 2px;">
-          <span style="font-weight: 400;font-size: 17px; color: white; font-variant-caps: small-caps;">Security BSides Kerala Hacking and Cyber Security Community Conference</span></br>
-          2026 dates will be announced soon!.<br> Kochi, Kerala. </br>
-        <!--   <span style="font-weight: 400;font-size: 15px;"><sup>th</sup>-<sup>th</sup> Trainings | <sup>th</sup> Conference</span>-->
-       
-        </p>  
-
-             <p style="font-weight: 400; font-size: 15px; margin-top:5px; margin-bottom:30px;">
-          <a href="archives/bsides-kerala-2025/" target="_blank" class="about-btn scrollto">BSides Kerala 2025 Archive</a>
-        <br><br></p>
+      <div class="term-body">
+        <div class="term-line"><span class="prompt">$</span> <span class="cmd">./bsides_kerala</span> <span class="flag">--status</span></div>
+        <div class="term-line"><span class="comment"># Conference Recon Report</span></div>
+        <div class="term-line">&nbsp;</div>
+        <div class="term-line"><span class="output">location:</span>    <span class="val-str">"Kochi, Kerala"</span>    <span class="status-ok">[CONFIRMED]</span></div>
+        <div class="term-line"><span class="output">year:</span>        <span class="val-str">"2026"</span></div>
+        <div class="term-line"><span class="output">duration:</span>    <span class="val-str">"Thursday → Saturday"</span></div>
+        <div class="term-line"><span class="output">tickets:</span>     <span class="status-pend">[STANDBY]</span>  <span class="comment"># opening soon</span></div>
+        <div class="term-line"><span class="output">lunch:</span>       <span class="val-str">"Free"</span>           <span class="status-ok">[INCLUDED]</span></div>
+        <div class="term-line"><span class="output">snacks:</span>      <span class="val-str">"Free"</span>           <span class="status-ok">[INCLUDED]</span></div>
+        <div class="term-line">&nbsp;</div>
+        <div class="term-line"><span class="output">tracks:</span>      <span class="val-str">["offensive", "defensive", "ctf", "training"]</span></div>
+        <div class="term-line"><span class="output">vibe:</span>        <span class="val-str">"hacker + enterprise"</span></div>
+        <div class="term-line">&nbsp;</div>
+        <div class="term-line"><span class="prompt">$</span> <span class="term-cursor"></span></div>
       </div>
-    </section>
+    </div>
 
-    <main id="main">
-      <section class="countdown-timer section-padding">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="heading-count">
-                <h2 class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">BSides Kerala Will Start In</h2>
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="row time-countdown justify-content-center wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                <div id="clock" class="time-count"><div class="time-entry days"><span>10</span> Days</div> <div class="time-entry hours"><span>00</span> Hours</div> <div class="time-entry minutes"><span>00</span> Minutes</div> <div class="time-entry seconds"><span>00</span> Seconds</div> </div>
-              </div>
+    <!-- RIGHT: Clean enterprise cards -->
+    <div class="conf-enterprise">
 
-            </div>
+      <div class="ent-card">
+        <div class="ent-card-top">
+          <div class="ent-icon red-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
+          <span class="ent-card-label">Location</span>
         </div>
-      </section>
-
-
-      <section class="counter-section section-padding" style="background: #ae122e; font-family: Raleway;">
-        <div class="container">
-          <div class="row">
-            <!-- Counter Item -->
-            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-              <div class="counter wow fadeInRight animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-                <div class="icon"><i class="lni-map"></i></div>
-                <p>Kochi</p>
-                <span>Kerala.</span>
-              </div>
-            </div>
-            <!-- Counter Item -->
-            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-              <div class="counter wow fadeInRight animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-                <div class="icon"><i class="lni-timer"></i></div>
-                <p>2026</p>
-                <span>Thursday to Saturday</span>
-              </div>
-            </div>
-            <!-- Counter Item -->
-            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-              <div class="counter wow fadeInRight animated" data-wow-delay="0.9s" style="visibility: visible;-webkit-animation-delay: 0.9s; -moz-animation-delay: 0.9s; animation-delay: 0.9s;">
-                <div class="icon"><i class="lni-users"></i></div>
-                <p> Tickets will open soon</p>       
-                <span>Please wait for a while.</span>
-              </div>
-            </div>
-            <!-- Counter Item -->
-            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-              <div class="counter wow fadeInRight animated" data-wow-delay="1.2s" style="visibility: visible;-webkit-animation-delay: 1.2s; -moz-animation-delay: 1.2s; animation-delay: 1.2s;">
-                <div class="icon"><i class="lni-coffee-cup"></i></div>
-                <p>Free Lunch &amp; Snacks</p>
-                <span>Don’t miss it</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-     
-
-      <section id="speakers" class="wow fadeInUp">
-        <div class="container">
-          <div class="section-header">
-            <h2>Inaugural Address 2025</h2>
-            <p></p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-full wow fadeInRight" data-wow-delay="0.3s">
-              <div class="video" style="padding-bottom: 20px;">
-                <img class="img-fluid" src="img/inauguration-2025.jpg" alt="" style="max-width: 100%;  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.17); padding: 10px; border-radius: 4px;">
-              </div>
-                <p class="intro-desc" style="font-weight: 500; font-size: large;">
-              </p>
-
-            </div>
-
-          </div>
-          </div>
-          </section>
-
-
-
-          <section id="speakers" class="wow fadeInUp" style="background-color: rgba(9,6,9);">
-            <div class="container">
-
-    
-              <div class="row">
-               
-
-                <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
-          
-                  <h2 class="intro-desc" style="font-weight: 600; color: white;">A message from Jack Daniel, Co-founder of Security BSides!
-                  </h2>
-                  <p class="intro-desc" style="font-weight: 500; font-size: large; color: white;">Jack Daniel is a storyteller, blacksmith, luthier, woodcarver, comic, bartender, and motorcyclist. In other words, Jack is retired. Jack is also a community builder and historian, he is a co-founder of Security BSides and the creator of the Shoulders of InfoSec Project. In a past life, he added things like technologist, security professional, admin, podcaster, and blogger to his bio, but no longer. Jack also used to list things like jobs, such as the many he held at Tenable before retiring. 
-                    <br><br>
-                    Jack was kind enough to agree to deliver his message virtually for BSides Kerala!
-                  </p>
-    
-                </div>
-                <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-                  <div class="video" style="padding-bottom: 20px;">
-                    <img class="img-fluid" src="img/speakers/jd.jpg" alt="" style="max-width: 100%;  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.17); padding: 10px; border-radius: 4px;">
-                  </div>
-                </div>
-              </div>
-              </div>
-              </section>
-
-      <section id="sponsors" class="wow fadeInUp" style="background-color: white;">
-
-        <div class="container-fluid">
-
-          <div class="section-header">
-            <h2>Past Sponsors</h2>
-            <p>Here is our past sponsors and supporters!</p>
-          </div>
-
-          <div class="row no-gutters">
-            <div class="col-lg-full">
-          <div class="video" style="padding-bottom: 20px;">
-                    <img class="img-fluid" src="img/2025-sponsors.jpg" alt="" style="max-width: 100%;  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.17); border-radius: 4px;">
-                  </div>
-            </div> 
-
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <section id="venue" class="wow fadeInUp" style="background-color: white;">
-
-        <div class="container-fluid">
-
-          <div class="section-header">
-            <h2>Event Venue</h2>
-            <p>Will be announced soon!</p>
-          </div> 
-
-          <div class="row no-gutters">
-            <div class="col-lg-6 venue-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251479.49747803173!2d76.13730739775555!3d9.986500065414937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala%2C%20India!5e0!3m2!1sen!2sae!4v1763751814883!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div class="col-lg-6 venue-info">
-              <div class="row justify-content-center">
-                <div class="col-11 col-lg-8">
-                  
-                  <div class="responsive-image"><h3>Kochi, Kerala.</h3>
-                    <img src="#" alt="" title=""  style="width: 65%;">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-    </main>
-
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-lg-3 col-md-6 footer-info">
-              <img src="img/logo.png" alt="">
-              <p>
-                BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Conference 2025</h4>
-              <ul>
-              
-                <li><i></i> <a href="https://konfhub.com/bsides-kerala-2025">Register</a></li>
-                <li><i></i> <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a></li>
-                <li><i></i> <a href="#">Privacy policy</a></li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Security BSides</h4>
-              <ul>
-                <li><i></i> <a href="https://bsides.org">Security BSides</a></li>
-                <li><i></i> <a href="about-us">About us</a></li>
-                <li><i></i> <a href="#">All events</a></li>
-          
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                <br>
-                <strong>Phone:</strong> +91 94966 08272<br>
-                <strong>email:</strong> hello@bsideskerala.in<br>
-              </p>
-
-              <div class="social-links">
-                <a href="https://x.com/bsideskerala" class="twitter"><i class="fa fa-twitter"></i></a>
-               <a href="https://www.facebook.com/BSidesKerala" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="https://instagram.com/bsideskerala" class="instagram"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/bsideskerala" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
+        <h3>Kochi Marriot Hotel</h3>
+        <p>Kerala, India</p>
       </div>
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>BSides Kerala 2026</strong>. All Rights Reserved
+      <div class="ent-card">
+        <div class="ent-card-top">
+          <div class="ent-icon green-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <span class="ent-card-label">Schedule</span>
         </div>
-        <div class="credits">
-      
-          With love to the security community!
+        <h3>7-9 May 2026</h3>
+        <p>Thursday to Saturday</p>
+      </div>
+
+      <div class="ent-card">
+        <div class="ent-card-top">
+          <div class="ent-icon red-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+          </div>
+          <span class="ent-card-label">Registration</span>
+        </div>
+        <h3>Tickets Opening Soon</h3>
+        <p>Please wait for a while.</p>
+      </div>
+
+      <div class="ent-card">
+        <div class="ent-card-top">
+          <div class="ent-icon green-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <span class="ent-card-label">Perks</span>
+        </div>
+        <h3>Free Lunch &amp; Snacks</h3>
+        <p>Don't miss it</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- INAUGURAL ADDRESS 2025 -->
+<section class="sect sect-alt">
+  <div class="wrap">
+    <div class="sect-label">BSides Kerala 2025</div>
+    <h2 class="sect-heading">Inaugural <span class="red">Address 2025</span></h2>
+    <div class="img-frame">
+      <img src="img/inauguration-2025.jpg" alt="BSides Kerala 2025 Inaugural Address">
+    </div>
+  </div>
+</section>
+
+<!-- JACK DANIEL -->
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-label">Featured Speaker</div>
+    <h2 class="sect-heading">A message from <span class="red">Jack Daniel,</span><br>Co-founder of Security BSides!</h2>
+    <div class="keynote-layout">
+      <div class="keynote-photo">
+        <div class="accent"></div>
+        <img src="img/speakers/jd.jpg" alt="Jack Daniel">
+      </div>
+      <div class="keynote-info">
+        <h3>Jack Daniel</h3>
+        <p class="role">Co-founder, Security BSides</p>
+        <p>Jack Daniel is a storyteller, blacksmith, luthier, woodcarver, comic, bartender, and motorcyclist. In other words, Jack is retired. Jack is also a community builder and historian, he is a co-founder of Security BSides and the creator of the Shoulders of InfoSec Project.</p>
+        <p>In a past life, he added things like technologist, security professional, admin, podcaster, and blogger to his bio, but no longer. Jack also used to list things like jobs, such as the many he held at Tenable before retiring.</p>
+        <div class="note">Jack was kind enough to agree to deliver his message virtually for BSides Kerala!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- PAST SPONSORS -->
+<section class="sect sect-alt">
+  <div class="wrap">
+    <div class="sect-label">Our Supporters</div>
+    <h2 class="sect-heading">Past <span class="red">Sponsors</span></h2>
+    <p class="sect-text">Here is our past sponsors and supporters!</p>
+    <div class="sponsors-img">
+      <img src="img/2025-sponsors.jpg" alt="BSides Kerala 2025 Sponsors">
+    </div>
+  </div>
+</section>
+
+<!-- EVENT VENUE -->
+<section class="sect">
+  <div class="wrap">
+    <div class="sect-label">Location</div>
+    <h2 class="sect-heading">Event <span class="red">Venue</span></h2>
+    <p class="sect-text"></p>
+    <div class="venue-grid">
+      <div class="venue-map">
+        <div class="pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Kochi Marriot Hotel</span>
         </div>
       </div>
-    </footer>
+      <div class="venue-right">
+        <h3>Kochi Marriot Hotel, Kerala.</h3>
+        <p class="vsub"></p>
+        <div class="vlist">
+          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>7-9 May 2026 - Thursday to Saturday</div>
+          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="4" x2="18" y2="4"/><line x1="6" y1="9" x2="18" y2="9"/><path d="M14 4c1.5 2 1.5 5 0 7H9l7 9"/></svg>Tickets will open soon - Please wait for a while.</div>
+          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Free Lunch &amp; Snacks - Don't miss it</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- CTA -->
+<section class="cta-block">
+  <div class="inner">
+    <h2>BSides <span class="red">Kerala 2026</span><span class="blink"></span></h2>
+    <p>Security BSides Kerala Hacking and Cyber Security Community Conference.<br>Be part of the community.</p>
+    <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap">
+      <a href="https://konfhub.com/bsides-kerala-2025" class="btn btn-primary">Register Now</a>
+      <a href="contact/index.html" class="btn btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
 
-    <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script> 
-    <script src="lib/venobox/venobox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="contactform/contactform.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/countdown.js"></script>
-  </body>
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="img/logo.png" alt="BSides Kerala">
+        <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Conference 2026</h4>
+        <a href="https://konfhub.com/bsides-kerala-2025">Register</a>
+        <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
+        <a href="#">Privacy policy</a>
+      </div>
+      <div class="ft-col">
+        <h4>Security BSides</h4>
+        <a href="https://bsides.org">Security BSides</a>
+        <a href="about-us/index.html">About us</a>
+        <a href="#">All events</a>
+      </div>
+      <div class="ft-col">
+        <h4>Contact Us</h4>
+        <a href="tel:+919496608272"><b>Phone:</b> +91 94966 08272</a>
+        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© Copyright <b>BSides Kerala 2026</b>. All Rights Reserved</p>
+      <p class="love"><span class="heart">❤</span> With love to the <span class="grn">security</span> community</p>
+    </div>
+  </div>
+</footer>
+<div class="ft-banner">
+  <img src="img/footer-img.png" alt="BSides Kerala 2026">
+</div>
 
-  </html>
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
+const T=new Date('2026-05-07T09:00:00+05:30');
+!function tick(){const d=T-new Date();if(d<=0)return;const p=n=>String(Math.floor(n)).padStart(2,'0');document.getElementById('cd-d').textContent=p(d/864e5);document.getElementById('cd-h').textContent=p(d%864e5/36e5);document.getElementById('cd-m').textContent=p(d%36e5/6e4);document.getElementById('cd-s').textContent=p(d%6e4/1e3);setTimeout(tick,1000)}();
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

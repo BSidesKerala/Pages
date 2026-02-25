@@ -75,3 +75,15 @@ img{max-width:100%;height:auto;display:block}
 @media(max-width:768px){.nav-links{display:none}.burger{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);border-bottom:1px solid var(--g200);padding:1rem 5%;backdrop-filter:blur(16px);gap:.2rem}.nav{padding:.7rem 5%}.page-hero{padding:8rem 5% 3.5rem}.ft-grid{grid-template-columns:1fr;gap:2.5rem}.cards-grid{grid-template-columns:1fr}.sect{padding:3.5rem 5%}}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+.ft-banner{
+  width:100%;
+  line-height:0;
+  overflow:hidden;
+}
+.ft-banner img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  max-height:400px;
+}

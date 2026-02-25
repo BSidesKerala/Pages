@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Security BSides Kerala 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --red:#DC2626;--red-h:#EF4444;--red-d:#991B1B;
@@ -51,7 +42,7 @@ img{max-width:100%;height:auto;display:block}
 .hero-bg .lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:80px 80px}
 @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.08)}}
 .hero-content{position:relative;z-index:1;max-width:1100px}
-.hero-chip{display:inline-flex;align-items:center;gap:.6rem;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.3);padding:.6rem 1.5rem;border-radius:999px;margin-bottom:3rem;font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--red-h);text-transform:uppercase;letter-spacing:.14em}
+.hero-chip{display:inline-flex;align-items:center;gap:.6rem;/*! background:rgba(220,38,38,.12); *//*! border:1px solid rgba(220,38,38,.3); */padding:.6rem 1.5rem;border-radius:999px;margin-bottom:3rem;font-family:'JetBrains Mono',monospace;font-size:.85rem;/*! color:var(--red-h); */text-transform:uppercase;letter-spacing:.14em}
 .hero-chip .dot{width:8px;height:8px;background:var(--red-h);border-radius:50%;animation:pls 2s infinite}
 @keyframes pls{0%,100%{opacity:1}50%{opacity:.2}}
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,14vw,12rem);line-height:.88;letter-spacing:.05em;margin-bottom:2rem}
@@ -78,7 +69,7 @@ img{max-width:100%;height:auto;display:block}
 .cd-item .lbl{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--g500);text-transform:uppercase;letter-spacing:.16em;margin-top:.4rem}
 
 /* ════════════════════════════════════════════════════════
-   CONFERENCE INFO — HACKER + ENTERPRISE HYBRID
+   CONFERENCE INFO - HACKER + ENTERPRISE HYBRID
    Left: terminal readout  |  Right: clean enterprise cards
    ════════════════════════════════════════════════════════ */
 .conf-info{
@@ -93,7 +84,7 @@ img{max-width:100%;height:auto;display:block}
   min-height:520px;
 }
 
-/* LEFT — Terminal Panel */
+/* LEFT - Terminal Panel */
 .conf-terminal{
   padding:3.5rem 4rem;
   position:relative;
@@ -147,7 +138,7 @@ img{max-width:100%;height:auto;display:block}
 }
 @keyframes scanline{0%{top:0}100%{top:100%}}
 
-/* RIGHT — Enterprise Cards */
+/* RIGHT - Enterprise Cards */
 .conf-enterprise{
   padding:3.5rem 4rem;
   background:var(--white);
@@ -228,7 +219,7 @@ img{max-width:100%;height:auto;display:block}
 .keynote-info .note{font-weight:700;color:var(--green);font-size:1.05rem;padding:1rem 1.4rem;background:rgba(22,163,74,.06);border-left:4px solid var(--green);border-radius:0 12px 12px 0;margin-top:1rem}
 
 /* ─── SPONSORS ─── */
-.sponsors-img{max-width:900px;border-radius:20px;overflow:hidden;border:1px solid var(--g200);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.sponsors-img{max-width:100%;border-radius:20px;overflow:hidden;border:1px solid var(--g200);box-shadow:0 20px 60px rgba(0,0,0,.08)}
 
 /* ─── VENUE ─── */
 .venue-grid{display:grid;grid-template-columns:1.3fr 1fr;border-radius:20px;overflow:hidden;border:1px solid var(--g200);box-shadow:0 16px 48px rgba(0,0,0,.07);background:var(--white)}
@@ -247,7 +238,7 @@ img{max-width:100%;height:auto;display:block}
 
 /* ─── CTA ─── */
 .cta-block{background:var(--black);color:#fff;text-align:center;padding:7rem 5%;position:relative;overflow:hidden}
-.cta-block::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 30% 50%,rgba(220,38,38,.12),transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(34,197,94,.07),transparent 60%)}
+.cta-block::before{content:'';position:absolute;inset:0;pointer-events:none;}
 .cta-block .inner{position:relative;z-index:1}
 .cta-block h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.92;letter-spacing:.05em;margin-bottom:1.2rem}
 .cta-block h2 .red{color:var(--red)}
@@ -297,260 +288,3 @@ img{max-width:100%;height:auto;display:block}
 
 .reveal{opacity:1;transform:translateY(0);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala">
-    <b>BSides <em>Kerala</em></b>
-  </a>
-  <ul class="nav-links" id="navMenu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="call-for-papers/index.html">CFP</a></li>
-    <li><a href="trainings/index.html">Trainings</a></li>
-    <li><a href="speakers/index.html">Speakers</a></li>
-    <li><a href="schedule/index.html">Schedule</a></li>
-    <li><a href="capture-the-flag/index.html">Capture-the-flag</a></li>
-    <li><a href="about-us/index.html">About Us</a></li>
-    <li><a href="contact/index.html">Contact</a></li>
-    <li><a href="https://konfhub.com/bsides-kerala-2025" class="cta-link">Register</a></li>
-  </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"><div class="c1"></div><div class="c2"></div><div class="lines"></div></div>
-  <div class="hero-content">
-    <div class="hero-chip"><span class="dot"></span>Coming Soon</div>
-    <h1><span class="block">BSides</span><span class="block red">Kerala 2026</span></h1>
-    <p class="hero-text"><strong>Security BSides Kerala</strong> Hacking and Cyber Security Community Conference<br>2026 dates will be announced soon!</p>
-    <p class="hero-loc">Kochi, Kerala.</p>
-    <div class="hero-btns">
-      <a href="https://konfhub.com/bsides-kerala-2025" class="btn btn-primary">Register Now</a>
-      <a href="archives/bsides-kerala-2025/" class="btn btn-secondary">BSides Kerala 2025 Archive →</a>
-    </div>
-  </div>
-</section>
-
-<!-- COUNTDOWN -->
-<div class="cd-wrap">
-  <h2 class="cd-title">BSides Kerala Will <em>Start In</em></h2>
-  <div class="cd-grid">
-    <div class="cd-item"><div class="val" id="cd-d">--</div><div class="lbl">Days</div></div>
-    <div class="cd-item"><div class="val" id="cd-h">--</div><div class="lbl">Hours</div></div>
-    <div class="cd-item"><div class="val" id="cd-m">--</div><div class="lbl">Minutes</div></div>
-    <div class="cd-item"><div class="val" id="cd-s">--</div><div class="lbl">Seconds</div></div>
-  </div>
-</div>
-
-<!-- ════════════════════════════════════════════════
-     CONFERENCE INFO — SPLIT TERMINAL / ENTERPRISE
-     ════════════════════════════════════════════════ -->
-<section class="conf-info">
-  <div class="conf-split">
-
-    <!-- LEFT: Terminal readout -->
-    <div class="conf-terminal">
-      <div class="term-bar">
-        <span class="term-dot r"></span>
-        <span class="term-dot y"></span>
-        <span class="term-dot g"></span>
-        <span>bsides@kerala:~</span>
-      </div>
-      <div class="term-body">
-        <div class="term-line"><span class="prompt">$</span> <span class="cmd">./bsides_kerala</span> <span class="flag">--status</span></div>
-        <div class="term-line"><span class="comment"># Conference Recon Report</span></div>
-        <div class="term-line">&nbsp;</div>
-        <div class="term-line"><span class="output">location:</span>    <span class="val-str">"Kochi, Kerala"</span>    <span class="status-ok">[CONFIRMED]</span></div>
-        <div class="term-line"><span class="output">year:</span>        <span class="val-str">"2026"</span></div>
-        <div class="term-line"><span class="output">duration:</span>    <span class="val-str">"Thursday → Saturday"</span></div>
-        <div class="term-line"><span class="output">tickets:</span>     <span class="status-pend">[STANDBY]</span>  <span class="comment"># opening soon</span></div>
-        <div class="term-line"><span class="output">lunch:</span>       <span class="val-str">"Free"</span>           <span class="status-ok">[INCLUDED]</span></div>
-        <div class="term-line"><span class="output">snacks:</span>      <span class="val-str">"Free"</span>           <span class="status-ok">[INCLUDED]</span></div>
-        <div class="term-line">&nbsp;</div>
-        <div class="term-line"><span class="output">tracks:</span>      <span class="val-str">["offensive", "defensive", "ctf", "training"]</span></div>
-        <div class="term-line"><span class="output">vibe:</span>        <span class="val-str">"hacker + enterprise"</span></div>
-        <div class="term-line">&nbsp;</div>
-        <div class="term-line"><span class="prompt">$</span> <span class="term-cursor"></span></div>
-      </div>
-    </div>
-
-    <!-- RIGHT: Clean enterprise cards -->
-    <div class="conf-enterprise">
-
-      <div class="ent-card">
-        <div class="ent-card-top">
-          <div class="ent-icon red-bg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <span class="ent-card-label">Location</span>
-        </div>
-        <h3>Kochi</h3>
-        <p>Kerala, India</p>
-      </div>
-
-      <div class="ent-card">
-        <div class="ent-card-top">
-          <div class="ent-icon green-bg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <span class="ent-card-label">Schedule</span>
-        </div>
-        <h3>2026</h3>
-        <p>Thursday to Saturday</p>
-      </div>
-
-      <div class="ent-card">
-        <div class="ent-card-top">
-          <div class="ent-icon red-bg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
-          </div>
-          <span class="ent-card-label">Registration</span>
-        </div>
-        <h3>Tickets Opening Soon</h3>
-        <p>Please wait for a while.</p>
-      </div>
-
-      <div class="ent-card">
-        <div class="ent-card-top">
-          <div class="ent-icon green-bg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-          </div>
-          <span class="ent-card-label">Perks</span>
-        </div>
-        <h3>Free Lunch &amp; Snacks</h3>
-        <p>Don't miss it</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="sep"></div>
-
-<!-- INAUGURAL ADDRESS 2025 -->
-<section class="sect sect-alt">
-  <div class="wrap">
-    <div class="sect-label">BSides Kerala 2025</div>
-    <h2 class="sect-heading">Inaugural <span class="red">Address 2025</span></h2>
-    <div class="img-frame">
-      <img src="https://bsideskerala.in/img/inauguration-2025.jpg" alt="BSides Kerala 2025 Inaugural Address">
-    </div>
-  </div>
-</section>
-
-<!-- JACK DANIEL -->
-<section class="sect">
-  <div class="wrap">
-    <div class="sect-label">Featured Speaker</div>
-    <h2 class="sect-heading">A message from <span class="red">Jack Daniel,</span><br>Co-founder of Security BSides!</h2>
-    <div class="keynote-layout">
-      <div class="keynote-photo">
-        <div class="accent"></div>
-        <img src="https://bsideskerala.in/img/speakers/jd.jpg" alt="Jack Daniel">
-      </div>
-      <div class="keynote-info">
-        <h3>Jack Daniel</h3>
-        <p class="role">Co-founder, Security BSides</p>
-        <p>Jack Daniel is a storyteller, blacksmith, luthier, woodcarver, comic, bartender, and motorcyclist. In other words, Jack is retired. Jack is also a community builder and historian, he is a co-founder of Security BSides and the creator of the Shoulders of InfoSec Project.</p>
-        <p>In a past life, he added things like technologist, security professional, admin, podcaster, and blogger to his bio, but no longer. Jack also used to list things like jobs, such as the many he held at Tenable before retiring.</p>
-        <div class="note">Jack was kind enough to agree to deliver his message virtually for BSides Kerala!</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="sep"></div>
-
-<!-- PAST SPONSORS -->
-<section class="sect sect-alt">
-  <div class="wrap">
-    <div class="sect-label">Our Supporters</div>
-    <h2 class="sect-heading">Past <span class="red">Sponsors</span></h2>
-    <p class="sect-text">Here is our past sponsors and supporters!</p>
-    <div class="sponsors-img">
-      <img src="https://bsideskerala.in/img/2025-sponsors.jpg" alt="BSides Kerala 2025 Sponsors">
-    </div>
-  </div>
-</section>
-
-<!-- EVENT VENUE -->
-<section class="sect">
-  <div class="wrap">
-    <div class="sect-label">Location</div>
-    <h2 class="sect-heading">Event <span class="red">Venue</span></h2>
-    <p class="sect-text">Will be announced soon!</p>
-    <div class="venue-grid">
-      <div class="venue-map">
-        <div class="pin">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Kochi, Kerala</span>
-        </div>
-      </div>
-      <div class="venue-right">
-        <h3>Kochi, Kerala.</h3>
-        <p class="vsub">Will be announced soon!</p>
-        <div class="vlist">
-          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2026 — Thursday to Saturday</div>
-          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Tickets will open soon — Please wait for a while.</div>
-          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Free Lunch &amp; Snacks — Don't miss it</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-block">
-  <div class="inner">
-    <h2>BSides <span class="red">Kerala 2026</span><span class="blink"></span></h2>
-    <p>Security BSides Kerala — Hacking and Cyber Security Community Conference.<br>Be part of the community.</p>
-    <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap">
-      <a href="https://konfhub.com/bsides-kerala-2025" class="btn btn-primary">Register Now</a>
-      <a href="contact/index.html" class="btn btn-secondary">Contact Us</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="ft">
-  <div class="ft-inner">
-    <div class="ft-grid">
-      <div class="ft-brand">
-        <img src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala">
-        <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
-      </div>
-      <div class="ft-col">
-        <h4>Conference 2025</h4>
-        <a href="https://konfhub.com/bsides-kerala-2025">Register</a>
-        <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
-        <a href="#">Privacy policy</a>
-      </div>
-      <div class="ft-col">
-        <h4>Security BSides</h4>
-        <a href="https://bsides.org">Security BSides</a>
-        <a href="about-us/index.html">About us</a>
-        <a href="#">All events</a>
-      </div>
-      <div class="ft-col">
-        <h4>Contact Us</h4>
-        <a href="tel:+919496608272"><b>Phone:</b> +91 94966 08272</a>
-        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
-      </div>
-    </div>
-    <div class="ft-bottom">
-      <p>© Copyright <b>BSides Kerala 2026</b>. All Rights Reserved</p>
-      <p class="love"><span class="heart">❤</span> With love to the <span class="grn">security</span> community</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-const T=new Date('2026-06-15T09:00:00+05:30');
-!function tick(){const d=T-new Date();if(d<=0)return;const p=n=>String(Math.floor(n)).padStart(2,'0');document.getElementById('cd-d').textContent=p(d/864e5);document.getElementById('cd-h').textContent=p(d%864e5/36e5);document.getElementById('cd-m').textContent=p(d%36e5/6e4);document.getElementById('cd-s').textContent=p(d%6e4/1e3);setTimeout(tick,1000)}();
-cons

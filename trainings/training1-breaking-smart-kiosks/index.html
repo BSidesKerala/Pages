@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breaking Smart Kiosks with Windows 11 OS Hardening | Trainings | BSides Kerala 2026</title>
+<link rel="stylesheet" href="../../css/style-2026.css">
+<style>
+.td-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:2rem}
+.td-meta-item{display:flex;align-items:center;gap:.4rem;font-size:.95rem;color:var(--g500)}
+.td-meta-item svg{width:18px;height:18px;stroke:var(--red);flex-shrink:0}
+.td-meta-sep{width:4px;height:4px;border-radius:50%;background:var(--g300)}
+.td-cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.td-content{max-width:none}
+.td-content h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.04em;margin:2.5rem 0 .8rem;color:var(--black)}
+.td-content h3:first-child{margin-top:0}
+.td-content h3 .red{color:var(--red)}
+.td-content p{font-size:1.05rem;color:var(--g600);line-height:1.8;margin-bottom:1rem}
+.td-content ul{margin:0 0 1.5rem 0;padding:0;list-style:none}
+.td-content ul li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:1.02rem;color:var(--g600);line-height:1.7;border-bottom:1px solid var(--g100)}
+.td-content ul li:last-child{border-bottom:none}
+.td-content ul li::before{content:'›';position:absolute;left:0;color:var(--red);font-weight:700;font-size:1.2rem}
+
+/* ── day tabs ── */
+.td-days{display:flex;gap:.5rem;margin-bottom:1.5rem}
+.td-day-tab{font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.5rem 1.2rem;border-radius:8px;border:2px solid var(--g200);background:var(--white);color:var(--g500);cursor:pointer;transition:.2s}
+.td-day-tab.active{background:var(--red);color:#fff;border-color:var(--red)}
+.td-day-tab:hover:not(.active){border-color:var(--red);color:var(--red)}
+.td-day-panel{display:none}
+.td-day-panel.active{display:block}
+
+/* ── info boxes ── */
+.td-info{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0}
+.td-info-box{border:1px solid var(--g200);border-radius:12px;padding:1.5rem 1.8rem;background:var(--white)}
+.td-info-box h4{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;color:var(--black);margin-bottom:.6rem}
+.td-info-box h4 .red{color:var(--red)}
+.td-info-box p{font-size:1.02rem;color:var(--g600);line-height:1.7;margin:0}
+.td-info-box ul{margin:.5rem 0 0;padding:0;list-style:none}
+.td-info-box ul li{position:relative;padding:.35rem 0 .35rem 1.3rem;font-size:1rem;color:var(--g600);line-height:1.6}
+.td-info-box ul li::before{content:'›';position:absolute;left:0;color:var(--red);font-weight:700;font-size:1.1rem}
+.td-info-box.highlight{background:rgba(220,38,38,.03);border-color:rgba(220,38,38,.12)}
+.td-info-box.highlight h4{color:var(--red)}
+
+/* ── trainer profiles ── */
+.td-trainers{margin-top:3rem}
+.td-trainer{display:flex;gap:2.5rem;padding:2.5rem 0;border-top:1px solid var(--g200)}
+.td-trainer:last-child{padding-bottom:0}
+.td-trainer-img{flex-shrink:0}
+.td-trainer-img img{width:200px;height:200px;border-radius:16px;object-fit:cover;border:2px solid var(--g200)}
+.td-trainer-body{flex:1}
+.td-trainer-body h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.04em;margin-bottom:.3rem}
+.td-trainer-body .td-trainer-role{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--red);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem}
+.td-trainer-body p{font-size:1.05rem;color:var(--g600);line-height:1.8;margin-bottom:.6rem}
+.td-trainer-body p+p{margin-top:0}
+
+/* ── social links ── */
+.td-socials{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.td-social{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:500;color:var(--g500);padding:.35rem .75rem;border:1px solid var(--g200);border-radius:8px;transition:.2s}
+.td-social:hover{color:var(--red);border-color:var(--red);background:rgba(220,38,38,.03)}
+.td-social svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+
+/* ── breadcrumb ── */
+.td-bread{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--g400);margin-bottom:1.5rem;display:flex;align-items:center;gap:.4rem}
+.td-bread a{color:var(--g500);transition:.2s}
+.td-bread a:hover{color:var(--red)}
+.td-bread span{color:var(--g300)}
+
+/* ── expect callout ── */
+.td-callout{display:flex;align-items:center;gap:1rem;background:rgba(22,163,74,.04);border:1px solid rgba(22,163,74,.15);border-radius:12px;padding:1.2rem 1.5rem;margin:2rem 0}
+.td-callout svg{width:28px;height:28px;stroke:var(--green);flex-shrink:0}
+.td-callout p{font-size:1.05rem;color:var(--g600);line-height:1.6;margin:0}
+.td-callout strong{color:var(--green)}
+
+@media(max-width:768px){
+  .td-trainer{flex-direction:column;gap:1.2rem}
+  .td-trainer-img img{width:140px;height:140px}
+  .td-info{grid-template-columns:1fr}
+  .td-meta{gap:.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="../../index.html" class="nav-logo">
+    <img src="../../img/logo.png" alt="BSides Kerala">
+    <b>BSides <em>Kerala</em></b>
+  </a>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="../../">Home</a></li>
+    <li><a href="../../call-for-papers">CFP</a></li>
+    <li><a href="../../trainings" class="active">Trainings</a></li>
+    <li><a href="../../speakers">Speakers</a></li>
+    <li><a href="../../schedule">Schedule</a></li>
+    <li><a href="../../capture-the-flag">Capture-the-flag</a></li>
+    <li><a href="../../about-us">About Us</a></li>
+    <li><a href="../../contact">Contact</a></li>
+    <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
+  </ul>
+  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">&#9776;</button>
+</nav>
+
+<section class="page-hero">
+  <div class="inner">
+    <div class="label">Training Ground</div>
+    <h1>Breaking Smart Kiosks with Windows 11 <span class="red">OS Hardening</span></h1>
+    <p>Evade enterprise endpoint protection, bypass kiosk lockdowns, and escalate privileges on hardened Windows 11 systems</p>
+  </div>
+</section>
+
+<section class="sect">
+  <div class="wrap">
+
+    <div class="td-bread">
+      <a href="../">Trainings</a>
+      <span>/</span>
+      Breaking Smart Kiosks with Windows 11 OS Hardening
+    </div>
+
+    <div class="td-meta">
+      <div class="td-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        7 &ndash; 8 May 2026
+      </div>
+      <div class="td-meta-sep"></div>
+      <div class="td-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        2 Days
+      </div>
+      <div class="td-meta-sep"></div>
+      <div class="td-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Limited Seats
+      </div>
+      <div class="td-meta-sep"></div>
+      <div class="td-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Beginner &ndash; Intermediate
+      </div>
+      <div class="td-meta-sep"></div>
+      <div class="td-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Kartik Lalan and Aravind C Ajayan
+      </div>
+    </div>
+
+    <div class="td-cta-row">
+      <a href="https://konfhub.com/bsides-kerala-2026" class="btn btn-primary">Register for Training</a>
+      <a href="../" class="btn btn-outline">&larr; All Trainings</a>
+    </div>
+
+    <div class="td-content">
+
+      <h3>Training <span class="red">Abstract</span></h3>
+      <p>With growing usage of desktop applications in various segments like aviation, healthcare, public infrastructure, logistics, finance, education, hospitality and many more in the form of kiosk/un-attended systems in public, it opens scope of information and network security. Also with change in way of work getting flexible from home due to Covid-19, this increases the responsibilities of enterprises to have their systems run safely using multiple endpoint protection tools like DLP/EDR/KIOSK/PAM etc.</p>
+      <p>In addition, when KIOSK apps are integrated with smart AI solutions, it becomes pivotal in compromising the systems. This training course would target such areas where systems are secured via hardening using Windows/3rd party tools and how we can evade hardening to gain unrestricted system access. After having system access trying to elevate privilege within the Windows system.</p>
+      <p>Learning these techniques would help in pentest, designing tools securely which can be used in commercial products or enterprise systems.</p>
+
+      <div class="td-callout">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <p><strong>What to expect:</strong> More than 20 hands-on labs across 2 days. Prepare your VM to practice those during the workshop.</p>
+      </div>
+
+      <h3>Training <span class="red">Outline</span></h3>
+
+      <div class="td-days">
+        <button class="td-day-tab active" onclick="switchDay(0)">Day 1</button>
+        <button class="td-day-tab" onclick="switchDay(1)">Day 2</button>
+      </div>
+
+      <div class="td-day-panel active" id="day-0">
+        <ul>
+          <li>Setting up OS Hardening with custom scripts, which would demonstrate what changes are made so that participants can visualize their scope</li>
+          <li>Learning core concepts like Reg/filesystem permissions, user roles &amp; privileges, process inheritance, cross ownership, etc. and getting familiar with commands used during the entire session</li>
+          <li>Windows 11 KIOSK Bypass techniques to access restricted windows components like creds. manager, certificate store, registry, filesystem, etc.</li>
+          <li>Group policies and Registry restriction bypass</li>
+          <li>Various techniques to access command prompt / PowerShell when blocked via sys. admin in Windows 11</li>
+          <li>Accessing restricted Control Panel components in Windows 11</li>
+          <li>Working with deploying multiple 3rd party KIOSK/Hardening endpoint protection apps and exploiting multiple vulnerabilities which undergone CVD</li>
+          <li>Creating Shell Explorer by self and designing KIOSK to understand the nature of Winlogon while hardening</li>
+          <li>bcdedit, insecure boot to evade DLP/EP software/KIOSK</li>
+          <li>Techniques via which DLP can be bypassed being non-admin standard user or admin user, leaving no traces</li>
+          <li>Gaining command execution via compiling binaries, using other platform binaries, extension precedence rule, shortcuts, task scheduler, ActiveXObject, etc.</li>
+          <li>Creating reverse shell executables and managing remote connections for persistence</li>
+        </ul>
+      </div>
+
+      <div class="td-day-panel" id="day-1">
+        <ul>
+          <li>Introduction to Architecture of Smart AI Kiosk and comparison with Vanilla Kiosk architecture</li>
+          <li>Frameworks for Navigating Security Challenges in AI systems</li>
+          <li>Tactics and Techniques in Adversarial Prompting</li>
+          <li>Controlled Intelligence: Guardrails in Action</li>
+          <li>Overview of Intelligent agents in Smart AI Kiosk and leveraging that for evasion</li>
+          <li>Multiple Applocker restriction rules and various bypass techniques</li>
+          <li>Understanding design restrictions for Administrator vs System, followed by leveraging multiple techniques to gain system privilege and get execution of restricted components</li>
+          <li>Using ReactOS to evade signature based application restriction</li>
+          <li>Understanding UAC and identifying various bypass techniques</li>
+          <li>Various techniques to uninstall security providing EPM application (e.g. antivirus, DLP, remote administration, etc.) in restricted environment</li>
+          <li>Post bypassing OS Hardening: various techniques of Privilege escalation like extension precedence, misconfigured service parameters, token priv., DLL preloading, unquoted service path, cmdkey, tasks, Reg hive dump, always elevated, startup, etc.</li>
+          <li>Practice and summarize all items learnt</li>
+        </ul>
+      </div>
+
+      <div class="td-info">
+        <div class="td-info-box highlight">
+          <h4>Who Should Take This <span class="red">Training</span></h4>
+          <p>This training is designed for the following security professionals:</p>
+          <ul>
+            <li>Penetration testers looking to expand their skillset into kiosk and hardened endpoint assessments</li>
+            <li>Security architects or developers who want security by design in their products and kiosk deployments</li>
+            <li>Windows system administrators responsible for securing enterprise endpoints and kiosk infrastructure</li>
+            <li>Security professionals from IT security teams working with DLP, EDR, and endpoint hardening solutions</li>
+            <li>Anyone building or deploying kiosk/unattended systems in public-facing environments</li>
+          </ul>
+        </div>
+
+        <div class="td-info-box">
+          <h4>Who Would Not Be a Good <span class="red">Fit</span></h4>
+          <p>This training may not be suitable for:</p>
+          <ul>
+            <li>People focusing on any other OS apart from Windows</li>
+            <li>People looking for Network Assessments or core anti-virus evasion techniques</li>
+            <li>Those interested primarily in Fuzzing or Kernel exploitation</li>
+            <li>Anyone without basic Windows OS familiarity</li>
+          </ul>
+        </div>
+
+        <div class="td-info-box">
+          <h4>Audience <span class="red">Level</span></h4>
+          <p>Beginner to Intermediate. You should have:</p>
+          <ul>
+            <li>Basic knowledge of how Windows OS works (file system, registry, services, user accounts)</li>
+            <li>Familiarity with Virtual Machines and how to set them up</li>
+            <li>Scripting/programming knowledge is NOT required, though a few small scripts will be used during the session</li>
+          </ul>
+        </div>
+
+        <div class="td-info-box highlight">
+          <h4>Student <span class="red">Requirements</span></h4>
+          <p>Please prepare the following before the training:</p>
+          <ul>
+            <li>Windows 11 Enterprise 64-bit Evaluation VirtualBox VM (use <a href="https://www.microsoft.com/en-in/evalcenter/evaluate-windows-11-enterprise" style="color:var(--red)">Microsoft Eval Center</a> if you do not have a license)</li>
+            <li>Free Google and/or Twitter X account for interacting with AI models during Day 2 labs</li>
+            <li>Stable internet connection (required for both trainer and participants)</li>
+            <li>Additional tools list will be shared to registered participants before the training</li>
+            <li>Laptop with sufficient RAM and disk space to run VirtualBox VMs smoothly</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="td-trainers">
+        <h3>Meet the <span class="red">Trainers</span></h3>
+
+        <div class="td-trainer">
+          <div class="td-trainer-img">
+            <img src="../../img/speakers/kartik-lalan.jpg" alt="Kartik Lalan">
+          </div>
+          <div class="td-trainer-body">
+            <h3>Kartik Lalan</h3>
+            <div class="td-trainer-role">Product Security Architect @ Security Centre of Excellence – Philips Innovation Campus.</div>
+            <p>Product Security Architect at Security Centre of Excellence, Philips Innovation Campus. He holds an M.Tech. in Computer Science with Specialization in Information &amp; Network Security.</p>
+            <p>Kartik conducts frequent talks and workshops on InfoSec topics at several notable conferences and community events including C0C0N, Nullcon, DEF CON Blue and Hardware Villages, OWASP AppSec Days, BSides Delhi and Bangalore chapters, DroidCon-IN, and other community meetups. Kartik loves to write technical blogs in his leisure time.</p>
+            <div class="td-socials">
+              <a href="https://x.com/kartikialan" class="td-social" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                @kartiklalan
+              </a>
+              <a href="https://www.linkedin.com/in/kartiklalan/" class="td-social" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="td-trainer">
+          <div class="td-trainer-img">
+            <img src="../../img/speakers/aravind-ajayan.jpg" alt="Aravind C Ajayan">
+          </div>
+          <div class="td-trainer-body">
+            <h3>Aravind C Ajayan</h3>
+            <div class="td-trainer-role">Product Security Architect at Philips, Security Centre of Excellence team</div>
+            <p>Product Security Architect with Philips and is part of the Security Centre of Excellence team. Aravind's primary areas of expertise are web/thick client application penetration testing, hardened system security, network security, and Windows Active Directory security.</p>
+            <p>He has helped to fix severe issues in IMS (Internet Management Software) solutions through responsible disclosures. Aravind pursued his master's in Cyber Security Systems and Networks from Amrita Vishwa Vidyapeetham, Coimbatore. He is an Offensive Security Certified Professional (OSCP) and has published several research papers on security in IEEE and Springer.</p>
+            <div class="td-socials">
+             
+              <a href="#" class="td-social" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3rem">
+      <a href="https://konfhub.com/bsides-kerala-2026" class="btn btn-primary">Register for Training</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="../../img/logo.png" alt="BSides Kerala">
+        <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Conference 2026</h4>
+        <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
+        <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
+        <a href="#">Privacy policy</a>
+      </div>
+      <div class="ft-col">
+        <h4>Security BSides</h4>
+        <a href="https://bsides.org">Security BSides</a>
+        <a href="../../about-us/index.html">About us</a>
+        <a href="#">All events</a>
+      </div>
+      <div class="ft-col">
+        <h4>Contact Us</h4>
+        <a href="tel:+919496608272"><b>Phone:</b> +91 929201 1337</a>
+        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>&copy; Copyright <b>BSides Kerala 2026</b>. All Rights Reserved</p>
+      <p class="love"><span class="heart">&#10084;</span> With love to the <span class="grn">security</span> community</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+function switchDay(i){
+  document.querySelectorAll('.td-day-tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+  document.querySelectorAll('.td-day-panel').forEach((p,idx)=>p.classList.toggle('active',idx===i));
+}
+</script>
+</body>
+</html>

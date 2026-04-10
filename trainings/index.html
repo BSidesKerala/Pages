@@ -5,9 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trainings | BSides Kerala 2026</title>
 <link rel="stylesheet" href="../css/style-2026.css">
-
+<style>
+.trn-intro{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--g600);line-height:1.7;max-width:750px;margin-bottom:3rem}
+.trn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem}
+.trn-card{border:1px solid var(--g200);border-radius:16px;overflow:hidden;transition:.3s;background:var(--white);display:flex;flex-direction:column}
+.trn-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.06);transform:translateY(-4px)}
+.trn-card-img{overflow:hidden;position:relative}
+.trn-card-img img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.4s}
+.trn-card:hover .trn-card-img img{transform:scale(1.03)}
+.trn-card-img .trn-badge{position:absolute;top:1rem;left:1rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--red);color:#fff;padding:.3rem .8rem;border-radius:6px}
+.trn-card-img .trn-dur{position:absolute;top:1rem;right:1rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;background:rgba(0,0,0,.7);color:#fff;padding:.3rem .7rem;border-radius:6px}
+.trn-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.trn-card-body h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em;margin-bottom:.4rem;line-height:1.1}
+.trn-card-body .trn-trainers{font-size:.95rem;color:var(--g500);margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem}
+.trn-card-body .trn-trainers svg{width:16px;height:16px;stroke:var(--g400);flex-shrink:0}
+.trn-card-body .trn-desc{font-size:.95rem;color:var(--g500);line-height:1.6;margin-bottom:1.2rem;flex:1}
+.trn-card-body .trn-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.trn-card-body .trn-tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:.2rem .55rem;border-radius:4px;border:1px solid var(--g200);color:var(--g500)}
+.trn-card-body .trn-tag-level{background:rgba(22,163,74,.06);color:var(--green);border-color:rgba(22,163,74,.15)}
+.trn-card-body .trn-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:'Outfit',sans-serif;font-weight:700;font-size:.95rem;padding:.7rem 1.5rem;border-radius:8px;border:2px solid var(--g300);color:var(--black);transition:.3s;text-align:center;justify-content:center}
+.trn-card-body .trn-cta:hover{border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.trn-card-body .trn-cta svg{width:16px;height:16px;stroke:currentColor}
+@media(max-width:768px){.trn-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
+
 <nav class="nav" id="nav">
   <a href="../index.html" class="nav-logo">
     <img src="../img/logo.png" alt="BSides Kerala">
@@ -15,34 +38,69 @@
   </a>
   <ul class="nav-links" id="navMenu">
     <li><a href="../">Home</a></li>
-<li><a href="../call-for-papers">CFP</a></li>
-<li><a href="../trainings" class="active">Trainings</a></li>
-<li><a href="../speakers">Speakers</a></li>
-<li><a href="../schedule">Schedule</a></li>
-<li><a href="../capture-the-flag">Capture-the-flag</a></li>
-<li><a href="../about-us">About Us</a></li>
-<li><a href="../contact">Contact</a></li>
-
+    <li><a href="../call-for-papers">CFP</a></li>
+    <li><a href="../trainings" class="active">Trainings</a></li>
+    <li><a href="../speakers">Speakers</a></li>
+    <li><a href="../schedule">Schedule</a></li>
+    <li><a href="../capture-the-flag">Capture-the-flag</a></li>
+    <li><a href="../about-us">About Us</a></li>
+    <li><a href="../contact">Contact</a></li>
     <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
   </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">&#9776;</button>
 </nav>
+
 <section class="page-hero">
   <div class="inner">
     <div class="label">Hands-on Learning</div>
     <h1>Training <span class="red">Sessions</span></h1>
-    <p>Hands-on training sessions at BSides Kerala 2026</p>
+    <p>Intensive hands-on training sessions at BSides Kerala 2026</p>
   </div>
-</section><section class="sect">
+</section>
+
+<section class="sect">
   <div class="wrap">
-    <div class="coming-soon">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="4" width="6" height="6" rx="1"/><rect x="2" y="4" width="6" height="6" rx="1"/><rect x="9" y="14" width="6" height="6" rx="1"/></svg></div>
-      <h2>Coming <span class="red">Soon!</span></h2>
-      <p>Training sessions will be announced soon. Stay tuned for workshops on penetration testing, red teaming, cloud security, and more.</p>
-      <a href="../index.html" class="btn btn-outline">&larr; Back to Home</a>
+
+    <div class="sect-label">Training Ground</div>
+    <h2 class="sect-heading">Pre-Conference <span class="red">Trainings</span></h2>
+    <p class="trn-intro">The trainings will be hosted on 7-8 May 2026. All training sessions are focused on hands-on exercises with limited seats. Register early to secure your spot.</p>
+
+    <div class="trn-grid">
+
+
+      <div class="trn-card reveal">
+        <div class="trn-card-img">
+          <img src="images/os-hardening.jpg" alt="Breaking Smart Kiosks with Windows 11 OS Hardening
+">
+          <span class="trn-badge">Training</span>
+          <span class="trn-dur">2 Days</span>
+        </div>
+        <div class="trn-card-body">
+          <h3>Breaking Smart Kiosks with Windows 11 OS Hardening
+</h3>
+          <div class="trn-trainers">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Kartik Lalan and Aravind C Ajayan 
+          </div>
+          <p class="trn-desc">This training course would target such areas where systems are secured via hardening using Windows/3rd party tools and how we can evade hardening to gain unrestricted system access.</p>
+          <div class="trn-tags">
+            <span class="trn-tag trn-tag-level">Intermediate</span>
+            <span class="trn-tag">OS Hardening</span>
+            <span class="trn-tag">Red Team</span>
+          </div>
+          <a href="training1-breaking-smart-kiosks" class="trn-cta">
+            View Details &amp; Register
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      
+
     </div>
   </div>
 </section>
+
 <footer class="ft">
   <div class="ft-inner">
     <div class="ft-grid">
@@ -64,7 +122,7 @@
       </div>
       <div class="ft-col">
         <h4>Contact Us</h4>
-        <a href="tel:+919496608272"><b>Phone:</b> +91 94966 08272</a>
+        <a href="tel:+919496608272"><b>Phone:</b> +91 929201 1337</a>
         <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
       </div>
     </div>
@@ -74,6 +132,7 @@
     </div>
   </div>
 </footer>
+
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});

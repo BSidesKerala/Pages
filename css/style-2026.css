@@ -87,3 +87,10 @@ img{max-width:100%;height:auto;display:block}
   object-fit:cover;
   max-height:400px;
 }
+
+/* Footer social icons */
+.ft-socials{display:flex;gap:.55rem;margin-top:1.3rem;flex-wrap:wrap}
+.ft-social{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#aaa;background:rgba(255,255,255,.025);transition:all .25s ease}
+.ft-social svg{width:16px;height:16px}
+.ft-social:hover{border-color:var(--red);background:var(--red);color:#fff;transform:translateY(-2px)}
+.ft-social:focus-visible{outline:2px solid var(--red);outline-offset:2px}

@@ -39,7 +39,7 @@ img{max-width:100%;height:auto;display:block}
 .btn-primary:hover{background:var(--red-h);box-shadow:0 8px 30px rgba(220,38,38,.35);transform:translateY(-2px)}
 .btn-outline{background:transparent;color:var(--black);border:2px solid var(--g300)}
 .btn-outline:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
 .card{border:1px solid var(--g200);border-radius:16px;overflow:hidden;transition:.3s;background:var(--white)}
 .card:hover{box-shadow:0 12px 40px rgba(0,0,0,.06);transform:translateY(-4px)}
 .card-img{overflow:hidden}

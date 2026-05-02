@@ -405,7 +405,7 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-const T=new Date('2026-05-07T09:00:00+05:30');
+const T=new Date('2026-05-09T08:00:00+05:30');
 !function tick(){const d=T-new Date();if(d<=0)return;const p=n=>String(Math.floor(n)).padStart(2,'0');document.getElementById('cd-d').textContent=p(d/864e5);document.getElementById('cd-h').textContent=p(d%864e5/36e5);document.getElementById('cd-m').textContent=p(d%36e5/6e4);document.getElementById('cd-s').textContent=p(d%6e4/1e3);setTimeout(tick,1000)}();
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));

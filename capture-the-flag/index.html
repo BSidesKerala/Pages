@@ -4,80 +4,369 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Capture The Flag | BSides Kerala 2026</title>
-<meta name="description" content="Security BSides Kerala">
-  <meta name="author" content="BSides Kerala">
-  <meta name="keywords" content="BSides, Kerala, cyber security, conference">
-  <meta property="og:title" content="BSides Kerala 2026">
-  <meta property="og:description" content="Security BSides Kerala 2026">
-  <meta property="og:type" content="website, conference, cyber security">
-  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg"/>
+<meta name="description" content="BSides Kerala CTF - realistic Capture The Flag competition at BSides Kerala 2026. Web, network, IoT, AD, programming and more.">
+<meta name="author" content="BSides Kerala">
+<meta name="keywords" content="BSides Kerala CTF, Capture The Flag, web attacks, network attacks, IoT, Active Directory, Kerala, BSides 2026">
+<meta property="og:title" content="BSides Kerala CTF | BSides Kerala 2026">
+<meta property="og:description" content="Realistic Capture The Flag competition at BSides Kerala 2026.">
+<meta property="og:type" content="website">
+<meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg"/>
+<link rel="icon" href="https://bsideskerala.in/img/favicon.ico">
 <link rel="stylesheet" href="../css/style-2026.css">
-
+<link rel="stylesheet" href="css/ctf.css">
 </head>
 <body>
+
+<!-- ─────────── NAV ─────────── -->
 <nav class="nav" id="nav">
   <a href="../index.html" class="nav-logo">
-    <img src="../img/logo.png" alt="BSides Kerala">
+    <img src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala">
     <b>BSides <em>Kerala</em></b>
   </a>
   <ul class="nav-links" id="navMenu">
-    <li><a href="../">Home</a></li>
-<li><a href="../call-for-papers">CFP</a></li>
-<li><a href="../trainings">Trainings</a></li>
-<li><a href="../speakers">Speakers</a></li>
-<li><a href="../schedule">Schedule</a></li>
-<li><a href="../capture-the-flag" class="active">Capture-the-flag</a></li>
-<li><a href="../about-us">About Us</a></li>
-<li><a href="../contact">Contact</a></li>
-
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../call-for-papers/index.html">CFP</a></li>
+    <li><a href="../trainings/index.html">Trainings</a></li>
+    <li><a href="../speakers/index.html">Speakers</a></li>
+    <li><a href="../schedule/index.html">Schedule</a></li>
+    <li><a href="../capture-the-flag/index.html" class="active">Capture-the-flag</a></li>
+    <li><a href="../about-us/index.html">About Us</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
     <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
   </ul>
   <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
-<section class="page-hero">
-  <div class="inner">
-    <div class="label">Hack to Win</div>
-    <h1>CTF <span class="red">Competition</span></h1>
-    <p>BSides Kerala Capture-the-flag competition</p>
-  </div>
-</section><section class="sect">
-  <div class="wrap">
-    <div class="coming-soon">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
-      <h2>Coming <span class="red">Soon!</span></h2>
-      <p>CTF competition details will be announced soon. Get ready to test your skills in web exploitation, reverse engineering, cryptography, and forensics.</p>
-      <a href="../index.html" class="btn btn-outline">&larr; Back to Home</a>
+
+<!-- ─────────── HERO ─────────── -->
+<section class="ctf-hero">
+  <div class="ctf-hero-inner">
+    <div class="ctf-hero-text">
+
+      <h1><span class="blk">BSides Kerala</span><span class="red">CTF</span></h1>
+      <p class="desc">A realistic, hands-on capture-the-flag competition at BSides Kerala 2026. Web, network, IoT, Active Directory, programming and more - built to mirror what real adversaries do, not what textbook puzzles ask.</p>
+      <div class="hero-meta">
+        <span class="meta-pill"><span class="k">format::</span>realistic</span>
+        <span class="meta-pill"><span class="k">mode::</span>onsite</span>
+        <span class="meta-pill"><span class="k">categories::</span>08</span>
+      </div>
+    </div>
+
+
+    <div class="ctf-hero-art">
+      <span class="art-corner tl">[ key_art.png ]</span>
+      <div class="art-placeholder">
+ <img src="images/kathakali.png" alt="BSides Kerala CTF" class="art-img">
+      </div>
+
+      <div class="scan"></div>
     </div>
   </div>
 </section>
+
+
+<section class="sect">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <h2>When and <span class="red">Where</span></h2>
+    </div>
+
+    <div class="info-strip reveal">
+      <div class="info-cell">
+        <div class="lbl">event</div>
+        <div class="val">BSides Kerala <span class="red">2026</span></div>
+        <div class="sub">On the conference day</div>
+      </div>
+      <div class="info-cell">
+        <div class="lbl">date</div>
+        <div class="val">9 May 2026</div>
+        <div class="sub">Saturday</div>
+      </div>
+      <div class="info-cell">
+        <div class="lbl">time</div>
+        <div class="val">6 AM to 6 PM</div>
+        <div class="sub">single-day competition</div>
+      </div>
+      <div class="info-cell">
+        <div class="lbl">venue</div>
+        <div class="val">Kochi Marriot</div>
+        <div class="sub">Kerala, India</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sect">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <h2>What You'll <span class="red">Hack</span></h2>
+      <p class="lead">Eight realistic categories. No isolated puzzles. Every challenge mirrors a real-world target you'd hit on a real engagement.</p>
+    </div>
+
+    <div class="cat-grid">
+
+      <div class="cat-card light reveal">
+        <div class="cat-num"> 01</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Web attacks</h3>
+        <p>Modern web app exploitation against realistic stacks - auth bypasses, injection, deserialisation, SSRF, and chained logic flaws.</p>
+        <div class="cat-tags"><span class="cat-tag">SQLi</span><span class="cat-tag">SSRF</span><span class="cat-tag">auth_bypass</span></div>
+      </div>
+
+      <div class="cat-card dark reveal">
+        <div class="cat-num"> 02</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div>
+        <h3>Network attacks</h3>
+        <p>Network service exploitation, lateral movement, pivoting through segmented zones. Real services on real ports - find the foothold and move.</p>
+        <div class="cat-tags"><span class="cat-tag">pivoting</span><span class="cat-tag">SMB</span><span class="cat-tag">service_exploit</span></div>
+      </div>
+
+      <div class="cat-card light reveal">
+        <div class="cat-num"> 03</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg></div>
+        <h3>IoT &amp; Hardware</h3>
+        <p>Firmware analysis, embedded device exploitation, IoT protocol abuse. Pull the binary, find the vuln, talk to the device.</p>
+        <div class="cat-tags"><span class="cat-tag">firmware</span><span class="cat-tag">UART</span><span class="cat-tag">MQTT</span></div>
+      </div>
+
+      <div class="cat-card dark reveal">
+        <div class="cat-num"> 04</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Active Directory</h3>
+        <p>Kerberoasting, AS-REP roasting, ACL abuse, ADCS misconfigurations, delegation attacks. The full AD playbook against a real forest.</p>
+        <div class="cat-tags"><span class="cat-tag">kerberoasting</span><span class="cat-tag">ACL_abuse</span><span class="cat-tag">ADCS</span></div>
+      </div>
+
+      <div class="cat-card light reveal">
+        <div class="cat-num"> 05</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Programming</h3>
+        <p>Scripting and automation challenges. Write code that solves crypto puzzles, parses protocols, brute-forces APIs, or beats a timer.</p>
+        <div class="cat-tags"><span class="cat-tag">scripting</span><span class="cat-tag">automation</span><span class="cat-tag">algorithms</span></div>
+      </div>
+
+      <div class="cat-card dark reveal">
+        <div class="cat-num"> 06</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+        <h3>Reverse Engineering</h3>
+        <p>Static and dynamic analysis of real binaries. Custom packers, anti-debug tricks, obfuscated logic - find the flag in the bytes.</p>
+        <div class="cat-tags"><span class="cat-tag">static_analysis</span><span class="cat-tag">debugging</span><span class="cat-tag">unpacking</span></div>
+      </div>
+
+      <div class="cat-card light reveal">
+        <div class="cat-num"> 07</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3>Cloud Security</h3>
+        <p>Cloud misconfigurations, IAM privilege escalation, exposed metadata services, container escapes. AWS, Azure, the works.</p>
+        <div class="cat-tags"><span class="cat-tag">IAM</span><span class="cat-tag">S3</span><span class="cat-tag">container_escape</span></div>
+      </div>
+
+      <div class="cat-card dark reveal">
+        <div class="cat-num"> 08</div>
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>Forensics &amp; DFIR</h3>
+        <p>Memory dumps, packet captures, disk images, log analysis. Reconstruct what happened and find what the attacker left behind.</p>
+        <div class="cat-tags"><span class="cat-tag">memory</span><span class="cat-tag">PCAP</span><span class="cat-tag">log_analysis</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sect sect-grey">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+
+      <h2>Rules of <span class="red">Engagement</span></h2>
+      <p class="lead">Read the rules before you turn up. Stay in scope, play hard, and don't be that person.</p>
+    </div>
+
+    <div class="rules-grid">
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 01</span>
+          <h3>Eligibility &amp; Registration</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Open to all <strong>registered BSides Kerala 2026</strong> attendees with a valid conference ticket.</li>
+          <li>CTF registration is required <strong>separately</strong> at the event check-in desk.</li>
+          <li>Slots are limited and assigned on a <strong>first-come, first-served</strong> basis.</li>
+          <li>Bring a valid photo ID for verification at check-in and prize collection.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 02</span>
+          <h3>Team Formation</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Teams of <strong>up to TBA participants</strong>. Solo entries are allowed.</li>
+          <li>Team composition <strong>locks at the start</strong> of the competition. No substitutions afterward.</li>
+          <li>Each team nominates a <strong>captain</strong>, who is accountable for compliance with these rules.</li>
+          <li>One team per participant. <strong>Multi-team play is forbidden</strong> and grounds for disqualification.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 03</span>
+          <h3>Equipment &amp; Access</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Bring your own laptop with your <strong>offensive toolkit pre-installed</strong>. Internet access on-site is not guaranteed for downloads.</li>
+          <li>VPN credentials and lab access are issued at <strong>check-in</strong>, not before.</li>
+          <li>Power outlets are available at the venue. Bring a charger and a backup if you have one.</li>
+          <li>Conference Wi-Fi is provided but is <strong>not</strong> the CTF network - connect to the lab VPN to access the range.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 04</span>
+          <h3>Allowed Techniques</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Any offensive technique is fair game <strong>against in-scope range targets</strong>.</li>
+          <li>Public exploits, custom tooling, exploitation frameworks (Metasploit, Impacket, Sliver, etc.) are all allowed.</li>
+          <li>Automated scanning and brute-forcing <strong>against challenge boxes</strong> is permitted, within reason.</li>
+          <li>Teams may share write-ups and tooling <strong>after</strong> the competition ends - not during.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 05</span>
+          <h3>Out of Scope</h3>
+        </div>
+        <ul class="rule-list">
+          <li><strong>No attacks</strong> against other participants, their devices, or their accounts.</li>
+          <li><strong>No attacks</strong> against the venue network, conference infrastructure, or any system not explicitly listed in scope.</li>
+          <li><strong>No DoS</strong> or resource exhaustion against shared infrastructure or the scoring platform.</li>
+          <li><strong>No attacks</strong> against the scoreboard, the CTF platform, or organizer systems.</li>
+          <li>Persistent backdoors on <strong>shared boxes</strong> that block other teams are forbidden.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 06</span>
+          <h3>Scoring &amp; Tiebreakers</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Each flag carries a <strong>fixed point value</strong> based on category and difficulty.</li>
+          <li><strong>First-blood bonus</strong> awarded to the first team to capture each flag.</li>
+          <li>Tiebreakers resolved by <strong>total time-to-capture</strong> across all flags.</li>
+          <li>Live scoreboard available throughout the competition. Updates may have a small lag.</li>
+          <li>Organizer decisions on scoring disputes are <strong>final</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 07</span>
+          <h3>Disqualification</h3>
+        </div>
+        <ul class="rule-list">
+          <li><strong>Flag sharing or collusion</strong> between teams is an immediate DQ.</li>
+          <li>Any out-of-scope attack results in <strong>immediate DQ</strong>, no warnings.</li>
+          <li>Disrupting other teams' access or progress results in <strong>DQ</strong>.</li>
+          <li>Repeated platform abuse or attacks against organizer infrastructure result in <strong>DQ and ejection</strong> from the venue.</li>
+          <li>Disqualified teams forfeit any prize eligibility.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 08</span>
+          <h3>Conduct &amp; Disputes</h3>
+        </div>
+        <ul class="rule-list">
+          <li>The BSides Kerala <strong>Code of Conduct</strong> applies for the entire duration of the CTF.</li>
+          <li>Direct any complaints or disputes to the <strong>CTF organizers</strong> at the help desk - do not air them publicly.</li>
+          <li>Found a bug in the platform or the range itself? Report it <strong>privately</strong>. Do not exploit it for points.</li>
+          <li>Be respectful to other competitors, the organizers, and the venue staff.</li>
+          <li>Organizer decisions on conduct issues are <strong>final and binding</strong>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="rule-note reveal">
+      <strong>By participating, you agree</strong> to abide by these rules and the <a href="https://bsideskerala.in/code-of-conduct">BSides Kerala Code of Conduct</a>. Rules may be updated before the event - the latest version on this page is authoritative. Questions? <a href="../contact/index.html">Contact the organizers</a>.
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="sect sect-grey">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+   
+      <h2>Top of the <span class="red">Board</span></h2>
+      <p class="lead">Three teams take the podium. Full prize pool announced soon.</p>
+    </div>
+
+    <div class="prize-grid">
+      <div class="prize-card dark reveal">
+        <div class="prize-rank">2nd Place</div>
+        <div class="prize-medal">02</div>
+        <p> prize_tba</p>
+      </div>
+      <div class="prize-card first reveal">
+        <div class="prize-rank">1st Place</div>
+        <div class="prize-medal">01</div>
+        <p> prize_tba</p>
+      </div>
+      <div class="prize-card dark reveal">
+        <div class="prize-rank">3rd Place</div>
+        <div class="prize-medal">03</div>
+        <p> prize_tba</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="sect">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <div class="eyebrow"> ctf_sponsors</div>
+      <h2>Powered <span class="red">By</span></h2>
+      <p class="lead">Thanks to the sponsors making the BSides Kerala CTF happen.</p>
+    </div>
+
+    <div class="sponsor-grid reveal">
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 01</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 02</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 03</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 04</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 05</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 06</span></div>
+    </div>
+  </div>
+</section>
+-->
+<section class="ctf-cta-section">
+  <div class="cta-inner">
+    <h2>Ready to <span class="red">Breach?</span></h2>
+    <p>Register for BSides Kerala 2026. CTF access is open to all conference attendees - bring a team or roll solo.</p>
+    <div class="ctas">
+      <a href="https://konfhub.com/bsides-kerala-2026" class="btn btn-red">Register Now</a>
+      <a href="../contact/index.html" class="btn btn-ol">Contact Organizers</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
 <footer class="ft">
   <div class="ft-inner">
     <div class="ft-grid">
-<div class="ft-brand">
-  <img src="../img/logo.png" alt="BSides Kerala">
-  <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
-
-  <div class="ft-socials">
-    <a href="https://x.com/bsideskerala" class="ft-social" aria-label="X (Twitter)" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/company/bsideskerala" class="ft-social" aria-label="LinkedIn" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/bsideskerala" class="ft-social" aria-label="Instagram" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/bsideskerala" class="ft-social" aria-label="Facebook" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
-    </a>
-    <a href="https://www.youtube.com/@bsideskerala" class="ft-social" aria-label="YouTube" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-    </a>
-    <a href="https://github.com/bsideskerala" class="ft-social" aria-label="GitHub" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-    </a>
-  </div>
-</div>
+      <div class="ft-brand">
+        <img src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala">
+        <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
+      </div>
       <div class="ft-col">
         <h4>Conference 2026</h4>
         <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
@@ -92,7 +381,7 @@
       </div>
       <div class="ft-col">
         <h4>Contact Us</h4>
-        <a href="tel:+919496608272"><b>Phone:</b> +91 929201 1337</a>
+        <a href="tel:+919292011337"><b>Phone:</b> +91 929201 1337</a>
         <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
       </div>
     </div>
@@ -102,9 +391,7 @@
     </div>
   </div>
 </footer>
-<div class="ft-banner">
-  <img src="../img/footer-img.png" alt="BSides Kerala 2026">
-</div>
+
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});

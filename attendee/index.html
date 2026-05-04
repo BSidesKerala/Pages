@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I'm Attending Poster Generator | BSides kerala 2026</title>
+<meta name="description" content="Generate your 'I'm attending' poster. Upload your photo, add your name and designation, and build posters." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="I'm Attending BSides kerala 2026 Poster Generator" />
+<meta property="og:description" content="Generate your 'I'm attending' poster. Upload your photo, add your name and designation, and download." />
+<meta property="og:image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="BSides kerala 2026 | I'm Attending Poster Generator" />
+<meta name="twitter:description" content="Generate your 'I'm attending' poster. Upload your photo, add your name and designation, and download." />
+<meta name="twitter:image" content="template.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f8fafc;
+    --surface-3: #f1f5f9;
+    --border: #e5e7eb;
+    --border-strong: #d1d5db;
+    --text: #0f172a;
+    --text-2: #1f2937;
+    --muted: #6b7280;
+    --red: #dc2626;
+    --red-hover: #b91c1c;
+    --red-soft: #fee2e2;
+    --radius: 14px;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,0.05);
+    --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+    --shadow-lg: 0 12px 32px rgba(15,23,42,0.08);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--surface-2);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 28px;
+    border-bottom: 1px solid var(--border);
+    background: #ffffff;
+    z-index: 50;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+  .brand-text { line-height: 1.1; }
+  .brand-text .title {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  .brand-text .title em { color: var(--red); font-style: normal; }
+  .brand-text .sub { font-size: 10px; color: var(--muted); margin-top: 2px; letter-spacing: 0.4px; }
+  header .tag {
+    font-size: 10px;
+    color: var(--muted);
+    padding: 5px 11px;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 999px;
+    background: var(--surface-2);
+  }
+
+  main {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 380px minmax(0, 1fr);
+    gap: 20px;
+    padding: 18px 24px;
+    max-width: 1680px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .panel.controls { overflow-y: auto; }
+  .preview-wrap { min-width: 0; min-height: 0; }
+  @media (max-width: 1024px) {
+    body { height: auto; }
+    main {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+    .panel.controls { overflow: visible; }
+    .preview-wrap { height: auto; }
+    .preview-wrap > .panel { flex: none; }
+    .canvas-frame {
+      width: min(100%, 560px);
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 640px) {
+    header { padding: 10px 16px; }
+    .brand { gap: 10px; }
+    .brand-logo { height: 32px; }
+    .brand-text .title { font-size: 17px; letter-spacing: 1.2px; }
+    .brand-text .sub { font-size: 9px; }
+    header .tag { display: none; }
+
+    main {
+      padding: 12px;
+      gap: 12px;
+    }
+    .panel { padding: 16px; border-radius: 12px; }
+    .panel h2 { font-size: 16px; }
+
+    .field input[type="text"],
+    .field input[type="url"],
+    .field input[type="number"],
+    .field textarea {
+      font-size: 16px;
+      padding: 10px 12px;
+    }
+
+    .drop { padding: 16px 12px; }
+
+    .actions { gap: 8px; }
+    .btn { padding: 12px 14px; font-size: 13px; }
+
+    .canvas-stage { padding: 10px; }
+    .canvas-frame { width: 100%; }
+
+    .post-section { margin-top: 16px; padding-top: 12px; }
+    .post-section .post-text {
+      font-size: 14px;
+      height: 160px;
+    }
+
+    .toast {
+      bottom: 16px;
+      font-size: 12px;
+      padding: 10px 18px;
+    }
+
+    footer {
+      font-size: 9px;
+      letter-spacing: 1px;
+      padding: 8px;
+    }
+  }
+  @media (max-width: 380px) {
+    .brand-text .sub { display: none; }
+    .actions { flex-direction: column; }
+    .btn { flex: none; width: 100%; }
+  }
+
+  .panel {
+    border-radius: var(--radius);
+    padding: 20px 22px;
+  }
+  .panel h2 {
+    margin: 0 0 4px 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    color: var(--text);
+  }
+  .panel h2 .accent { color: var(--red); }
+  .panel p.helper {
+    margin: 0 0 16px 0;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .field label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .field input[type="text"],
+  .field input[type="url"],
+  .field input[type="number"],
+  .field textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .field input:focus, .field textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(220,38,38,0.15);
+  }
+  .field textarea { line-height: 1.55; resize: vertical; }
+
+  .drop {
+    border: 1.5px dashed var(--border-strong);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .15s ease;
+    background: var(--surface-2);
+    display: block;
+  }
+  .drop:hover { border-color: var(--red); background: var(--red-soft); }
+  .drop.drag { border-color: var(--red); background: var(--red-soft); }
+  .drop.has-file { border-style: solid; border-color: var(--red); background: var(--red-soft); }
+  .drop .icon {
+    width: 30px; height: 30px;
+    margin: 0 auto 6px;
+    background: var(--red);
+    color: white;
+    display: grid; place-items: center;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  .drop .title { font-weight: 600; font-size: 12px; color: var(--text); }
+  .drop .sub { font-size: 10px; color: var(--muted); margin-top: 3px; letter-spacing: 0.3px; }
+  .drop input[type="file"] { display: none; }
+
+  .actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+  .btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .12s, transform .1s, box-shadow .15s;
+    color: white;
+    flex: 1;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .btn-primary {
+    background: var(--red);
+    box-shadow: 0 4px 12px rgba(220,38,38,0.25);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--red-hover);
+    box-shadow: 0 6px 16px rgba(220,38,38,0.35);
+  }
+  .btn-ghost {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+  }
+  .btn-ghost:hover { border-color: var(--text-2); background: var(--surface-2); }
+
+  .preview-wrap { display: flex; flex-direction: column; gap: 12px; height: 100%; }
+  .preview-wrap > .panel {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 18px;
+  }
+
+  .canvas-stage {
+    flex: 1;
+    min-height: 0;
+    background:
+      linear-gradient(45deg, var(--surface-3) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--surface-3) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--surface-3) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--surface-3) 75%);
+    background-size: 24px 24px;
+    background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+    background-color: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .canvas-frame {
+    position: relative;
+    width: min(100%, calc(100vh - 245px));
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+  }
+  .empty-state {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; color: var(--muted);
+    border: 1px dashed var(--border-strong);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+  .empty-state .big {
+    width: 56px; height: 56px;
+    margin: 0 auto 12px;
+    background: var(--red);
+    color: white;
+    display: grid; place-items: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+    border-radius: 10px;
+  }
+  .empty-state h3 {
+    margin: 0 0 6px;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .empty-state p { margin: 0 16px; font-size: 12px; }
+  .empty-state code {
+    background: var(--surface-3);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--red);
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+    box-shadow: var(--shadow-lg);
+    cursor: grab;
+    touch-action: none;
+    background: #fff;
+  }
+  canvas.grabbing { cursor: grabbing; }
+
+  .stage-hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+  .stage-hint .red { color: var(--red); font-weight: 700; }
+
+  .post-section {
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  .post-section .post-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .post-section .section-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .post-section .section-label .accent { color: var(--red); }
+  .post-section .post-text {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text-2);
+    font-family: inherit;
+    height: 186px;
+    resize: none;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s, background .15s;
+  }
+  .post-section .post-text:focus {
+    border-color: var(--red);
+    background: var(--surface);
+    box-shadow: 0 0 0 3px rgba(220,38,38,0.12);
+  }
+  .btn-mini {
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .12s;
+  }
+  .btn-mini:hover { background: var(--red-hover); }
+
+  .toast {
+    position: fixed; bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--red);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+    z-index: 100;
+    box-shadow: 0 8px 24px rgba(220,38,38,0.35);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  footer {
+    flex-shrink: 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 10px;
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    background: #ffffff;
+  }
+  footer .red { color: var(--red); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img class="brand-logo" src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala" />
+    <div class="brand-text">
+      <div class="title">BSides Kerala <em>2026</em></div>
+      <div class="sub">Let the world know you are attending BSides Kerala 2026.</div>
+    </div>
+  </div>
+  <div class="tag">See you all there at BSides Kerala 2026.</div>
+</header>
+
+<main>
+  <section class="panel controls">
+    <h2>Build your <span class="accent">poster</span></h2>
+    <p class="helper">Upload your photo, add your details, drag to position, download.</p>
+
+    <div class="field">
+      <label>Your photo</label>
+      <label class="drop" id="dropPhoto">
+        <div class="icon">+</div>
+        <div class="title" id="photoTitle">Upload your photo</div>
+        <div class="sub" id="photoSub">Square crop, LinkedIn style</div>
+        <input type="file" id="photoInput" accept="image/*" />
+      </label>
+    </div>
+
+    <div class="field">
+      <label>Full name</label>
+      <input type="text" id="nameInput" placeholder="JANE DOE" maxlength="40" />
+    </div>
+    <div class="field">
+      <label>Designation</label>
+      <input type="text" id="designationInput" placeholder="Security Engineer at Acme" maxlength="80" />
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="downloadBtn" disabled>Download</button>
+      <button class="btn btn-ghost" id="resetBtn">Reset</button>
+    </div>
+
+    <div class="post-section">
+      <div class="post-head">
+        <span class="section-label">LinkedIn <span class="accent">post</span></span>
+        <button class="btn-mini" id="copyBtn">Copy</button>
+      </div>
+      <textarea class="post-text" id="postText" rows="4" spellcheck="false"></textarea>
+    </div>
+  </section>
+
+  <section class="preview-wrap">
+    <div class="panel">
+      <h2 style="margin-bottom:10px;">Live <span class="accent">preview</span></h2>
+      <div class="canvas-stage">
+        <div class="canvas-frame">
+          <div class="empty-state" id="emptyState">
+            <div class="big">!</div>
+            <h3>Template not found</h3>
+            <p>Place your 1200x1200 template at <code>template.png</code><br>(in the same folder as <code>index.html</code>)</p>
+          </div>
+          <canvas id="canvas" width="1200" height="1200" style="display:none"></canvas>
+        </div>
+      </div>
+      <div class="stage-hint">
+        <span class="red">Tip:</span> drag photo or text on the preview to reposition
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast">Copied</div>
+
+<footer>
+  Built by Abx with love and vanilla HTML/CSS/JS. <span class="red">Dont worry, Nothing is uploaded.</span>
+</footer>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const TEMPLATE_PATH = 'template.png';
+  const CANVAS_W = 1200;
+  const CANVAS_H = 1200;
+  const NAME_COLOR = '#ffffff';
+  const DESIG_COLOR = '#ffffff';
+
+  const state = {
+    templateImg: null,
+    photoImg: null,
+    name: '',
+    designation: '',
+    photoX: 602,
+    photoY: 674,
+    photoSize: 450,
+    nameY: 947,
+    nameFontSize: 55,
+    desigY: 997,
+    desigFontSize: 25,
+  };
+
+  const canvas = $('canvas');
+  const ctx = canvas.getContext('2d');
+  const emptyState = $('emptyState');
+
+  (function preload() {
+    const img = new Image();
+    img.onload = () => { state.templateImg = img; render(); };
+    img.onerror = () => {};
+    img.src = TEMPLATE_PATH + '?t=' + Date.now();
+  })();
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => render());
+  }
+
+
+  function bindDropzone(dropEl, inputEl, onFile) {
+    dropEl.addEventListener('dragover', (e) => { e.preventDefault(); dropEl.classList.add('drag'); });
+    dropEl.addEventListener('dragleave', () => dropEl.classList.remove('drag'));
+    dropEl.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropEl.classList.remove('drag');
+      if (e.dataTransfer.files && e.dataTransfer.files[0]) onFile(e.dataTransfer.files[0]);
+    });
+    inputEl.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files[0]) onFile(e.target.files[0]);
+    });
+  }
+
+  function loadImage(file) {
+    return new Promise((resolve, reject) => {
+      if (!file.type.startsWith('image/')) return reject(new Error('Not an image'));
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = e.target.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  bindDropzone($('dropPhoto'), $('photoInput'), async (file) => {
+    try {
+      const img = await loadImage(file);
+      state.photoImg = img;
+      $('photoTitle').textContent = file.name;
+      $('photoSub').textContent = `${img.width} × ${img.height}`;
+      $('dropPhoto').classList.add('has-file');
+      render();
+    } catch { toast('Could not load photo'); }
+  });
+  $('nameInput').addEventListener('input', (e) => { state.name = e.target.value; render(); updatePost(); });
+  $('designationInput').addEventListener('input', (e) => { state.designation = e.target.value; render(); updatePost(); });
+
+  function syncCoordInputs() {}
+
+  function render() {
+    if (!state.templateImg) {
+      canvas.style.display = 'none';
+      emptyState.style.display = 'flex';
+      $('downloadBtn').disabled = true;
+      return;
+    }
+    emptyState.style.display = 'none';
+    canvas.style.display = 'block';
+    $('downloadBtn').disabled = false;
+
+    canvas.width = CANVAS_W;
+    canvas.height = CANVAS_H;
+
+    ctx.drawImage(state.templateImg, 0, 0, CANVAS_W, CANVAS_H);
+
+    if (state.photoImg) {
+      const s = state.photoSize;
+      const x = state.photoX - s / 2;
+      const y = state.photoY - s / 2;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(x, y, s, s);
+      ctx.closePath();
+      ctx.clip();
+      const ph = state.photoImg;
+      const ratio = Math.max(s / ph.width, s / ph.height);
+      const drawW = ph.width * ratio;
+      const drawH = ph.height * ratio;
+      ctx.drawImage(ph, state.photoX - drawW/2, state.photoY - drawH/2, drawW, drawH);
+      ctx.restore();
+    }
+
+    const centerX = CANVAS_W / 2;
+
+    if (state.name) {
+      ctx.save();
+      ctx.font = `400 ${state.nameFontSize}px Anton, sans-serif`;
+      ctx.fillStyle = NAME_COLOR;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(state.name.toUpperCase(), centerX, state.nameY);
+      ctx.restore();
+    }
+
+    if (state.designation) {
+      ctx.save();
+      ctx.font = `500 ${state.desigFontSize}px Poppins, sans-serif`;
+      ctx.fillStyle = DESIG_COLOR;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(toTitleCase(state.designation), centerX, state.desigY);
+      ctx.restore();
+    }
+  }
+
+  function toTitleCase(s) {
+    return s.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
+  let dragging = null;
+
+  function getCanvasCoords(clientX, clientY) {
+    const rect = canvas.getBoundingClientRect();
+    const x = (clientX - rect.left) * (CANVAS_W / rect.width);
+    const y = (clientY - rect.top) * (CANVAS_H / rect.height);
+    return { x, y };
+  }
+
+  function hitTest(x, y) {
+    const centerX = CANVAS_W / 2;
+    if (state.name) {
+      ctx.font = `400 ${state.nameFontSize}px Anton, sans-serif`;
+      const w = Math.max(40, ctx.measureText(state.name.toUpperCase()).width);
+      const h = state.nameFontSize;
+      if (Math.abs(x - centerX) < w/2 + 8 && Math.abs(y - state.nameY) < h/2 + 8) return { key: 'name' };
+    }
+    if (state.designation) {
+      ctx.font = `500 ${state.desigFontSize}px Poppins, sans-serif`;
+      const w = Math.max(40, ctx.measureText(toTitleCase(state.designation)).width);
+      const h = state.desigFontSize;
+      if (Math.abs(x - centerX) < w/2 + 8 && Math.abs(y - state.desigY) < h/2 + 8) return { key: 'desig' };
+    }
+    if (state.photoImg) {
+      const s = state.photoSize;
+      if (Math.abs(x - state.photoX) <= s/2 && Math.abs(y - state.photoY) <= s/2) return { key: 'photo' };
+    }
+    return null;
+  }
+
+  function elementPos(key) {
+    const centerX = CANVAS_W / 2;
+    if (key === 'photo') return { x: state.photoX, y: state.photoY };
+    if (key === 'name')  return { x: centerX,      y: state.nameY };
+    if (key === 'desig') return { x: centerX,      y: state.desigY };
+  }
+  function setElementPos(key, x, y) {
+    x = Math.max(0, Math.min(CANVAS_W, Math.round(x)));
+    y = Math.max(0, Math.min(CANVAS_H, Math.round(y)));
+    if (key === 'photo') { state.photoX = x; state.photoY = y; }
+    if (key === 'name')  { state.nameY  = y; }
+    if (key === 'desig') { state.desigY = y; }
+  }
+
+  function startDrag(clientX, clientY) {
+    if (!state.templateImg) return;
+    const { x, y } = getCanvasCoords(clientX, clientY);
+    const hit = hitTest(x, y);
+    if (!hit) return;
+    const pos = elementPos(hit.key);
+    dragging = { key: hit.key, dx: x - pos.x, dy: y - pos.y };
+    canvas.classList.add('grabbing');
+  }
+  function moveDrag(clientX, clientY) {
+    if (!dragging) return;
+    const { x, y } = getCanvasCoords(clientX, clientY);
+    setElementPos(dragging.key, x - dragging.dx, y - dragging.dy);
+    syncCoordInputs();
+    render();
+  }
+  function endDrag() {
+    dragging = null;
+    canvas.classList.remove('grabbing');
+  }
+
+  canvas.addEventListener('mousedown', (e) => startDrag(e.clientX, e.clientY));
+  window.addEventListener('mousemove', (e) => moveDrag(e.clientX, e.clientY));
+  window.addEventListener('mouseup', endDrag);
+
+  canvas.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      e.preventDefault();
+      startDrag(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: false });
+  canvas.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 1) {
+      e.preventDefault();
+      moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: false });
+  canvas.addEventListener('touchend', endDrag);
+
+  canvas.addEventListener('mousemove', (e) => {
+    if (dragging) return;
+    const { x, y } = getCanvasCoords(e.clientX, e.clientY);
+    canvas.style.cursor = hitTest(x, y) ? 'grab' : 'default';
+  });
+
+  $('downloadBtn').addEventListener('click', () => {
+    if (!state.templateImg) return;
+    const link = document.createElement('a');
+    const safe = (state.name || 'attendx-poster').replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+    link.download = `${safe}-poster.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    toast('Downloaded');
+  });
+
+  function updatePost() {
+    $('postText').value =
+`I'm attending BSides Kerala!
+Looking forward to amazing talks, hands-on sessions, and being a part of the hacking and cyber security community of Kerala.
+Let's connect if you are coming to BSides Kerala. Drop a comment or DM and we will meet up. See you  all there at BSides kerala 2026!
+Know more about Security BSides kerala: https://bsideskerala.in
+
+#BSidesKerala #hacker #CXO #leadership #CyberSecurity #Community`;
+  }
+  updatePost();
+
+  $('copyBtn').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText($('postText').value);
+      toast('Copied');
+    } catch {
+      $('postText').select();
+      document.execCommand('copy');
+      toast('Copied');
+    }
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    state.photoImg = null;
+    state.name = state.designation = '';
+    $('nameInput').value = ''; $('designationInput').value = '';
+    $('photoInput').value = '';
+    $('photoTitle').textContent = 'Upload your photo';
+    $('photoSub').textContent = 'Square crop, LinkedIn style';
+    $('dropPhoto').classList.remove('has-file');
+    render(); updatePost();
+  });
+
+  let toastTimer;
+  function toast(msg) {
+    const t = $('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 1600);
+  }
+})();
+</script>
+</body>
+</html>

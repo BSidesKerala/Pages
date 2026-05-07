@@ -1,0 +1,124 @@
+
+.sp-tiers{background:#fff;color:var(--black,#0f172a)}
+
+/* Section header */
+.sp-section-head{text-align:center;padding:5.5rem 5% 4rem;background:#fff;max-width:1240px;margin:0 auto;width:100%;box-sizing:border-box}
+.sp-section-head .eyebrow{font-family:'JetBrains Mono','Space Mono',monospace;font-size:.78rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--red,#dc2626);margin-bottom:1.1rem;display:block}
+.sp-section-head h2{font-family:'Bebas Neue','Anton',sans-serif;font-size:clamp(2.8rem,5.4vw,4.6rem);font-weight:400;letter-spacing:.015em;line-height:.95;margin:0;color:var(--black,#0f172a);text-transform:uppercase}
+.sp-section-head h2 em{color:var(--red,#dc2626);font-style:normal}
+.sp-section-head .lead{margin:1.4rem auto 0;max-width:640px;color:var(--g500,#4b5563);font-size:1rem;line-height:1.55}
+
+/* ─── Tier strip (full width, alternating bg) ─── */
+.sp-tier{padding:4rem 5%;width:100%;box-sizing:border-box}
+.sp-tier:nth-of-type(odd){background:var(--g50,#f7f7f9)}
+.sp-tier:nth-of-type(even){background:#fff}
+.sp-tier-inner{max-width:1240px;margin:0 auto}
+
+/* Tier head — same eyebrow + heading pattern, scaled down */
+.sp-tier-head{text-align:center;margin-bottom:2.4rem}
+.sp-tier-head .eyebrow{font-family:'JetBrains Mono','Space Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red,#dc2626);margin-bottom:.7rem;display:block}
+.sp-tier-head h3{font-family:'Bebas Neue','Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.025em;line-height:1;margin:0;color:var(--black,#0f172a);font-size:clamp(2rem,3.4vw,2.8rem)}
+.sp-tier-head h3 em{color:var(--red,#dc2626);font-style:normal}
+.sp-tier.is-title .sp-tier-head h3{font-size:clamp(2.6rem,4.6vw,3.8rem);letter-spacing:.04em}
+.sp-tier.is-diamond .sp-tier-head h3{font-size:clamp(2.3rem,4vw,3.3rem);letter-spacing:.03em}
+
+/* ─── Card rows ─── */
+.sp-row{display:grid;gap:1.1rem;justify-content:center;align-items:stretch}
+/* Multi-card rows get extra breathing room — wider container + bigger gaps */
+.sp-row.r-2,.sp-row.r-3,.sp-row.r-gold,.sp-row.r-fluid{gap:1.8rem}
+.sp-row.r-title{grid-template-columns:minmax(0,860px)}
+.sp-row.r-diamond{grid-template-columns:minmax(0,700px)}
+.sp-row.r-1{grid-template-columns:minmax(0,560px)}
+.sp-row.r-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px;margin:0 auto}
+.sp-row.r-3{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto}
+.sp-row.r-gold{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1180px;margin:0 auto}
+.sp-row.r-gold>.sp-card{min-height:180px;padding:2.4rem 1.8rem}
+.sp-row.r-gold>.sp-card img{max-height:110px}
+.sp-row.r-gold>.sp-card:last-child:nth-child(3n+1){grid-column:2 / span 1}
+.sp-row.r-fluid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:1180px;margin:0 auto}
+
+/* ─── Cards ─── */
+.sp-card{background:#fff;border:1px solid var(--g200,#e5e7eb);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:2rem 1.6rem;min-height:140px;transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+.sp-card.lg{min-height:200px;padding:2.6rem 2rem}
+.sp-card.xl{min-height:260px;padding:3rem 2.4rem}
+.sp-card.xxl{min-height:340px;padding:3.6rem 3rem;border-width:2px}
+.sp-card.sm{min-height:120px;padding:1.6rem 1.2rem}
+.sp-card:hover{border-color:var(--black,#0f172a);transform:translateY(-3px);box-shadow:0 10px 30px -10px rgba(0,0,0,.12)}
+.sp-card.xxl:hover{border-color:var(--red,#dc2626);box-shadow:0 20px 50px -15px rgba(220,38,38,.18)}
+.sp-card>a{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+/* Cards that contain a stacked logo + social handle row */
+.sp-card.has-social{flex-direction:column;justify-content:space-between;gap:1.6rem;padding-top:2.8rem;padding-bottom:1.6rem}
+.sp-card.has-social>a.sp-card-logo{flex:1;width:100%;height:auto;min-height:0}
+.sp-card.has-social .sp-social{margin-top:0;width:100%}
+
+.sp-card img{max-height:80px;max-width:100%;object-fit:contain;transform:scale(1);transition:transform .35s cubic-bezier(.2,.7,.3,1.1)}
+.sp-card.lg img{max-height:140px}
+.sp-card.xl img{max-height:180px}
+.sp-card.xxl img{max-height:230px}
+.sp-card.sm img{max-height:55px}
+.sp-card:hover img{transform:scale(1.08)}
+.sp-card.xl:hover img,.sp-card.xxl:hover img{transform:scale(1.1)}
+.sp-card.sm:hover img{transform:scale(1.06)}
+
+.sp-card:has(.sp-ph){border-style:dashed;border-color:var(--g300,#d1d5db);background:linear-gradient(180deg,#fff 0%,#fafafa 100%)}
+.sp-card:has(.sp-ph):hover{border-color:var(--red,#dc2626);background:#fff}
+.sp-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.55rem;text-align:center;line-height:1.25;font-family:'Bebas Neue','Anton',sans-serif;font-weight:400;font-size:1.4rem;letter-spacing:.04em;text-transform:uppercase;color:var(--black,#0f172a)}
+.sp-ph small,.sp-ph .tba{font-family:'JetBrains Mono','Space Mono',monospace;font-size:.62rem;font-weight:700;letter-spacing:.22em;color:var(--red,#dc2626);text-transform:uppercase}
+.sp-card.xl .sp-ph{font-size:2rem}
+.sp-card.xxl .sp-ph{font-size:2.6rem;gap:.8rem}
+.sp-card.xl .sp-ph small,.sp-card.xl .sp-ph .tba{font-size:.7rem}
+.sp-card.xxl .sp-ph small,.sp-card.xxl .sp-ph .tba{font-size:.78rem}
+
+/* ─── Social handle row (inside Title + Diamond cards) ─── */
+.sp-social{display:flex;justify-content:center;align-items:center;gap:.6rem;flex-wrap:wrap}
+.sp-social a{display:inline-flex;align-items:center;gap:.5rem;color:var(--g600,#475569);text-decoration:none;font-family:'JetBrains Mono','Space Mono',monospace;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.55rem .95rem;border:1px solid var(--g200,#e5e7eb);border-radius:999px;background:var(--g50,#f7f7f9);transition:color .2s ease,border-color .2s ease,background .2s ease,transform .2s ease}
+.sp-social a:hover{color:var(--red,#dc2626);border-color:var(--red,#dc2626);background:#fff;transform:translateY(-1px)}
+.sp-social svg{width:14px;height:14px;flex-shrink:0;fill:currentColor}
+
+/* ─── Responsive breakpoints ─── */
+@media (max-width:880px){
+  .sp-section-head{padding:4.5rem 5% 3.5rem}
+  .sp-tier{padding:3.2rem 5%}
+  .sp-tier-head{margin-bottom:2rem}
+  .sp-row.r-2,.sp-row.r-3,.sp-row.r-gold,.sp-row.r-fluid{gap:1.3rem}
+  .sp-row.r-gold{max-width:760px}
+  .sp-row.r-gold>.sp-card{min-height:160px;padding:2rem 1.4rem}
+  .sp-row.r-gold>.sp-card img{max-height:95px}
+  .sp-row.r-3{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px}
+  .sp-row.r-3>.sp-card:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;max-width:280px}
+}
+@media (max-width:640px){
+  .sp-section-head{padding:3.5rem 5% 3rem}
+  .sp-section-head .lead{font-size:.95rem}
+  .sp-tier{padding:2.8rem 5%}
+  .sp-tier-head{margin-bottom:1.6rem}
+  .sp-row{gap:.85rem}
+  .sp-row.r-gold{grid-template-columns:repeat(2,minmax(0,1fr));max-width:100%}
+  .sp-row.r-gold>.sp-card{min-height:140px;padding:1.8rem 1.2rem}
+  .sp-row.r-gold>.sp-card img{max-height:80px}
+  .sp-row.r-gold>.sp-card:last-child:nth-child(3n+1){grid-column:auto}
+  .sp-row.r-gold>.sp-card:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;max-width:48%}
+  .sp-row.r-3{grid-template-columns:1fr;max-width:380px}
+  .sp-row.r-3>.sp-card:last-child:nth-child(odd){grid-column:auto;max-width:none}
+  .sp-row.r-2{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .sp-row.r-fluid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .sp-card{padding:1.6rem 1.2rem;min-height:120px}
+  .sp-card.lg{min-height:160px;padding:2rem 1.4rem}
+  .sp-card.xl{min-height:200px;padding:2.2rem 1.6rem}
+  .sp-card.xxl{min-height:240px;padding:2.4rem 1.8rem}
+  .sp-card.has-social{padding-top:2rem;padding-bottom:1.2rem;gap:1.2rem}
+  .sp-card img{max-height:65px}
+  .sp-card.lg img{max-height:110px}
+  .sp-card.xl img{max-height:140px}
+  .sp-card.xxl img{max-height:170px}
+  .sp-social{margin-top:1.4rem;gap:.5rem}
+  .sp-social a{padding:.5rem .8rem;font-size:.62rem;letter-spacing:.14em}
+}
+@media (max-width:420px){
+  .sp-row.r-gold{grid-template-columns:1fr;max-width:280px;margin:0 auto}
+  .sp-row.r-gold>.sp-card:last-child:nth-child(odd){grid-column:auto;max-width:none;justify-self:auto}
+  .sp-row.r-fluid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sp-social a span{display:none}
+  .sp-social a{padding:.55rem .7rem}
+  .sp-social svg{width:16px;height:16px}
+}

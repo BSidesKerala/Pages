@@ -45,7 +45,7 @@ img{max-width:100%;height:auto;display:block}
 .card-img{overflow:hidden}
 .card-img img{width:100%;aspect-ratio:1;object-fit:cover;transition:.3s}
 .card:hover .card-img img{transform:scale(1.03)}
-.card-body{padding:1.5rem}
+.card-body{padding:.5rem;}
 .card-body h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.04em;margin-bottom:.25rem}
 .card-body p{font-size:.95rem;color:var(--g500);line-height:1.5}
 .coming-soon{text-align:center;padding:5rem 2rem;max-width:700px;margin:0 auto}

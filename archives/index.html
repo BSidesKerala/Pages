@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSides Kerala Event Archives</title>
+
+<meta name="description" content="Archives of past Security BSides Kerala conferences: speakers, schedules, trainings and CTF from every edition.">
+<meta name="author" content="BSides Kerala">
+<meta name="keywords" content="BSides, Kerala, cyber security, conference, archives">
+<meta property="og:title" content="BSides Kerala Event Archives">
+<meta property="og:description" content="Browse past editions of Security BSides Kerala.">
+<meta property="og:type" content="website">
+<meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="../img/favicon.png" rel="icon">
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#DC2626;--red-h:#EF4444;--green:#16A34A;--green-l:#22C55E;--black:#09090B;--black2:#18181B;--white:#FFF;--g100:#F4F4F5;--g200:#E4E4E7;--g300:#D4D4D8;--g400:#A1A1AA;--g500:#71717A;--g600:#52525B}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--black);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4%;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:.3s}
+.nav.sticky{padding:.6rem 4%;box-shadow:0 4px 30px rgba(0,0,0,.06)}
+.nav-logo{display:flex;align-items:center;gap:.6rem}
+.nav-logo img{height:40px}
+.nav-logo b{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;letter-spacing:.06em}
+.nav-logo b em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;align-items:center;gap:.3rem;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--g600);padding:.5rem .8rem;border-radius:8px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--black);background:var(--g100)}
+.nav-links .cta-link{background:var(--red);color:#fff;font-weight:600;padding:.55rem 1.4rem;border-radius:8px;margin-left:.3rem}
+.nav-links .cta-link:hover{background:var(--red-h)}
+.burger{display:none;background:0;border:1px solid var(--g300);border-radius:8px;padding:.4rem .6rem;cursor:pointer;font-size:1.3rem;color:var(--black)}
+
+/* HERO */
+.page-hero{background:var(--black);color:#fff;padding:10rem 5% 5rem;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:80px 80px}
+.page-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(220,38,38,.15),transparent 70%);top:-20%;right:-5%}
+.page-hero .inner{position:relative;z-index:1;max-width:1200px;margin:0 auto}
+.page-hero .label{font-family:'JetBrains Mono',monospace;font-size:.85rem;text-transform:uppercase;letter-spacing:.16em;color:var(--green-l);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.page-hero .label::before{content:'';width:24px;height:2px;background:var(--green-l)}
+.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.92;letter-spacing:.05em;margin-bottom:1rem}
+.page-hero h1 .red{color:var(--red)}
+.page-hero p{font-size:clamp(1.1rem,1.8vw,1.35rem);color:rgba(255,255,255,.5);max-width:600px;line-height:1.7}
+
+/* ARCHIVE GRID */
+.archive-sect{padding:5rem 5%}
+.wrap{max-width:1200px;margin:0 auto}
+.archive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem}
+.year-card{display:flex;flex-direction:column;border:1px solid var(--g200);border-radius:18px;overflow:hidden;background:var(--white);transition:.3s;position:relative}
+.year-card:hover{box-shadow:0 16px 50px rgba(0,0,0,.1);transform:translateY(-6px);border-color:var(--g300)}
+.year-card-img{position:relative;overflow:hidden;background:var(--black2)}
+.year-card-img img{width:100%;aspect-ratio:1.91;object-fit:cover;transition:.4s}
+.year-card:hover .year-card-img img{transform:scale(1.04)}
+.year-badge{position:absolute;top:1rem;left:1rem;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.08em;background:var(--red);color:#fff;padding:.15rem .9rem;border-radius:8px;z-index:2}
+.year-card-body{padding:1.6rem 1.6rem 1.8rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.year-card-body h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;line-height:1}
+.year-card-body h2 em{font-style:normal;color:var(--red)}
+.year-meta{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--green);letter-spacing:.04em}
+.year-card-body p{font-size:.98rem;color:var(--g500);line-height:1.6;flex:1}
+.year-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.8rem;font-weight:700;color:var(--red);font-size:1rem}
+.year-link::after{content:'→';transition:.2s}
+.year-card:hover .year-link::after{transform:translateX(4px)}
+
+/* CTA */
+.cta-block{background:var(--black);color:#fff;text-align:center;padding:5rem 5%}
+.cta-block h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:.05em;margin-bottom:1rem}
+.cta-block h2 .red{color:var(--red)}
+.cta-block p{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.1rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem;padding:.95rem 2.3rem;border-radius:10px;transition:.3s}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-h);box-shadow:0 8px 30px rgba(220,38,38,.35);transform:translateY(-2px)}
+
+/* FOOTER */
+.ft-mini{background:var(--black);border-top:1px solid rgba(255,255,255,.08);color:var(--g400);text-align:center;padding:2rem 5%;font-size:.9rem}
+.ft-mini b{color:#fff}
+.ft-mini .heart{color:var(--red)}
+.ft-mini .grn{color:var(--green-l)}
+
+@media(max-width:860px){
+  .nav-links{position:fixed;top:64px;right:0;flex-direction:column;align-items:stretch;background:#fff;border-left:1px solid var(--g200);border-bottom:1px solid var(--g200);padding:1rem;width:240px;transform:translateX(100%);transition:.3s}
+  .nav-links.open{transform:translateX(0)}
+  .burger{display:block}
+  .archive-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="https://bsideskerala.in" class="nav-logo">
+    <img src="../img/logo.png" alt="BSides Kerala">
+    <b>BSides <em>Kerala</em></b>
+  </a>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="https://bsideskerala.in">Home</a></li>
+    <li><a href="./" class="active">Archives</a></li>
+    <li><a href="https://bsideskerala.in/about-us">About Us</a></li>
+    <li><a href="https://bsideskerala.in/contact">Contact</a></li>
+    <li><a href="https://bsideskerala.in" class="cta-link">BSides Kerala Home</a></li>
+  </ul>
+  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+</nav>
+
+<section class="page-hero">
+  <div class="inner">
+    <div class="label">Event Archives</div>
+    <h1>BSides Kerala <span class="red">Archives</span></h1>
+    <p>Past editions of Security BSides Kerala, with speakers, schedules, trainings and CTF from each year.</p>
+  </div>
+</section>
+
+<section class="archive-sect">
+  <div class="wrap">
+    <div class="archive-grid">
+
+      <!-- 2026 -->
+      <a href="bsides-kerala-2026/" class="year-card">
+        <div class="year-card-img">
+          <span class="year-badge">2026</span>
+          <img src="bsides-kerala-2026/img/bsides-kerala-2026-og-image.jpg" alt="BSides Kerala 2026" loading="lazy">
+        </div>
+        <div class="year-card-body">
+          <h2>BSides <em>Kerala 2026</em></h2>
+          <div class="year-meta">7–9 May 2026 · Kochi Marriott Hotel</div>
+          <p>Three days of talks, trainings and CTF at Kochi Marriott Hotel. Keynotes by Manoj Abraham IPS, R. Vittal Raj and Lt Gen. M Unnikrishnan Nair (Retd.), with an inaugural address by Prasad K. Panicker.</p>
+          <span class="year-link">View 2026 archive</span>
+        </div>
+      </a>
+
+      <!-- 2025 -->
+      <a href="bsides-kerala-2025/" class="year-card">
+        <div class="year-card-img">
+          <span class="year-badge">2025</span>
+          <img src="bsides-kerala-2025/img/bsides-kerala-og-image.jpg" alt="BSides Kerala 2025" loading="lazy">
+        </div>
+        <div class="year-card-body">
+          <h2>BSides <em>Kerala 2025</em></h2>
+          <div class="year-meta">8–9 February 2025 · Kochi Marriott Hotel</div>
+          <p>The first edition of BSides Kerala, with a full day of talks and a dedicated trainings day.</p>
+          <span class="year-link">View 2025 archive</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-block">
+  <div class="inner">
+    <h2>BSides <span class="red">Kerala</span></h2>
+    <p>Visit the main site for the upcoming edition.</p>
+    <a href="https://bsideskerala.in" class="btn btn-primary">BSides Kerala Home</a>
+  </div>
+</section>
+
+<footer class="ft-mini">
+  <p>© Copyright <b>BSides Kerala</b>. All Rights Reserved · <span class="heart">❤</span> With love to the <span class="grn">security</span> community</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
+</script>
+</body>
+</html>

@@ -11,7 +11,7 @@
   <meta property="og:title" content="BSides Kerala 2026">
   <meta property="og:description" content="Security BSides Kerala 2026">
   <meta property="og:type" content="website, conference, cyber security">
-  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg" />
+  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg" />
   <link rel="stylesheet" href="../css/style-2026.css">
   <style>
     @media(max-width:768px) {
@@ -24,6 +24,30 @@
       }
     }
   </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* match the 2027 homepage: font and top menu */
+*{font-family:'Baloo Chettan 2',sans-serif !important}
+.page-hero h1,.sect-heading,.nav-logo b,.card-body h3{letter-spacing:0 !important;font-weight:800}
+.page-hero h1{text-transform:uppercase}
+.page-hero .label,.sect-label{letter-spacing:.12em !important}
+.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
+.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase;white-space:nowrap}
+.nav-links a{font-weight:800;font-size:1rem;color:#fff;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-links .cta-link{font-weight:800}
+.burger{color:#fff;border-color:rgba(255,255,255,.3)}
+@media(max-width:1100px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;
+    background:rgba(0,0,0,.94);border-bottom:1px solid rgba(255,255,255,.08);padding:1rem 5%;backdrop-filter:blur(16px);gap:.2rem}
+  .nav-links.open .cta-link{margin:.4rem 0 0;text-align:center}
+}
+@media(max-width:480px){.nav-logo b{font-size:1.2rem}.nav-logo img{height:32px}.nav{padding:.6rem 4%}}
+</style>
 </head>
 
 <body>
@@ -33,17 +57,15 @@
       <b>BSides <em>Kerala</em></b>
     </a>
     <ul class="nav-links" id="navMenu">
-      <li><a href="../">Home</a></li>
-      <li><a href="../call-for-papers">CFP</a></li>
-      <li><a href="../trainings">Trainings</a></li>
-      <li><a href="../speakers">Speakers</a></li>
-      <li><a href="../schedule">Schedule</a></li>
-      <li><a href="../capture-the-flag">Capture-the-flag</a></li>
-      <li><a href="../about-us" class="active">About Us</a></li>
-      <li><a href="../contact">Contact</a></li>
-
-      <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
-    </ul>
+    <li><a href="../">Home</a></li>
+    <li><a href="../trainings">Trainings</a></li>
+    <li><a href="../speakers">Speakers</a></li>
+    <li><a href="../schedule">Schedule</a></li>
+    <li><a href="../capture-the-flag">Capture-the-flag</a></li>
+    <li><a href="../about-us" class="active">About Us</a></li>
+    <li><a href="../contact">Contact</a></li>
+    <li><a href="../archives/" class="cta-link">Archives</a></li>
+  </ul>
     <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
   </nav>
   <section class="page-hero">
@@ -77,8 +99,8 @@
   <section class="sect sect-alt">
     <div class="wrap">
       <div class="sect-label">Leadership</div>
-      <h2 class="sect-heading">Organizing <span class="red">Team</span> 2026</h2>
-      <p class="sect-text">The team behind BSides Kerala 2026</p>
+      <h2 class="sect-heading">Organizing <span class="red">Team</span> 2027</h2>
+      <p class="sect-text">The team behind BSides Kerala 2027</p>
       <div class="cards-grid" style="max-width:1200px">
         <div class="card reveal">
           <div class="card-img"><img src="team/a-balakrishnan.jpg" alt="A Balakrishnan"></div>
@@ -113,31 +135,6 @@
         </div>
 
         <div class="card reveal">
-          <div class="card-img"><img src="team/sony-a.jpg" alt="Sony A"></div>
-          <div class="card-body">
-            <h3>Sony A</h3>
-            <p>Chief General Manager & Chief Information Officer at South Indian Bank</p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/dr-a-shiju-rawther.jpg" alt="Shiju Rawther"></div>
-          <div class="card-body">
-            <h3>Dr. A Shiju Rawther </h3>
-            <p>Chief Information Technology Officer at CARE Ratings Limited</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/sunil-varkey.jpg" alt="Sunil Varkey"></div>
-          <div class="card-body">
-            <h3>Sunil Varkey</h3>
-            <p>CISO, CTO, Former Wipro Fellow, Writer, Speaker, Mentor, Cyber Evangelist</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
           <div class="card-img"><img src="team/robin-joy.jpg" alt="Robin Joy"></div>
           <div class="card-body">
             <h3>Robin Joy</h3>
@@ -153,419 +150,12 @@
             <p>Group Chief Information Officer at NesT Group, SFO Technologies </p>
           </div>
         </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/anil-menon.jpg" alt="Anil Menon"></div>
-          <div class="card-body">
-            <h3>Anil Menon</h3>
-            <p>Chief Information Officer at Lulu group India. </p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/deepu-s.jpg" alt="Deepu S"></div>
-          <div class="card-body">
-            <h3>Deepu S</h3>
-            <p>Chief Information Security Officer at Muthoot Microfin Ltd </p>
-          </div>
-        </div>
 
         <div class="card reveal">
           <div class="card-img"><img src="team/jojy-payyanickal.png" alt="Jojy"></div>
           <div class="card-body">
             <h3>Jojy Payyanickal</h3>
             <p>Chief Information Security Officer at Geojit Financial Services Ltd. </p>
-          </div>
-        </div>
-
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/georgie-kurian.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Georgie Kurien</h3>
-            <p>Chief Information Security Officer and Head of Cyber Assurance Practice at SecnSure </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="sect sect-alt">
-    <div class="wrap">
-      <div class="sect-label">Community Associates</div>
-      <h2 class="sect-heading">Associates <span class="red">Team</span> 2026</h2>
-      <p class="sect-text">The Community Associates behind BSides Kerala 2026</p>
-      <div class="cards-grid" style="max-width:1200px">
-        <div class="card reveal">
-          <div class="card-img"><img src="team/biju-k.jpg" alt="Biju"></div>
-          <div class="card-body">
-            <h3>Biju K</h3>
-            <p>Chief Data Protection Officer at Federal Bank </p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/jayakrishnan-p.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Jayakrishnan P</h3>
-            <p>Vice President Information Technology at Muthoot Pappachan Technologies Limited</p>
-          </div>
-        </div>
-
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/nishit-shrivastava.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Nishit Shrivastava </h3>
-            <p> Chief Information Officer at Muthoot Fincorp Ltd.
-
-            </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/placeholder.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Xavier Alexander</h3>
-            <p>General Manager(IT) at The FACT Ltd </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/shibinc.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Shibin Chulliparambil
-            </h3>
-            <p>Head of Information Technology at Malabar Group </p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/venugopal.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Venugopal Parameswara
-            </h3>
-            <p>Chief Information Security Officer at Cholamandalam Investment and Finance Company Limited. </p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/jomy-luke.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Jomy Luke Xavier</h3>
-            <p>Chief Information Officer at Wizzmoni Financial Services Ltd.</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/manjith-m-r.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Manjith M R</h3>
-            <p>Chief Information Security Officer at ESAF Bank</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/dileepkumar-mukundan.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Dileepkumar Mukundan</h3>
-            <p>Chief Information Security Officer at IFTAS - Indian Financial Technology & Allied Services </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/placeholder.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Archana Venugopal</h3>
-            <p>Senior Vice President & Chief Information Security Officer at NCDEX</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/vineed-viswanathan.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Vineed Viswanathan</h3>
-            <p>Chief Technology Officer (Consulting) at KHIMJI-K.D.& SONS PRIVATE LIMITED</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/saiprasad-sivadasan.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Saiprasad Sivadasan </h3>
-            <p>Global Chief Information Security Officer at Centelon Solutions</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/sangeeth-k-mohan.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Sangeeth K Mohan </h3>
-            <p>Head IT at Mane (India & Sri Lanka) </p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/ciju-peter.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Ciju peter</h3>
-            <p>Chief Technology Officer at Emsyne Technologies Pvt Ltd. </p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/ram-pratap-singh.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Ram Pratap Singh</h3>
-            <p>Head Of Information Technology at Muthoot Capital Services Ltd</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/renjit-paul.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Renjit Paul </h3>
-            <p>General Manager (IT) at Malayala Manorama Co. Ltd.</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/roopesh-kr.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Roopesh Menon K R</h3>
-            <p>Deputy General Manager IT at Muthoot Finance Ltd</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/biju-kuriakose.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Biju Kuriakose</h3>
-            <p>IT/SAP Consulting</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/vinodh-kumar.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Vinodh Kumar C</h3>
-            <p>Chief Technology Officer at Muthoot MCred Limited</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/dawny-philip.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Dawny Philip</h3>
-            <p>General Manager & Head of IT at Nest Digital</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/ananth-rajagopal.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Ananth Rajagopal</h3>
-            <p>Director Of Information Technology at TMEFX</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/pradeep-kumar.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Pradeep Kumar</h3>
-            <p>IT Manager (Group Head) at ABAD</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/lijo-john.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Lijo John</h3>
-            <p>IT Manager at Amalgam Group</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/jobin-jose.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Jobin Jose</h3>
-            <p>Head - IT Infrastructure at Rajagiri School Of Engineering and Technology</p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/mathai-vs.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Mathai V S</h3>
-            <p>Head of IT - Classic Fashion Apparel Industry Ltd. Co.</p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/subramanih.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Subramani H</h3>
-            <p>Senior Manager - Information Techonolgy at Symega Food Ingredients Ltd. </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/prasanth-r.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Prasanth R</h3>
-            <p>Senior Manager IT Applications at Orkla India </p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/jayadevan-meledath.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Jayadevan Meledath</h3>
-            <p>Sr. Manager IT at OMS Group</p>
-          </div>
-        </div>
-
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/prasad-paulose.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Prasad Paulose </h3>
-            <p>Head of Information Technology & CISO at Agappe Diagnostics Ltd.</p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/shinoj.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Shinoj Kumar</h3>
-            <p>Chief Information Security Officer at The Muthoot Group.</p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/jojo-tm.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Jojo T M</h3>
-            <p>Senior Manager (Systems) at Malayala Manorama Television</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/gokul-kishan.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Gokul kishan</h3>
-            <p>Information Security Manager, Deputy Chief Manager at Muthoot Microfin</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/nithinpm.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Nithin Mani</h3>
-            <p>Senior Manager - IT at Hotpack Global</p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/antony-cl.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Antony C L</h3>
-            <p>DGM-IT, Muthoot Finance Ltd.</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/nitha-sasi.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Nitha Sasi</h3>
-            <p>Deputy General Manager at Geojit </p>
-          </div>
-        </div>
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/prajeesh-kg.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Prajeesh KG</h3>
-            <p>Chief Information Security Officer at Muthoot Capital</p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/manu-ms.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Manu MS</h3>
-            <p>Chief Technology Officer at Manappuram Home Finance Limited.</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/deepakumar-kg.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Deepakumar K G </h3>
-            <p>AVP IT at Bhima Jewels Pvt Ltd </p>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="card-img"><img src="team/jins-skaria.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Jins Skaria </h3>
-            <p>Manager | E-commerce & Marketplaces | IT at Dhathri</p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/shine-ks.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Shine KS</h3>
-            <p>Head - IT Core Infra at Manappuram Finance Limited. </p>
-          </div>
-        </div>
-
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/ajith-udayabanu.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>AJITH UDAYABHANU</h3>
-            <p>Chief Technology Officer at Asirvad Micro Finance Limited </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/linesh-thirumangalath.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Linesh Thirumangalath</h3>
-            <p>Chief Strategy Officer at Finch Innovate </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/sunil-raj.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Sunil Raj</h3>
-            <p>Senior Director and Advisor - Digital Transformations and Solutions at UST </p>
-          </div>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/diamond-j-paul.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Diamond J Paul</h3>
-            <p>Senior System Engineer at VPS Lakeshore Hospital</p>
-          </div>
-        </div>
-
-
-        <!--
-<div class="card reveal"><div class="card-img"><img src="team/placeholder.jpg" alt=""></div><div class="card-body"><h3>Smitha S
-</h3><p>SAP Lead at Dynamic Techno Medicals </p></div></div>
--->
-
-
-        <div class="card reveal">
-          <div class="card-img"><img src="team/marin.jpg" alt=""></div>
-          <div class="card-body">
-            <h3>Merin K Jacob
-            </h3>
-            <p>Technical Account Manager at Google</p>
           </div>
         </div>
 
@@ -831,7 +421,7 @@
         </div>
         <div class="ft-col">
           <h4>Conference 2026</h4>
-          <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
+          <a href="../archives/">Event Archives</a>
           <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
           <a href="#">Privacy policy</a>
         </div>
@@ -839,7 +429,7 @@
           <h4>Security BSides</h4>
           <a href="https://bsides.org">Security BSides</a>
           <a href="../about-us/index.html">About us</a>
-          <a href="#">All events</a>
+          <a href="../archives/">All events</a>
         </div>
         <div class="ft-col">
           <h4>Contact Us</h4>

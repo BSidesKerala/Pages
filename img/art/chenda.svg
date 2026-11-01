@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Cyberpunk chenda drum artwork">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="g1"><rect x="0" y="372" width="900" height="26"/></clipPath>
+    <clipPath id="g2"><rect x="0" y="520" width="900" height="18"/></clipPath>
+  </defs>
+
+  <g id="art">
+    <!-- equalizer bars (sound, cyber) -->
+    <g fill="#FBBF24" filter="url(#glow)">
+      <rect x="96" y="420" width="16" height="60" rx="8"/>
+      <rect x="130" y="390" width="16" height="120" rx="8"/>
+      <rect x="164" y="440" width="16" height="36" rx="8"/>
+      <rect x="198" y="404" width="16" height="92" rx="8"/>
+    </g>
+    <g fill="#FF3D2E" filter="url(#glow)">
+      <rect x="788" y="420" width="16" height="60" rx="8"/>
+      <rect x="754" y="390" width="16" height="120" rx="8"/>
+      <rect x="720" y="440" width="16" height="36" rx="8"/>
+      <rect x="686" y="404" width="16" height="92" rx="8"/>
+    </g>
+    <!-- sound arcs -->
+    <path d="M250 330 A 240 240 0 0 0 250 570" fill="none" stroke="#FBBF24" stroke-width="4" stroke-dasharray="6 14" stroke-linecap="round"/>
+    <path d="M650 330 A 240 240 0 0 1 650 570" fill="none" stroke="#FF3D2E" stroke-width="4" stroke-dasharray="6 14" stroke-linecap="round"/>
+
+    <!-- crossed sticks -->
+    <g stroke-linecap="round">
+      <path d="M330 150 L560 320" stroke="#FFFFFF" stroke-width="13"/>
+      <path d="M570 150 L340 320" stroke="#FFFFFF" stroke-width="13"/>
+      <circle cx="330" cy="150" r="15" fill="#FBBF24"/>
+      <circle cx="570" cy="150" r="15" fill="#FF3D2E"/>
+    </g>
+
+    <!-- drum body -->
+    <rect x="310" y="330" width="280" height="330" rx="26" fill="#C2240F" stroke="#7A1004" stroke-width="7"/>
+    <!-- heads -->
+    <ellipse cx="450" cy="340" rx="150" ry="40" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="7"/>
+    <ellipse cx="450" cy="656" rx="150" ry="38" fill="#120606" stroke="#0A0A0A" stroke-width="7"/>
+    <!-- rim rings -->
+    <ellipse cx="450" cy="340" rx="150" ry="40" fill="none" stroke="#FBBF24" stroke-width="3" stroke-dasharray="4 12" filter="url(#glow)"/>
+    <!-- lacing zigzag -->
+    <g stroke="#FBBF24" stroke-width="5" fill="none" stroke-linejoin="round">
+      <path d="M320 380 L365 620 M365 380 L410 620 M410 380 L455 620 M455 380 L500 620 M500 380 L545 620 M545 380 L580 600"/>
+      <path d="M580 380 L535 620 M535 380 L490 620 M490 380 L445 620 M445 380 L400 620 M400 380 L355 620 M355 380 L322 598"/>
+    </g>
+    <!-- tension band with LED -->
+    <rect x="310" y="478" width="280" height="30" fill="#0A0A0A"/>
+    <rect x="336" y="485" width="26" height="16" rx="5" fill="#FF3D2E" filter="url(#glow)"/>
+    <rect x="372" y="485" width="26" height="16" rx="5" fill="#FBBF24" filter="url(#glow)"/>
+    <rect x="408" y="485" width="26" height="16" rx="5" fill="#FF3D2E" opacity=".4"/>
+    <rect x="444" y="485" width="26" height="16" rx="5" fill="#FBBF24" opacity=".4"/>
+
+    <!-- strap -->
+    <path d="M318 356 C 230 420, 230 560, 322 640" fill="none" stroke="#7A1004" stroke-width="10"/>
+  </g>
+
+  <!-- displacement glitch: shifted slices of the artwork -->
+  <use href="#art" clip-path="url(#g1)" x="16" opacity=".95"/>
+  <use href="#art" clip-path="url(#g2)" x="-14" opacity=".95"/>
+  <rect x="300" y="372" width="300" height="4" fill="#FFFFFF" opacity=".5"/>
+  <rect x="320" y="534" width="260" height="3" fill="#FBBF24" opacity=".6"/>
+
+  <!-- scanlines over the subject -->
+  <g stroke="#000" stroke-width="2" opacity=".16">
+    <path d="M280 360 h340 M280 400 h340 M280 440 h340 M280 480 h340 M280 520 h340 M280 560 h340 M280 600 h340 M280 640 h340"/>
+  </g>
+
+  <!-- data strip -->
+  <g fill="#FBBF24">
+    <rect x="330" y="760" width="5" height="34"/><rect x="342" y="760" width="12" height="34"/><rect x="362" y="760" width="4" height="34"/>
+    <rect x="374" y="760" width="8" height="34"/><rect x="390" y="760" width="16" height="34"/><rect x="414" y="760" width="5" height="34"/>
+    <rect x="426" y="760" width="10" height="34"/><rect x="444" y="760" width="4" height="34"/><rect x="456" y="760" width="13" height="34"/>
+    <rect x="477" y="760" width="6" height="34"/><rect x="491" y="760" width="11" height="34"/><rect x="510" y="760" width="4" height="34"/>
+    <rect x="522" y="760" width="9" height="34"/><rect x="539" y="760" width="15" height="34"/><rect x="562" y="760" width="5" height="34"/>
+  </g>
+
+  <!-- HUD marks -->
+  <g stroke="#FBBF24" stroke-width="3" stroke-linecap="round">
+    <path d="M70 90 h24 M82 78 v24"/>
+    <path d="M812 830 h24 M824 818 v24"/>
+  </g>
+</svg>

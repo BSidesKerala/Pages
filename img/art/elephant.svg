@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 950" role="img" aria-label="Cyberpunk caparisoned elephant with nettipattam artwork">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="g1"><rect x="0" y="330" width="900" height="26"/></clipPath>
+    <clipPath id="g2"><rect x="0" y="600" width="900" height="18"/></clipPath>
+  </defs>
+
+  <g id="art">
+    <!-- ears -->
+    <path d="M232 330 C 120 330, 86 470, 130 580 C 164 664, 262 672, 302 612 L 302 380 Z" fill="#120606" stroke="#C2240F" stroke-width="7"/>
+    <path d="M668 330 C 780 330, 814 470, 770 580 C 736 664, 638 672, 598 612 L 598 380 Z" fill="#120606" stroke="#C2240F" stroke-width="7"/>
+    <!-- circuit traces on ears -->
+    <g fill="none" stroke="#FBBF24" stroke-width="3">
+      <polyline points="176,420 216,420 236,444 236,520"/>
+      <polyline points="724,420 684,420 664,444 664,520"/>
+    </g>
+    <circle cx="176" cy="420" r="5" fill="#FBBF24"/>
+    <circle cx="724" cy="420" r="5" fill="#FBBF24"/>
+
+    <!-- head dome -->
+    <path d="M290 420 C 290 300, 610 300, 610 420 L 610 560 C 610 640, 290 640, 290 560 Z" fill="#120606" stroke="#C2240F" stroke-width="8"/>
+
+    <!-- NETTIPATTAM: arched golden forehead ornament -->
+    <path d="M330 300 L450 220 L570 300 L570 520 L330 520 Z" fill="#7A1004" stroke="#FBBF24" stroke-width="6"/>
+    <!-- dome rows -->
+    <g fill="#FBBF24" filter="url(#glow)">
+      <circle cx="450" cy="262" r="13"/>
+      <circle cx="402" cy="300" r="11"/><circle cx="450" cy="300" r="11"/><circle cx="498" cy="300" r="11"/>
+      <circle cx="366" cy="344" r="11"/><circle cx="422" cy="344" r="11"/><circle cx="478" cy="344" r="11"/><circle cx="534" cy="344" r="11"/>
+      <circle cx="366" cy="392" r="11"/><circle cx="422" cy="392" r="11"/><circle cx="478" cy="392" r="11"/><circle cx="534" cy="392" r="11"/>
+      <circle cx="366" cy="440" r="11"/><circle cx="422" cy="440" r="11"/><circle cx="478" cy="440" r="11"/><circle cx="534" cy="440" r="11"/>
+      <circle cx="402" cy="486" r="11"/><circle cx="450" cy="486" r="11"/><circle cx="498" cy="486" r="11"/>
+    </g>
+    <g fill="#FF3D2E">
+      <circle cx="450" cy="368" r="8"/><circle cx="450" cy="416" r="8"/><circle cx="394" cy="416" r="6"/><circle cx="506" cy="416" r="6"/>
+    </g>
+
+    <!-- eyes -->
+    <circle cx="340" cy="564" r="14" fill="#0A0A0A" stroke="#FBBF24" stroke-width="3"/>
+    <circle cx="344" cy="560" r="4" fill="#FBBF24"/>
+    <!-- right eye: lens -->
+    <circle cx="560" cy="564" r="15" fill="#0A0A0A" stroke="#FF3D2E" stroke-width="3"/>
+    <circle cx="560" cy="564" r="5" fill="#FF3D2E" filter="url(#glow)"/>
+    <circle cx="560" cy="564" r="26" fill="none" stroke="#FF3D2E" stroke-width="2" stroke-dasharray="5 7"/>
+
+    <!-- tusks -->
+    <path d="M356 640 C 338 700, 346 744, 384 776" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+    <path d="M544 640 C 562 700, 554 744, 516 776" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="384" cy="776" r="7" fill="#FBBF24"/>
+    <circle cx="516" cy="776" r="7" fill="#FBBF24"/>
+
+    <!-- trunk -->
+    <path d="M414 620 C 404 720, 408 800, 436 870 C 448 898, 478 898, 486 868 C 500 740, 494 690, 486 622 Z" fill="#120606" stroke="#C2240F" stroke-width="7"/>
+    <!-- trunk bands + LED band -->
+    <path d="M414 680 h74 M410 740 h80 M418 800 h70" stroke="#C2240F" stroke-width="5"/>
+    <rect x="414" y="702" width="76" height="22" rx="7" fill="#0A0A0A" stroke="#FBBF24" stroke-width="3"/>
+    <rect x="422" y="707" width="16" height="12" rx="4" fill="#FF3D2E" filter="url(#glow)"/>
+    <rect x="444" y="707" width="16" height="12" rx="4" fill="#FBBF24" filter="url(#glow)"/>
+    <rect x="466" y="707" width="16" height="12" rx="4" fill="#FF3D2E" opacity=".4"/>
+  </g>
+
+  <!-- displacement glitch -->
+  <use href="#art" clip-path="url(#g1)" x="18" opacity=".95"/>
+  <use href="#art" clip-path="url(#g2)" x="-16" opacity=".95"/>
+  <rect x="300" y="332" width="310" height="4" fill="#FFFFFF" opacity=".5"/>
+  <rect x="290" y="612" width="320" height="3" fill="#FBBF24" opacity=".6"/>
+
+  <!-- scanlines over head -->
+  <g stroke="#000" stroke-width="2" opacity=".15">
+    <path d="M300 320 h300 M300 360 h300 M300 400 h300 M300 440 h300 M300 480 h300 M300 520 h300 M300 560 h300 M300 600 h300"/>
+  </g>
+
+  <!-- data strip -->
+  <g fill="#FF3D2E">
+    <rect x="356" y="920" width="5" height="26"/><rect x="368" y="920" width="12" height="26"/><rect x="388" y="920" width="4" height="26"/>
+    <rect x="400" y="920" width="8" height="26"/><rect x="416" y="920" width="15" height="26"/><rect x="439" y="920" width="5" height="26"/>
+    <rect x="451" y="920" width="10" height="26"/><rect x="469" y="920" width="4" height="26"/><rect x="481" y="920" width="13" height="26"/>
+    <rect x="502" y="920" width="6" height="26"/><rect x="516" y="920" width="11" height="26"/><rect x="534" y="920" width="4" height="26"/>
+  </g>
+
+  <!-- HUD marks -->
+  <g stroke="#FBBF24" stroke-width="3" stroke-linecap="round">
+    <path d="M70 100 h24 M82 88 v24"/>
+    <path d="M808 120 h24 M820 108 v24"/>
+    <path d="M90 880 h24 M102 868 v24"/>
+  </g>
+</svg>

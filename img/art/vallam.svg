@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Cyberpunk snake boat artwork">
+  <!-- ===== SUN DISC ===== -->
+  <circle cx="620" cy="300" r="130" fill="#C2240F"/>
+  <circle cx="620" cy="300" r="130" fill="none" stroke="#FF3D2E" stroke-width="5"/>
+  <circle cx="620" cy="300" r="158" fill="none" stroke="#FBBF24" stroke-width="3" stroke-dasharray="5 16" stroke-linecap="round"/>
+  <!-- sun scanlines -->
+  <path d="M506 266 h228 M494 300 h252 M506 334 h228" stroke="#0A0A0A" stroke-width="6" opacity=".35"/>
+
+  <!-- ===== SNAKE BOAT (chundan vallam) ===== -->
+  <!-- hull -->
+  <path d="M80 640 C 240 700 500 700 650 640 C 720 612 756 560 768 470 C 774 420 770 380 760 350
+           C 788 368 802 420 798 470 C 790 580 724 660 640 692 C 480 752 220 740 70 664 Z"
+        fill="#120606" stroke="#C2240F" stroke-width="8" stroke-linejoin="round"/>
+  <!-- gunwale gold trim -->
+  <path d="M96 648 C 250 704 500 704 644 648 C 712 622 744 572 756 480" fill="none" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>
+  <!-- prow bands -->
+  <path d="M726 520 l44 14 M740 478 l42 10 M750 436 l40 6 M754 394 l38 2" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+  <!-- prow pennant -->
+  <path d="M762 350 L826 326 L776 306 Z" fill="#FF3D2E" stroke="#7A1004" stroke-width="4"/>
+  <path d="M762 350 v-48" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
+  <!-- paddles -->
+  <g stroke="#FBBF24" stroke-width="5" stroke-linecap="round">
+    <path d="M200 672 L160 760"/>
+    <path d="M300 690 L268 778"/>
+    <path d="M400 698 L376 786"/>
+    <path d="M500 694 L484 782"/>
+  </g>
+  <g fill="#FBBF24">
+    <ellipse cx="156" cy="772" rx="10" ry="18" transform="rotate(24 156 772)"/>
+    <ellipse cx="264" cy="790" rx="10" ry="18" transform="rotate(20 264 790)"/>
+    <ellipse cx="372" cy="798" rx="10" ry="18" transform="rotate(16 372 798)"/>
+    <ellipse cx="480" cy="794" rx="10" ry="18" transform="rotate(12 480 794)"/>
+  </g>
+
+  <!-- ===== WATER: one wave, one circuit wave ===== -->
+  <path d="M60 812 Q 150 782 240 812 T 420 812 T 600 812 T 780 812" fill="none" stroke="#FF3D2E" stroke-width="6" stroke-linecap="round"/>
+  <g fill="none" stroke="#FBBF24" stroke-width="4" stroke-linecap="round">
+    <polyline points="90,862 180,862 180,842 300,842 300,862 420,862 420,842 540,842 540,862 660,862 660,842 780,842"/>
+  </g>
+  <circle cx="90" cy="862" r="6" fill="#FBBF24"/>
+  <circle cx="780" cy="842" r="6" fill="#FBBF24"/>
+
+  <!-- ===== GLITCH SLICES ===== -->
+  <rect x="100" y="250" width="170" height="11" fill="#FBBF24" opacity=".8"/>
+  <rect x="90" y="265" width="96" height="5" fill="#FFFFFF" opacity=".5"/>
+  <rect x="300" y="560" width="150" height="9" fill="#FF3D2E" opacity=".7"/>
+
+  <!-- HUD marks -->
+  <g stroke="#FBBF24" stroke-width="3" stroke-linecap="round">
+    <path d="M70 100 h24 M82 88 v24"/>
+    <path d="M818 120 h22 M829 109 v22"/>
+    <path d="M88 540 h22 M99 529 v22"/>
+  </g>
+</svg>

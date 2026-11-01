@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capture The Flag | BSides Kerala 2026</title>
+<meta name="description" content="BSides Kerala CTF - realistic Capture The Flag competition at BSides Kerala 2026. Web, network, IoT, AD, programming and more.">
+<meta name="author" content="BSides Kerala">
+<meta name="keywords" content="BSides Kerala CTF, Capture The Flag, web attacks, network attacks, IoT, Active Directory, Kerala, BSides 2026">
+<meta property="og:title" content="BSides Kerala CTF | BSides Kerala 2026">
+<meta property="og:description" content="Realistic Capture The Flag competition at BSides Kerala 2026.">
+<meta property="og:type" content="website">
+<meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg"/>
+<link rel="icon" href="https://bsideskerala.in/img/favicon.ico">
+<link rel="stylesheet" href="../css/style-2026.css">
+<link rel="stylesheet" href="css/ctf.css">
+<style>
+  /* ── About BeSec CTF – responsive layout ── */
+  .besec-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .besec-logo {
+    flex: 0 0 44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .besec-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: inline-block;
+    border-radius: 6px;
+  }
+  .besec-text {
+    flex: 0 0 48%;
+    max-width: 520px;
+    text-align: justify;
+  }
+
+  @media (max-width: 900px) {
+    .besec-logo { flex: 0 0 100%; }
+    .besec-text  { flex: 0 0 100%; max-width: 100%; }
+  }
+
+  @media (max-width: 768px) {
+    .besec-content {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 1.25rem;
+    }
+    .besec-logo,
+    .besec-text {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+    .besec-text {
+      text-align: left;
+    }
+    .besec-img {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .besec-content {
+      gap: 14px;
+      margin-top: 1rem;
+    }
+    .besec-text p {
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+  }
+</style>
+</head>
+<body>
+
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala">
+    <b>BSides <em>Kerala</em></b>
+  </a>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../call-for-papers/index.html">CFP</a></li>
+    <li><a href="../trainings/index.html">Trainings</a></li>
+    <li><a href="../speakers/index.html">Speakers</a></li>
+    <li><a href="../schedule/index.html">Schedule</a></li>
+    <li><a href="../capture-the-flag/index.html" class="active">Capture-the-flag</a></li>
+    <li><a href="../about-us/index.html">About Us</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
+    <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
+  </ul>
+  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+</nav>
+
+<section class="ctf-hero">
+  <div class="ctf-hero-inner">
+    <div class="ctf-hero-text">
+
+      <h1><span class="blk">BSides Kerala</span><span class="red">CTF</span></h1>
+      <p class="hero-tagline" style="margin:0 0 1rem; font-size:1rem; font-weight:500; color:rgba(255,255,255,0.82); line-height:1.5; letter-spacing:0.02em; max-width:680px;">Capture-the-flag competition powered by Beagle Security.<br>May 9th, 9:00 AM to 6:00 PM</p>
+      <p class="desc">A realistic, hands-on capture-the-flag competition at BSides Kerala 2026. Built to mirror what real adversaries do, not what textbook puzzles ask.<br>Are you ready to test your skills in a cybersecurity competition like no other? besec.ctf, organized by Beagle Security, is set to challenge and inspire the brightest minds in ethical hacking at BSides Kerala 2026.</p>
+      <div class="hero-meta">
+        <span class="meta-pill"><span class="k">format::</span>realistic</span>
+        <span class="meta-pill"><span class="k">mode::</span>onsite</span>
+        <span class="meta-pill"><span class="k">categories::</span>08</span>
+      </div>
+    </div>
+
+
+    <div class="ctf-hero-art">
+      <span class="art-corner tl">[ key_art.png ]</span>
+      <div class="art-placeholder">
+ <img src="images/kathakali.png" alt="BSides Kerala CTF" class="art-img">
+      </div>
+
+      <div class="scan"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sect">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <h2>When and <span class="red">Where</span></h2>
+    </div>
+
+    <div class="info-strip reveal">
+      <div class="info-cell">
+        <div class="lbl">event</div>
+        <div class="val">BSides Kerala <span class="red">2026</span></div>
+        <div class="sub">On the conference day</div>
+      </div>
+      <div class="info-cell">
+        <div class="lbl">date</div>
+        <div class="val">9 May 2026</div>
+        <div class="sub">Saturday</div>
+      </div>
+      <div class="info-cell">
+        <div class="lbl">time</div>
+        <div class="val">9 AM to 6 PM</div>
+        <div class="sub">single-day competition</div>
+      </div>
+      <div class="info-cell">
+        <div class="lbl">venue</div>
+        <div class="val">Kochi Marriott</div>
+        <div class="sub">Kerala, India</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sect">
+  <div class="sect-inner">
+    <div class="sect-head reveal" style="text-align:center;">
+      <h2>About <span class="red">BeSec CTF</span></h2>
+      <p class="lead" style="max-width:760px; margin:0.75rem auto 0;">Diverse challenge categories. No isolated puzzles. Every challenge mirrors a real-world target you'd hit on a real engagement.</p>
+    </div>
+
+    <div class="besec-content">
+      <div class="besec-logo">
+        <div style="width:100%; max-width:520px; text-align:center;">
+          <img src="images/besec-ctf.jpeg" alt="BeSec CTF Logo" class="besec-img">
+        </div>
+      </div>
+      <div class="besec-text">
+        <p style="margin:0 0 1rem;">This high-intensity capture-the-flag experience delivers a hands-on battlefield where participants take on real-world security scenarios across multiple domains.</p>
+        <p style="margin:0 0 1rem;">Taking place on May 9th, 2026, at the Kochi Marriott Hotel, Edapally, Kerala, besec.ctf promises an intense, hands-on experience designed to push your expertise to its limits. Participants will face a wide range of advanced challenges, including network exploitation, cryptographic puzzles, reverse engineering, and coding tasks. This is a unique opportunity to engage with real-world cybersecurity scenarios that demand precision, quick thinking, and innovative problem-solving.</p>
+        <p style="margin:0 0 1rem;">The stakes are high, and the rewards are even higher. Top-performing teams will earn recognition and incredible prizes, solidifying their place as leaders in the cybersecurity field. Whether you’re looking to showcase your talent, learn from cutting-edge challenges, or simply experience the camaraderie of a world-class event, besec.ctf has something for everyone.</p>
+        <p style="margin:0;">Mark your calendar for May 9th, 2026, and join us at Kochi Marriott Hotel for this unforgettable experience. Don’t miss your chance to capture the flag and make your mark in the future of cybersecurity competitions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect sect-grey">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+
+      <h2>Rules of <span class="red">Engagement</span></h2>
+      <p class="lead">Read the rules before you turn up. Stay in scope, play hard, and don't be that person.</p>
+    </div>
+
+    <div class="rules-grid">
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 01</span>
+          <h3>Eligibility &amp; Registration</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Open to all <strong>registered BSides Kerala 2026</strong> attendees with a valid conference ticket.</li>
+          <li>CTF registration is required <strong>separately</strong> at the event check-in desk.</li>
+          <li>Slots are limited and assigned on a <strong>first-come, first-served</strong> basis.</li>
+          <li>Bring a valid photo ID for verification at check-in and prize collection.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 02</span>
+          <h3>Team Formation</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Teams of <strong>up to TBA participants</strong>. Solo entries are allowed.</li>
+          <li>Team composition <strong>locks at the start</strong> of the competition. No substitutions afterward.</li>
+          <li>Each team nominates a <strong>captain</strong>, who is accountable for compliance with these rules.</li>
+          <li>One team per participant. <strong>Multi-team play is forbidden</strong> and grounds for disqualification.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 03</span>
+          <h3>Equipment &amp; Access</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Bring your own laptop with your <strong>offensive toolkit pre-installed</strong>. Internet access on-site is not guaranteed for downloads.</li>
+          <li>VPN credentials and lab access are issued at <strong>check-in</strong>, not before.</li>
+          <li>Power outlets are available at the venue. Bring a charger and a backup if you have one.</li>
+          <li>Conference Wi-Fi is provided but is <strong>not</strong> the CTF network - connect to the lab VPN to access the range.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 04</span>
+          <h3>Allowed Techniques</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Any offensive technique is fair game <strong>against in-scope range targets</strong>.</li>
+          <li>Public exploits, custom tooling, exploitation frameworks (Metasploit, Impacket, Sliver, etc.) are all allowed.</li>
+          <li>Automated scanning and brute-forcing <strong>against challenge boxes</strong> is permitted, within reason.</li>
+          <li>Teams may share write-ups and tooling <strong>after</strong> the competition ends - not during.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 05</span>
+          <h3>Out of Scope</h3>
+        </div>
+        <ul class="rule-list">
+          <li><strong>No attacks</strong> against other participants, their devices, or their accounts.</li>
+          <li><strong>No attacks</strong> against the venue network, conference infrastructure, or any system not explicitly listed in scope.</li>
+          <li><strong>No DoS</strong> or resource exhaustion against shared infrastructure or the scoring platform.</li>
+          <li><strong>No attacks</strong> against the scoreboard, the CTF platform, or organizer systems.</li>
+          <li>Persistent backdoors on <strong>shared boxes</strong> that block other teams are forbidden.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 06</span>
+          <h3>Scoring &amp; Tiebreakers</h3>
+        </div>
+        <ul class="rule-list">
+          <li>Each flag carries a <strong>fixed point value</strong> based on category and difficulty.</li>
+          <li><strong>First-blood bonus</strong> awarded to the first team to capture each flag.</li>
+          <li>Tiebreakers resolved by <strong>total time-to-capture</strong> across all flags.</li>
+          <li>Live scoreboard available throughout the competition. Updates may have a small lag.</li>
+          <li>Organizer decisions on scoring disputes are <strong>final</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card light reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 07</span>
+          <h3>Disqualification</h3>
+        </div>
+        <ul class="rule-list">
+          <li><strong>Flag sharing or collusion</strong> between teams is an immediate DQ.</li>
+          <li>Any out-of-scope attack results in <strong>immediate DQ</strong>, no warnings.</li>
+          <li>Disrupting other teams' access or progress results in <strong>DQ</strong>.</li>
+          <li>Repeated platform abuse or attacks against organizer infrastructure result in <strong>DQ and ejection</strong> from the venue.</li>
+          <li>Disqualified teams forfeit any prize eligibility.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card dark reveal">
+        <div class="rule-head">
+          <span class="rule-num"> 08</span>
+          <h3>Conduct &amp; Disputes</h3>
+        </div>
+        <ul class="rule-list">
+          <li>The BSides Kerala <strong>Code of Conduct</strong> applies for the entire duration of the CTF.</li>
+          <li>Direct any complaints or disputes to the <strong>CTF organizers</strong> at the help desk - do not air them publicly.</li>
+          <li>Found a bug in the platform or the range itself? Report it <strong>privately</strong>. Do not exploit it for points.</li>
+          <li>Be respectful to other competitors, the organizers, and the venue staff.</li>
+          <li>Organizer decisions on conduct issues are <strong>final and binding</strong>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="rule-note reveal">
+      <strong>By participating, you agree</strong> to abide by these rules and the <a href="https://bsideskerala.in/code-of-conduct">BSides Kerala Code of Conduct</a>. Rules may be updated before the event - the latest version on this page is authoritative. Questions? <a href="../contact/index.html">Contact the organizers</a>.
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="sect sect-grey">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+   
+      <h2>Top of the <span class="red">Board</span></h2>
+      <p class="lead">Three teams take the podium. Full prize pool announced soon.</p>
+    </div>
+
+    <div class="prize-grid">
+      <div class="prize-card dark reveal">
+        <div class="prize-rank">2nd Place</div>
+        <div class="prize-medal">02</div>
+        <p> prize_tba</p>
+      </div>
+      <div class="prize-card first reveal">
+        <div class="prize-rank">1st Place</div>
+        <div class="prize-medal">01</div>
+        <p>1,00,000 Cash Prize<br>Bsides Goodies</p>
+      </div>
+      <div class="prize-card dark reveal">
+        <div class="prize-rank">3rd Place</div>
+        <div class="prize-medal">03</div>
+        <p> prize_tba</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sect" style="background:#f4f7fb;">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <h2>CTF Prize <span class="red">Sponsor</span></h2>
+    </div>
+    <div class="partner-panel reveal" style="display:flex;justify-content:center;align-items:center;padding:2rem 0;background:#f4f7fb;">
+      <img src="images/CloudSEK dark horizontal.png" alt="CloudSEK" style="max-width:320px; width:100%; height:auto; display:block;">
+    </div>
+  </div>
+</section>
+<section class="sect" style="background:#f4f7fb;">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <h2>CTF <span class="red">Partner</span></h2>
+    </div>
+    <div class="partner-panel reveal" style="display:flex;justify-content:center;align-items:center;padding:2rem 0;background:#f4f7fb;">
+      <img src="images/beagle.jpg" alt="Beagle Security" style="max-width:320px; width:100%; height:auto; display:block;">
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="sect">
+  <div class="sect-inner">
+    <div class="sect-head reveal">
+      <div class="eyebrow"> ctf_sponsors</div>
+      <h2>Powered <span class="red">By</span></h2>
+      <p class="lead">Thanks to the sponsors making the BSides Kerala CTF happen.</p>
+    </div>
+
+    <div class="sponsor-grid reveal">
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 01</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 02</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 03</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 04</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 05</span></div>
+      <div class="sponsor-card"><span class="sponsor-placeholder">Sponsor 06</span></div>
+    </div>
+  </div>
+</section>
+-->
+<section class="ctf-cta-section">
+  <div class="cta-inner">
+    <h2>Ready to <span class="red">Breach?</span></h2>
+    <p>Register for BSides Kerala 2026. CTF access is open to all conference attendees - bring a team or roll solo.</p>
+    <div class="ctas">
+      <a href="https://konfhub.com/bsides-kerala-2026" class="btn btn-red">Register Now</a>
+      <a href="../contact/index.html" class="btn btn-ol">Contact Organizers</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer class="ft">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="https://bsideskerala.in/img/logo.png" alt="BSides Kerala">
+        <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Conference 2026</h4>
+        <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
+        <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
+        <a href="#">Privacy policy</a>
+      </div>
+      <div class="ft-col">
+        <h4>Security BSides</h4>
+        <a href="https://bsides.org">Security BSides</a>
+        <a href="../about-us/index.html">About us</a>
+        <a href="#">All events</a>
+      </div>
+      <div class="ft-col">
+        <h4>Contact Us</h4>
+        <a href="tel:+919292011337"><b>Phone:</b> +91 929201 1337</a>
+        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>&copy; Copyright <b>BSides Kerala 2026</b>. All Rights Reserved</p>
+      <p class="love"><span class="heart">&#10084;</span> With love to the <span class="grn">security</span> community</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

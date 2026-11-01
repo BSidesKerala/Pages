@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BSides Kerala 2027</title>
+  <meta name="description" content="Security BSides Kerala 2027: trainings 6–7 May, conference day 8 May 2027 at the Marriott Hotel, Kochi.">
+  <meta name="theme-color" content="#050208">
+  <link rel="preload" href="assets/layers/plate.png" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage" aria-label="Animated illustration of a cyberpunk Kathakali performer typing on a laptop beneath a neon sun">
+    <img class="stage__poster" src="assets/kathakali.png" alt="" width="1672" height="941">
+    <canvas class="stage__canvas" data-kathakali width="1672" height="941" role="img"
+            aria-label="A cyberpunk Kathakali performer types on a glowing laptop while his scarf drifts in the wind"></canvas>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__line hero__line--top glitch" data-text="BSIDES">BSIDES</span>
+        <span class="hero__line hero__line--bottom" aria-label="Kerala 2027">
+          <span class="neon" aria-hidden="true"><span class="neon__word glitch" data-text="KERALA"><span style="--i: 0">K</span><span style="--i: 1">E</span><span style="--i: 2">R</span><span class="neon__flicker" style="--i: 3">A</span><span style="--i: 4">L</span><span style="--i: 5">A</span></span><span class="neon__gap"> </span><span class="neon__year" style="--i: 6">2</span><span class="neon__year" style="--i: 7">0</span><span class="neon__year" style="--i: 8">2</span><span class="neon__year" style="--i: 9">7</span></span>
+        </span>
+      </h1>
+
+      <div class="hero__info">
+        <p class="hero__tagline" data-decode>Security BSides Kerala Hacking and Cyber Security Community Conference.</p>
+
+        <ul class="cards">
+          <li class="card">
+            <span class="pill">Trainings</span>
+            <strong class="card__main">6-7 May 2027</strong>
+            <span class="card__sub">Thursday and Friday</span>
+          </li>
+          <li class="card card--hot">
+            <span class="pill pill--hot">Conference Day</span>
+            <strong class="card__main">8 May 2027</strong>
+            <span class="card__sub">Saturday</span>
+          </li>
+          <li class="card">
+            <span class="pill">Venue</span>
+            <strong class="card__main">Kochi Marriott Hotel</strong>
+            <span class="card__sub">Keralam, India.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Tagline decode: random glyphs resolve into the real text from left to right.
+    (function () {
+      var el = document.querySelector('[data-decode]');
+      if (!el || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+      var intro = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--intro')) * 1000 || 0;
+      var text = el.textContent, glyphs = '01<>/\\[]{}#$%&*+=?!_', delay = intro + 1200, dur = 1800, start = null;
+      el.setAttribute('aria-label', text);
+      function frame(t) {
+        if (start === null) start = t;
+        var n = Math.floor(Math.max(0, (t - start - delay) / dur) * text.length);
+        if (n >= text.length) { el.textContent = text; return; }
+        var tail = '';
+        for (var i = n; i < text.length; i++) {
+          tail += text[i] === ' ' ? ' ' : glyphs[Math.floor(Math.random() * glyphs.length)];
+        }
+        el.textContent = text.slice(0, n);
+        var s = document.createElement('span');
+        s.className = 'scramble';
+        s.setAttribute('aria-hidden', 'true');
+        s.textContent = tail;
+        el.appendChild(s);
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
+  <script src="assets/kathakali-data.js"></script>
+  <script src="animation.js" data-assets="assets/"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Cyberpunk pooram parasol artwork">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="g1"><rect x="0" y="300" width="900" height="24"/></clipPath>
+    <clipPath id="g2"><rect x="0" y="420" width="900" height="16"/></clipPath>
+  </defs>
+
+  <g id="art">
+    <!-- finial + crescent -->
+    <path d="M450 56 v38" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="450" cy="46" r="10" fill="#FF3D2E" filter="url(#glow)"/>
+    <path d="M414 92 A 44 44 0 0 1 486 92" fill="none" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- canopy -->
+    <path d="M130 430 A 320 320 0 0 1 770 430 Z" fill="#C2240F" stroke="#7A1004" stroke-width="7"/>
+    <!-- canopy bands -->
+    <path d="M178 430 A 272 272 0 0 1 722 430" fill="none" stroke="#FBBF24" stroke-width="5"/>
+    <path d="M238 430 A 212 212 0 0 1 662 430" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round"/>
+    <path d="M298 430 A 152 152 0 0 1 602 430" fill="none" stroke="#FF3D2E" stroke-width="5" filter="url(#glow)"/>
+    <!-- ribs -->
+    <g stroke="#7A1004" stroke-width="4">
+      <path d="M450 118 L450 430 M450 124 L276 430 M450 124 L624 430 M450 140 L182 430 M450 140 L718 430"/>
+    </g>
+    <!-- scalloped edge -->
+    <g fill="#C2240F" stroke="#FBBF24" stroke-width="4">
+      <path d="M130 430 A 32 32 0 0 0 194 430 Z"/>
+      <path d="M194 430 A 32 32 0 0 0 258 430 Z"/>
+      <path d="M258 430 A 32 32 0 0 0 322 430 Z"/>
+      <path d="M322 430 A 32 32 0 0 0 386 430 Z"/>
+      <path d="M386 430 A 32 32 0 0 0 450 430 Z"/>
+      <path d="M450 430 A 32 32 0 0 0 514 430 Z"/>
+      <path d="M514 430 A 32 32 0 0 0 578 430 Z"/>
+      <path d="M578 430 A 32 32 0 0 0 642 430 Z"/>
+      <path d="M642 430 A 32 32 0 0 0 706 430 Z"/>
+      <path d="M706 430 A 32 32 0 0 0 770 430 Z"/>
+    </g>
+    <!-- pendants: circuit drops -->
+    <g stroke="#FBBF24" stroke-width="3" fill="none">
+      <path d="M162 462 v34 M226 462 v50 M290 462 v38 M354 462 v54 M418 462 v40 M482 462 v54 M546 462 v38 M610 462 v50 M674 462 v34 M738 462 v44"/>
+    </g>
+    <g fill="#FBBF24" filter="url(#glow)">
+      <circle cx="162" cy="504" r="7"/><circle cx="290" cy="508" r="7"/><circle cx="418" cy="510" r="7"/><circle cx="546" cy="508" r="7"/><circle cx="674" cy="504" r="7"/>
+    </g>
+    <g fill="#FF3D2E" filter="url(#glow)">
+      <circle cx="226" cy="520" r="7"/><circle cx="354" cy="524" r="7"/><circle cx="482" cy="524" r="7"/><circle cx="610" cy="520" r="7"/><circle cx="738" cy="514" r="7"/>
+    </g>
+
+    <!-- pole -->
+    <rect x="441" y="430" width="18" height="360" rx="9" fill="#FBBF24"/>
+    <rect x="441" y="560" width="18" height="26" fill="#0A0A0A"/>
+    <rect x="441" y="680" width="18" height="26" fill="#0A0A0A"/>
+    <!-- grip node -->
+    <circle cx="450" cy="804" r="16" fill="#FF3D2E" stroke="#7A1004" stroke-width="4" filter="url(#glow)"/>
+  </g>
+
+  <!-- displacement glitch -->
+  <use href="#art" clip-path="url(#g1)" x="18" opacity=".95"/>
+  <use href="#art" clip-path="url(#g2)" x="-14" opacity=".95"/>
+  <rect x="150" y="300" width="300" height="4" fill="#FFFFFF" opacity=".5"/>
+  <rect x="470" y="434" width="240" height="3" fill="#FBBF24" opacity=".6"/>
+
+  <!-- scanlines over canopy -->
+  <g stroke="#000" stroke-width="2" opacity=".14">
+    <path d="M150 180 h600 M150 220 h600 M150 260 h600 M150 300 h600 M150 340 h600 M150 380 h600 M150 420 h600"/>
+  </g>
+
+  <!-- perspective grid floor -->
+  <g stroke="#FBBF24" stroke-width="2" opacity=".35">
+    <path d="M110 866 L450 790 L790 866"/>
+    <path d="M210 866 L450 790 L690 866"/>
+    <path d="M330 866 L450 790 L570 866"/>
+    <path d="M160 836 h580 M230 812 h440"/>
+  </g>
+
+  <!-- HUD marks -->
+  <g stroke="#FBBF24" stroke-width="3" stroke-linecap="round">
+    <path d="M76 110 h24 M88 98 v24"/>
+    <path d="M806 140 h24 M818 128 v24"/>
+  </g>
+</svg>

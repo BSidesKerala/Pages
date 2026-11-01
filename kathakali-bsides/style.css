@@ -1,0 +1,354 @@
+/* Full-viewport stage that keeps the artwork's 1672:941 aspect ratio and never crops the character. */
+:root {
+  --ink: #050208;
+  --ratio: calc(1672 / 941);
+  --red: #e3262b;
+  --red-glow: #ff2a3d;
+  --sun: #ffd23f;
+  --cyan: #3fd8ff;
+  --font: "Baloo 2", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* How long the artwork plays alone before the title sequence starts (also read by the tagline script). */
+  --intro: 1.5s;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--ink);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  font-family: var(--font);
+  color: #fff;
+}
+
+.stage {
+  position: relative;
+  width: min(100vw, calc(100dvh * var(--ratio)));
+  width: min(100vw, calc(100vh * var(--ratio)));
+  aspect-ratio: 1672 / 941;
+  background: var(--ink);
+  contain: layout paint;
+  container-type: inline-size;
+}
+
+@supports (height: 100dvh) {
+  .stage { width: min(100vw, calc(100dvh * var(--ratio))); }
+}
+
+/* The poster shows the untouched artwork until the first animated frame is ready. */
+.stage__poster,
+.stage__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stage__poster {
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+}
+
+.stage__canvas {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.stage__canvas[data-ready="1"] { opacity: 1; }
+.stage__canvas[data-ready="1"] ~ .stage__poster,
+.stage:has(.stage__canvas[data-ready="1"]) .stage__poster { opacity: 0; }
+
+/* ---------- Hero overlay: sized in container units so it scales with the artwork ---------- */
+
+.hero {
+  position: absolute;
+  inset: auto 0 0.6cqw 4cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Soft dark pool behind the text so it reads over the busy art. */
+.hero::before {
+  content: "";
+  animation: fade-in 1s ease both var(--intro);
+  position: absolute;
+  inset: -4cqw -6cqw -3cqw;
+  z-index: -1;
+  background: radial-gradient(ellipse 55% 60% at 50% 70%, rgba(5, 2, 8, 0.55), transparent 70%);
+}
+
+.hero__title {
+  margin: 0;
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: 0.01em;
+}
+
+.hero__line {
+  display: block;
+  font-size: 10.6cqw;
+}
+
+/* BSIDES: white with a periodic RGB-split glitch burst. */
+.hero__line--top {
+  color: #fff;
+  text-shadow:
+    0.06em 0.03em 0 #050208,
+    0 0 1.2cqw rgba(255, 255, 255, 0.35);
+  animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both var(--intro);
+}
+
+.glitch { position: relative; }
+
+/* Two sliced copies of the word, each with a coloured edge, jump sideways during a burst. */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glitch::before {
+  text-shadow: -0.35cqw 0 var(--cyan);
+  animation: glitch-a 3.5s steps(1) infinite calc(var(--intro) + 2s);
+}
+
+.glitch::after {
+  text-shadow: 0.35cqw 0 var(--red-glow);
+  animation: glitch-b 3.5s steps(1) infinite calc(var(--intro) + 2s);
+}
+
+@keyframes glitch-a {
+  0%, 78%, 100% { opacity: 0; transform: none; clip-path: inset(0 0 100% 0); }
+  79% { opacity: 1; transform: translateX(-1.4cqw); clip-path: inset(8% 0 70% 0); }
+  81% { opacity: 1; transform: translateX(1cqw); clip-path: inset(55% 0 25% 0); }
+  83% { opacity: 1; transform: translateX(-0.6cqw); clip-path: inset(30% 0 48% 0); }
+  85% { opacity: 1; transform: translateX(1.6cqw); clip-path: inset(72% 0 6% 0); }
+  87% { opacity: 1; transform: translateX(-0.8cqw); clip-path: inset(18% 0 60% 0); }
+  89% { opacity: 0; }
+}
+
+@keyframes glitch-b {
+  0%, 78%, 100% { opacity: 0; transform: none; clip-path: inset(0 0 100% 0); }
+  79% { opacity: 1; transform: translateX(1.2cqw); clip-path: inset(62% 0 12% 0); }
+  81% { opacity: 1; transform: translateX(-1.5cqw); clip-path: inset(10% 0 74% 0); }
+  83% { opacity: 1; transform: translateX(0.8cqw); clip-path: inset(40% 0 38% 0); }
+  85% { opacity: 1; transform: translateX(-1cqw); clip-path: inset(0 0 82% 0); }
+  87% { opacity: 1; transform: translateX(1.4cqw); clip-path: inset(80% 0 2% 0); }
+  89% { opacity: 0; }
+}
+
+/* KERALA 2027: letters that drop in, then a lift wave rolls across them.
+   KERALA matches BSIDES; the red year only gets the hard black shadow. */
+.neon__word { display: inline-block; }
+
+.neon span:not(.neon__word) {
+  display: inline-block;
+  color: #fff;
+  text-shadow:
+    0.06em 0.03em 0 #050208,
+    0 0 1.2cqw rgba(255, 255, 255, 0.35);
+  animation:
+    letter-in 0.7s cubic-bezier(0.2, 0.9, 0.25, 1.2) both calc(var(--intro) + 0.35s + var(--i) * 70ms),
+    glow-wave 3.6s ease-in-out infinite calc(var(--intro) + 1.6s + var(--i) * 110ms);
+}
+
+.neon .neon__gap { width: 0.22em; }
+
+.neon span.neon__year {
+  color: var(--red);
+  text-shadow: 0.06em 0.03em 0 #050208;
+}
+
+.neon span.neon__flicker {
+  animation:
+    letter-in 0.7s cubic-bezier(0.2, 0.9, 0.25, 1.2) both calc(var(--intro) + 0.35s + var(--i) * 70ms),
+    flicker 6s linear infinite calc(var(--intro) + 2.5s);
+}
+
+@keyframes letter-in {
+  from { opacity: 0; transform: translateY(-40%) scale(1.25); filter: blur(0.6cqw); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+@keyframes glow-wave {
+  0%, 70%, 100% { transform: none; }
+  80% { transform: translateY(-4%); }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.35; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18%); filter: blur(0.5cqw); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* ---------- Tagline: decodes from random glyphs into the real text (see script in index.html) ---------- */
+
+.hero__tagline {
+  margin: 1.2cqw 0 1.1cqw;
+  font-size: 1.72cqw;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #f4eef6;
+  text-shadow:
+    -0.08em 0.04em 0 #050208,
+    0 0.12cqw 0.4cqw rgba(0, 0, 0, 0.9);
+  animation: fade-in 0.4s ease both calc(var(--intro) + 1.2s);
+}
+
+.hero__tagline .scramble { color: var(--red-glow); }
+
+/* ---------- Info cards: plain dark panel that powers on like a CRT, then each card's text flickers in ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 1.1cqw;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(5, 2, 8, 0.85);
+  pointer-events: auto;
+  /* Starts once the tagline decode (1.2s delay + 1.8s in index.html) has finished. */
+  animation: crt-on 0.7s cubic-bezier(0.7, 0, 0.3, 1) both calc(var(--intro) + 3.1s);
+}
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes crt-on {
+  0% { opacity: 0; transform: scale(0, 0.02); filter: brightness(4); }
+  10% { opacity: 1; }
+  50% { transform: scale(1, 0.02); filter: brightness(4); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25cqw;
+  padding: 0.9cqw 3cqw 1cqw;
+}
+
+.card > * { animation: flick-on 0.45s steps(1) both calc(var(--intro) + 3.8s + var(--d, 0s)); }
+.card:nth-child(2) { --d: 0.15s; }
+.card:nth-child(3) { --d: 0.3s; }
+
+@keyframes flick-on {
+  0% { opacity: 0; }
+  20% { opacity: 0.7; }
+  35% { opacity: 0.1; }
+  55% { opacity: 1; }
+  70% { opacity: 0.3; }
+  85%, 100% { opacity: 1; }
+}
+
+.card + .card { border-left: 1px solid rgba(255, 255, 255, 0.14); }
+
+.pill {
+  display: inline-block;
+  padding: 0.12cqw 1cqw 0.05cqw;
+  border: 0.11cqw solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  font-size: 0.95cqw;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.pill--hot {
+  border-color: var(--red);
+  background: var(--red);
+}
+
+.card__main {
+  font-size: 2.35cqw;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.card__sub {
+  font-size: 1.15cqw;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.2;
+}
+
+/* ---------- Portrait / narrow screens: keep the title on the art, move details below it ---------- */
+
+@media (max-aspect-ratio: 1/1) {
+  body {
+    place-items: start center;
+    overflow-y: auto;
+    padding-top: 8vh;
+  }
+
+  .stage {
+    width: 100vw;
+    contain: layout;
+  }
+
+  .hero { inset: auto 0 2cqw 0; }
+  .hero::before { display: none; }
+  .hero__line { font-size: 13cqw; }
+
+  .hero__info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 4cqw 16px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__tagline { margin: 0 0 20px; font-size: 16px; }
+
+  .cards { grid-template-columns: 1fr; width: 100%; max-width: 420px; border-radius: 16px; }
+  .card { padding: 16px; gap: 4px; }
+  .card + .card { border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+  .pill { font-size: 11px; padding: 2px 12px 1px; border-width: 1.5px; }
+  .card__main { font-size: 24px; }
+  .card__sub { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage__poster,
+  .stage__canvas { transition: none; }
+
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .glitch::before,
+  .glitch::after { display: none; }
+}

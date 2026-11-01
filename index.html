@@ -3,24 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Security BSides Kerala 2026</title>
+<title>Security BSides Kerala 2027</title>
 
-<meta name="description" content="Security BSides Kerala">
+<meta name="description" content="Security BSides Kerala 2027: trainings 6-7 May, conference day 8 May 2027, Marriott Hotel Kochi.">
   <meta name="author" content="BSides Kerala">
   <meta name="keywords" content="BSides, Kerala, cyber security, conference">
-  <meta property="og:title" content="BSides Kerala 2026">
-  <meta property="og:description" content="Security BSides Kerala 2026">
+  <meta property="og:title" content="BSides Kerala 2027">
+  <meta property="og:description" content="Security BSides Kerala 2027: trainings 6-7 May, conference day 8 May 2027, Marriott Hotel Kochi.">
   <meta property="og:type" content="website, conference, cyber security">
-  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg"/>
+  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
 
 
 <link rel="stylesheet" href="css/style-2026.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="css/sponsors.css">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="kathakali-bsides/assets/kathakali.png" as="image">
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<style>
+/* Baloo Chettan 2 everywhere */
+*{font-family:'Baloo Chettan 2',sans-serif !important}
+.hero h1,.sect-heading,.cta-block h2,.cd-title,.cd-item .val,.keynote-info h3,.ent-card h3,.venue-right h3,.card-body h3,.ft-col h4,.nav-logo b{letter-spacing:0 !important;font-weight:800}
+.sect-label,.cd-item .lbl,.ent-card-label{letter-spacing:.08em !important}
+
+/* black transparent menu bar, bold white menu items */
+.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
+.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase}
+.nav-links a{font-weight:800;font-size:1rem;color:#fff}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-links .cta-link{font-weight:800}
+.burger{color:#fff;border-color:rgba(255,255,255,.3)}
+@media(max-width:900px){.nav-links.open{background:rgba(0,0,0,.92);border-bottom:1px solid rgba(255,255,255,.08)}}
+
+/* Kathakali animation as the hero background */
+.hero{background:#09090B}
+.kstage{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.kstage .kart{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:max(100%,177.68vh);aspect-ratio:1672/941}
+.kstage img,.kstage canvas{position:absolute;inset:0;width:100%;height:100%}
+.kstage canvas{opacity:0;transition:opacity .8s ease}
+.kstage canvas[data-ready="1"]{opacity:1}
+.kstage::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(rgba(9,9,11,.15) 0%,rgba(9,9,11,0) 40%,rgba(9,9,11,.55) 62%,rgba(9,9,11,.92) 100%)}
+.hero{justify-content:flex-end;padding-bottom:3.5rem}
+.hero .hero-chip{display:none}
+.hero-content{max-width:1500px}
+.hero-text{max-width:900px}
+/* training + conference date blocks */
+.hero-dates{display:inline-flex;gap:0;margin:.4rem auto .8rem;border-radius:16px;overflow:hidden;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14)}
+.hd{display:flex;flex-direction:column;align-items:center;padding:.55rem 1.8rem .5rem;min-width:220px}
+.hd + .hd{border-left:1px solid rgba(255,255,255,.14)}
+.hd-k{font-size:.78rem;font-weight:800;letter-spacing:.14em !important;text-transform:uppercase;color:#fff;
+  border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:.1rem .8rem;margin-bottom:.35rem}
+.hd-main .hd-k{background:#DC2626;border-color:#DC2626}
+.hd-v{font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:800;line-height:1.1;color:#fff}
+.hd-main .hd-v{color:#fff}
+.hd-s{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.75)}
+.hero-row{display:flex;align-items:stretch;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:.6rem}
+.hero-row .hero-dates{margin:0}
+.hero-btns-col{flex-direction:column;justify-content:center;gap:.6rem}
+.hero-btns-col .btn{padding:.7rem 1.8rem;justify-content:center;width:100%}
+.hd{min-width:200px}
+.hero-venue{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:1.6rem;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+@media(max-height:860px) and (min-width:601px){
+  section.hero h1{font-size:min(12vw,12vh,12rem);margin-bottom:.5rem}
+  .hd-s{font-size:.8rem;line-height:1.2}
+  .hero-text{font-size:1.1rem}
+  .hero{padding-bottom:2rem}
+  .hero-text{margin-bottom:.2rem}
+  .hd{padding:.4rem 1.6rem .35rem}
+  .hd-k{margin-bottom:.2rem}
+  .hd-v{font-size:1.45rem}
+  .hero-venue{margin-bottom:1rem}
+}
+@media(max-width:900px){.hero-btns-col{flex-direction:row}}
+@media(max-width:600px){.hero-dates{flex-direction:column}.hd + .hd{border-left:0;border-top:1px solid rgba(255,255,255,.14)}.hd{min-width:0}}
+
+/* hero heading: same treatment as the live bsideskerala.in */
+section.hero h1,section.hero h1 span{font-family:'Baloo Chettan 2',sans-serif !important;font-weight:800 !important;letter-spacing:.01em !important;text-transform:uppercase}
+section.hero h1{font-size:min(12vw,14.5vh,12rem);line-height:.98;margin-bottom:1.2rem;text-shadow:0 4px 28px rgba(0,0,0,.8)}
+section.hero h1 .block{display:block}
+section.hero h1 .red{color:#DC2626}
+.hero-text{font-size:clamp(1.1rem,1.6vw,1.4rem);letter-spacing:.02em}
+.hero-loc{font-size:clamp(1rem,1.3vw,1.15rem);color:rgba(255,255,255,.85)}
+.hero-text{margin-bottom:.4rem}
+.hero-loc{margin-bottom:1.8rem}
+.hero h1,.hero-text,.hero-loc{text-shadow:0 2px 18px rgba(0,0,0,.75)}
+.hero-text{color:rgba(255,255,255,.8)}
+.hero-loc{color:#fff}
+.conf-info{background:#fff}
+.conf-split{grid-template-columns:1fr;min-height:0;max-width:1240px}
+.conf-enterprise{grid-template-columns:repeat(4,1fr);padding:3rem 5%}
+@media(max-width:1000px){.conf-enterprise{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.conf-enterprise{grid-template-columns:1fr}}
+.past-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.past-grid .card-body{padding:1.4rem}
+.past-grid .card-body a{display:inline-block;margin-top:.8rem;font-weight:700;color:var(--red)}
+
+/* ===== Hero: kathakali-bsides, scoped with kb- prefixes ===== */
+:root{
+  --kb-ink:#050208;
+  --kb-ratio:calc(1672 / 941);
+  --kb-red:#e3262b;
+  --kb-red-glow:#ff2a3d;
+  --kb-cyan:#3fd8ff;
+  --kb-intro:1.5s;
+}
+.kb-wrap{position:relative;height:100vh;height:100dvh;display:grid;place-items:center;background:var(--kb-ink);overflow:hidden;color:#fff;padding-top:72px;box-sizing:border-box}
+.kb-stage{position:relative;width:min(100vw, calc((100vh - 72px) * var(--kb-ratio)));aspect-ratio:1672/941;background:var(--kb-ink);contain:layout paint;container-type:inline-size}
+@supports (height:100dvh){.kb-stage{width:min(100vw, calc((100dvh - 72px) * var(--kb-ratio)))}}
+.kb-stage__poster,.kb-stage__canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.kb-stage__poster{object-fit:contain;transition:opacity .4s ease}
+.kb-stage__canvas{opacity:0;transition:opacity .4s ease}
+.kb-stage__canvas[data-ready="1"]{opacity:1}
+.kb-stage__canvas[data-ready="1"] ~ .kb-stage__poster,
+.kb-stage:has(.kb-stage__canvas[data-ready="1"]) .kb-stage__poster{opacity:0}
+
+.kb-hero{position:absolute;inset:auto 0 .6cqw 4cqw;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none}
+.kb-hero::before{content:"";animation:kb-fade-in 1s ease both var(--kb-intro);position:absolute;inset:-4cqw -6cqw -3cqw;z-index:-1;
+  background:radial-gradient(ellipse 55% 60% at 50% 70%,rgba(5,2,8,.55),transparent 70%)}
+.kb-hero__title{margin:0;font-weight:800;line-height:.82;letter-spacing:.01em}
+.kb-hero__line{display:block;font-size:10.6cqw}
+.kb-hero__line--top{color:#fff;text-shadow:.06em .03em 0 #050208,0 0 1.2cqw rgba(255,255,255,.35);
+  animation:kb-rise .9s cubic-bezier(.2,.8,.2,1) both var(--kb-intro)}
+.kb-glitch{position:relative}
+.kb-glitch::before,.kb-glitch::after{content:attr(data-text);position:absolute;inset:0;z-index:1;color:#fff;opacity:0;pointer-events:none}
+.kb-glitch::before{text-shadow:-.35cqw 0 var(--kb-cyan);animation:kb-glitch-a 3.5s steps(1) infinite calc(var(--kb-intro) + 2s)}
+.kb-glitch::after{text-shadow:.35cqw 0 var(--kb-red-glow);animation:kb-glitch-b 3.5s steps(1) infinite calc(var(--kb-intro) + 2s)}
+@keyframes kb-glitch-a{
+  0%,78%,100%{opacity:0;transform:none;clip-path:inset(0 0 100% 0)}
+  79%{opacity:1;transform:translateX(-1.4cqw);clip-path:inset(8% 0 70% 0)}
+  81%{opacity:1;transform:translateX(1cqw);clip-path:inset(55% 0 25% 0)}
+  83%{opacity:1;transform:translateX(-.6cqw);clip-path:inset(30% 0 48% 0)}
+  85%{opacity:1;transform:translateX(1.6cqw);clip-path:inset(72% 0 6% 0)}
+  87%{opacity:1;transform:translateX(-.8cqw);clip-path:inset(18% 0 60% 0)}
+  89%{opacity:0}}
+@keyframes kb-glitch-b{
+  0%,78%,100%{opacity:0;transform:none;clip-path:inset(0 0 100% 0)}
+  79%{opacity:1;transform:translateX(1.2cqw);clip-path:inset(62% 0 12% 0)}
+  81%{opacity:1;transform:translateX(-1.5cqw);clip-path:inset(10% 0 74% 0)}
+  83%{opacity:1;transform:translateX(.8cqw);clip-path:inset(40% 0 38% 0)}
+  85%{opacity:1;transform:translateX(-1cqw);clip-path:inset(0 0 82% 0)}
+  87%{opacity:1;transform:translateX(1.4cqw);clip-path:inset(80% 0 2% 0)}
+  89%{opacity:0}}
+.kb-neon__word{display:inline-block}
+.kb-neon span:not(.kb-neon__word){display:inline-block;color:#fff;
+  text-shadow:.06em .03em 0 #050208,0 0 1.2cqw rgba(255,255,255,.35);
+  animation:kb-letter-in .7s cubic-bezier(.2,.9,.25,1.2) both calc(var(--kb-intro) + .35s + var(--i) * 70ms),
+            kb-glow-wave 3.6s ease-in-out infinite calc(var(--kb-intro) + 1.6s + var(--i) * 110ms)}
+.kb-neon .kb-neon__gap{width:.22em}
+.kb-neon span.kb-neon__year{color:var(--kb-red);text-shadow:.06em .03em 0 #050208}
+.kb-neon span.kb-neon__flicker{
+  animation:kb-letter-in .7s cubic-bezier(.2,.9,.25,1.2) both calc(var(--kb-intro) + .35s + var(--i) * 70ms),
+            kb-flicker 6s linear infinite calc(var(--kb-intro) + 2.5s)}
+@keyframes kb-letter-in{from{opacity:0;transform:translateY(-40%) scale(1.25);filter:blur(.6cqw)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes kb-glow-wave{0%,70%,100%{transform:none}80%{transform:translateY(-4%)}}
+@keyframes kb-flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.35}}
+@keyframes kb-rise{from{opacity:0;transform:translateY(18%);filter:blur(.5cqw)}to{opacity:1;transform:none;filter:blur(0)}}
+
+.kb-hero__tagline{margin:1.2cqw 0 1.1cqw;font-size:1.72cqw;font-weight:600;letter-spacing:.01em;color:#f4eef6;
+  text-shadow:-.08em .04em 0 #050208,0 .12cqw .4cqw rgba(0,0,0,.9);
+  animation:kb-fade-in .4s ease both calc(var(--kb-intro) + 1.2s)}
+.kb-hero__tagline .kb-scramble{color:var(--kb-red-glow)}
+
+.kb-cards{display:grid;grid-template-columns:repeat(3,auto);margin:0;padding:0;list-style:none;border-radius:1.1cqw;
+  border:1px solid rgba(255,255,255,.14);background:rgba(5,2,8,.85);pointer-events:auto;
+  animation:kb-crt-on .7s cubic-bezier(.7,0,.3,1) both calc(var(--kb-intro) + 3.1s)}
+@keyframes kb-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes kb-crt-on{0%{opacity:0;transform:scale(0,.02);filter:brightness(4)}10%{opacity:1}50%{transform:scale(1,.02);filter:brightness(4)}100%{opacity:1;transform:none;filter:none}}
+.kb-card{display:flex;flex-direction:column;align-items:center;gap:.25cqw;padding:.9cqw 3cqw 1cqw}
+.kb-card > *{animation:kb-flick-on .45s steps(1) both calc(var(--kb-intro) + 3.8s + var(--d,0s))}
+.kb-card:nth-child(2){--d:.15s}
+.kb-card:nth-child(3){--d:.3s}
+@keyframes kb-flick-on{0%{opacity:0}20%{opacity:.7}35%{opacity:.1}55%{opacity:1}70%{opacity:.3}85%,100%{opacity:1}}
+.kb-card + .kb-card{border-left:1px solid rgba(255,255,255,.14)}
+.kb-pill{display:inline-block;padding:.12cqw 1cqw .05cqw;border:.11cqw solid rgba(255,255,255,.75);border-radius:999px;
+  font-size:.95cqw;font-weight:700;letter-spacing:.22em;text-transform:uppercase;line-height:1.6}
+.kb-pill--hot{border-color:var(--kb-red);background:var(--kb-red)}
+.kb-card__main{font-size:2.35cqw;font-weight:700;line-height:1.15}
+.kb-card__sub{font-size:1.15cqw;font-weight:500;color:rgba(255,255,255,.78);line-height:1.2}
+
+/* portrait / narrow: title stays on the art, details move below it */
+@media (max-aspect-ratio:1/1){
+  .kb-wrap{height:auto;display:block;padding-top:76px;overflow:visible}
+  .kb-stage{width:100vw;contain:layout}
+  .kb-hero{inset:auto 0 2cqw 0}
+  .kb-hero::before{display:none}
+  .kb-hero__line{font-size:13cqw}
+  .kb-hero__info{position:absolute;top:100%;left:0;right:0;padding:4cqw 16px 32px;display:flex;flex-direction:column;align-items:center}
+  .kb-hero__tagline{margin:0 0 20px;font-size:16px}
+  .kb-cards{grid-template-columns:1fr;width:100%;max-width:420px;border-radius:16px}
+  .kb-card{padding:16px;gap:4px}
+  .kb-card + .kb-card{border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .kb-pill{font-size:11px;padding:2px 12px 1px;border-width:1.5px}
+  .kb-card__main{font-size:24px}
+  .kb-card__sub{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  .kb-stage__poster,.kb-stage__canvas{transition:none}
+  .kb-hero *,.kb-hero *::before,.kb-hero *::after{animation:none !important;transition:none !important}
+  .kb-glitch::before,.kb-glitch::after{display:none}
+}
+.ent-card::before{display:none}
+/* responsive fixes */
+.nav-links a{white-space:nowrap}
+@media(max-width:1100px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;
+    background:rgba(0,0,0,.94);border-bottom:1px solid rgba(255,255,255,.08);padding:1rem 5%;backdrop-filter:blur(16px);gap:.2rem}
+  .nav-links.open .cta-link{margin:.4rem 0 0;text-align:center}
+}
+.nav-logo b{white-space:nowrap}
+@media(max-width:480px){.nav-logo b{font-size:1.2rem}.nav-logo img{height:32px}.nav{padding:.6rem 4%}}
+@media(max-width:900px){.keynote-photo{max-width:380px}}
+/* short landscape screens (phones turned sideways): details move below the art */
+@media(max-height:500px) and (min-aspect-ratio:1/1){
+  .kb-wrap{height:auto;display:block;overflow:visible;padding-top:72px}
+  .kb-stage{margin:0 auto;contain:layout}
+  .kb-hero{inset:auto 0 2cqw 0}
+  .kb-hero::before{display:none}
+  .kb-hero__info{position:absolute;top:100%;left:0;right:0;padding:16px 16px 28px;display:flex;flex-direction:column;align-items:center}
+  .kb-hero__tagline{margin:0 0 14px;font-size:15px}
+  .kb-cards{border-radius:14px}
+  .kb-card{padding:12px 20px}
+  .kb-pill{font-size:10px;padding:2px 10px 1px;border-width:1.5px}
+  .kb-card__main{font-size:18px}
+  .kb-card__sub{font-size:12px}
+}
+@media(min-aspect-ratio:1/1) and (min-height:501px){
+  .kb-pill{font-size:max(.95cqw,9px)}
+  .kb-card__sub{font-size:max(1.15cqw,11px)}
+  .kb-card__main{font-size:max(2.35cqw,15px)}
+  .kb-hero__tagline{font-size:max(1.72cqw,12px)}
+}</style>
 </head>
 <body>
 
@@ -32,35 +250,59 @@
   </a>
   <ul class="nav-links" id="navMenu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="call-for-papers">CFP</a></li>
     <li><a href="trainings">Trainings</a></li>
     <li><a href="speakers">Speakers</a></li>
     <li><a href="schedule">Schedule</a></li>
     <li><a href="capture-the-flag">Capture-the-flag</a></li>
     <li><a href="about-us">About Us</a></li>
     <li><a href="contact">Contact</a></li>
-    <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
+    <li><a href="archives/" class="cta-link">Archives</a></li>
   </ul>
   <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"><div class="c1"></div><div class="c2"></div><div class="lines"></div></div>
-  <div class="hero-content">
-    <div class="hero-chip"></div>
-    <h1><span class="block">BSides</span><span class="block red">Kerala 2026</span></h1>
-    <p class="hero-text"><strong>Security BSides Kerala Hacking and Cyber Security Community Conference</strong></p>
-    <p class="hero-loc" style="color:white;">7-9 May 2026, Kochi Marriott Hotel, Kerala.</p>
-    <div class="hero-btns">
-      <a href="https://konfhub.com/bsides-kerala-2026" class="btn btn-primary">Register Now</a>
-      <a href="archives/bsides-kerala-2025/" class="btn btn-secondary">BSides Kerala 2025 Archive</a>
+<!-- HERO (from kathakali-bsides) -->
+<section class="kb-wrap" id="kbWrap">
+  <div class="kb-stage" aria-label="Animated illustration of a cyberpunk Kathakali performer typing on a laptop beneath a neon sun">
+    <img class="kb-stage__poster" src="kathakali-bsides/assets/kathakali.png" alt="" width="1672" height="941">
+    <canvas class="kb-stage__canvas" data-kathakali width="1672" height="941" role="img"
+            aria-label="A cyberpunk Kathakali performer types on a glowing laptop while his scarf drifts in the wind"></canvas>
+
+    <div class="kb-hero">
+      <h1 class="kb-hero__title" id="hero-title">
+        <span class="kb-hero__line kb-hero__line--top kb-glitch" data-text="BSIDES">BSIDES</span>
+        <span class="kb-hero__line kb-hero__line--bottom" aria-label="Kerala 2027">
+          <span class="kb-neon" aria-hidden="true"><span class="kb-neon__word kb-glitch" data-text="KERALA"><span style="--i: 0">K</span><span style="--i: 1">E</span><span style="--i: 2">R</span><span class="kb-neon__flicker" style="--i: 3">A</span><span style="--i: 4">L</span><span style="--i: 5">A</span></span><span class="kb-neon__gap"> </span><span class="kb-neon__year" style="--i: 6">2</span><span class="kb-neon__year" style="--i: 7">0</span><span class="kb-neon__year" style="--i: 8">2</span><span class="kb-neon__year" style="--i: 9">7</span></span>
+        </span>
+      </h1>
+
+      <div class="kb-hero__info" id="kbInfo">
+        <p class="kb-hero__tagline" data-decode>Security BSides Kerala Hacking and Cyber Security Community Conference.</p>
+
+        <ul class="kb-cards">
+          <li class="kb-card">
+            <span class="kb-pill">Trainings</span>
+            <strong class="kb-card__main">67 May 2027</strong>
+            <span class="kb-card__sub">Thursday and Friday</span>
+          </li>
+          <li class="kb-card kb-card--hot">
+            <span class="kb-pill kb-pill--hot">Conference Day</span>
+            <strong class="kb-card__main">8 May 2027</strong>
+            <span class="kb-card__sub">Saturday</span>
+          </li>
+          <li class="kb-card">
+            <span class="kb-pill">Venue</span>
+            <strong class="kb-card__main">Kochi Marriott Hotel</strong>
+            <span class="kb-card__sub">Keralam, India.</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="cd-wrap">
-  <h2 class="cd-title">BSides Kerala Will <em>Start In</em></h2>
+  <h2 class="cd-title">Conference day <em>starts in</em></h2>
   <div class="cd-grid">
     <div class="cd-item"><div class="val" id="cd-d">--</div><div class="lbl">Days</div></div>
     <div class="cd-item"><div class="val" id="cd-h">--</div><div class="lbl">Hours</div></div>
@@ -69,179 +311,10 @@
   </div>
 </div>
 
-
-<section class="ks-section">
-
-  <div class="ks-bg"></div>
-  <div class="ks-inner">
-    <div class="sect-label" style="color:var(--green-l)">Keynote Speakers</div>
-    <h2 class="sect-heading" style="color:#fff">BSides Kerala 2026 <span class="red">Keynote</span></h2>
-    <div class="ks-layout">
-      <div class="ks-photo">
-        <div class="ks-accent"></div>
-        <img src="img/speakers/manoj-abraham.jpg" alt="">
-      </div>
-      <div class="ks-body">
-        <span class="ks-tag">Keynote Speaker</span>
-        <h3>Manoj Abraham IPS <span class="red"></span></h3>
-        <p class="ks-role">Director General of Police, Kerala Police<br>Director of Vigilance and Anti-corruption Bureau </p>
-        <p class="ks-bio">Manoj Abraham IPS is currently the Director General of Police, Thiruvananthapuram and the Head of Cyber Security, in Kerala State. He has won numerous national and international awards in areas of cyber security, social policing and traffic schemes.
-He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber security and also the Man behind c0c0n - International Cyber Security Conference. </p>
-        <p class="ks-bio">The keynote will cover the emerging attack vectors, and the role of community-driven defense in shaping the future of cyber security.</p>
-        <div class="ks-socials">
-          <a href="https://x.com/manojabraham051?s=20" class="ks-social" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span>Twitter / X</span>
-          </a>
-          <a href="https://linkedin.com/in/manoj-abraham" class="ks-social" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  
-
-  <div class="ks-bg"></div>
-
-
-</section>
-<div class="sep"></div>
-
-<section class="ks-section ks-alt">
-  <div class="ks-inner">
-        <div class="sect-label" style="color:var(--green-l)">Inaugural Address Speaker</div>
-    <h2 class="sect-heading" style="color:#000000"> BSides Kerala 2026 <span class="red">Inaugural Address</span></h2>
-    <div class="ks-layout ks-reverse">
-      <div class="ks-photo">
-        <div class="ks-accent green"></div>
-        <img src="img/speakers/prasad-k-panicker.jpg" alt="">
-      </div>
-      <div class="ks-body">
-        <span class="ks-tag ks-tag-green">Inaugural Address</span>
-        <h3>Prasad K. <span class="red">Panicker</span></h3>
-        <p class="ks-role">Executive Chairman of Nayara Energy Limited.</p>
-
-        <p class="ks-bio">Prasad K. Panicker is the Executive Chairman of Nayara Energy Ltd., one of India's largest private sector refiners. With over four decades in the Oil & Gas industry, he is widely regarded as a transformative leader known for driving operational excellence, safety, and sustainability at scale.</p>
-          <p class="ks-bio">He will deliver the Inaugural Address, sharing his perspectives on the intersection of industry, technology, and the growing importance of cyber resilience in critical infrastructure, along with the evolving imperatives of data sovereignty in an increasingly interconnected world.</p>
-        <div class="ks-socials">
-          <a href="https://x.com/prasadkpanicker" class="ks-social ks-social-dark" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span>Twitter / X</span>
-          </a>
-          <a href="https://www.linkedin.com/in/prasad-panicker" class="ks-social ks-social-dark" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="sep"></div>
-<!-- KEYNOTE SPEAKER 2 -->
-<section class="ks-section">
-  <div class="ks-inner">
-        <div class="sect-label" style="color:var(--green-l)">Keynote Speakers</div>
-    <h2 class="sect-heading" style="color:#fff">BSides Kerala 2026 <span class="red">Keynote</span></h2>
-    <div class="ks-layout">
-      <div class="ks-photo">
-        <div class="ks-accent green"></div>
-        <img src="img/speakers/vittal-raj.jpg" alt="Keynote Speaker">
-      </div>
-      <div class="ks-body">
-        <span class="ks-tag">Keynote Speaker</span>
-        <h3>R. Vittal Raj<span class="red"></span></h3>
-        <p class="ks-role">Founder and Partner at Kumar & Raj Chartered Accountant<br>Member, RBI Standing Committee<br>Former International Vice President at ISACA</p>
-        <p class="ks-bio">R. Vittal Raj is the Founder and Partner at Kumar & Raj Chartered Accountants, Chennai, and a globally respected thought leader in IT governance, cybersecurity, and risk management. A Fellow Chartered Accountant, he holds multiple prestigious certifications including CISA, CISSP, CISM, CRISC, CGEIT, CIA and CFE.</p>
-<!--    <p class="ks-bio">With over 25 years of experience directing projects in IT governance, information security, IT assurance, and enterprise risk management, he works closely with regulators in India on IT Risk Management and Cybersecurity policy, including as a Member of the RBI Standing Committee.</p>
-        <p class="ks-bio">He has served as International Vice President on the Board of ISACA, the global association serving IT governance, assurance, risk and security professionals across 180 countries. He is currently President & Advisor of the ISACA Chennai Chapter and an active mentor for professionals building careers in the digital world.</p> --->
-        <p class="ks-bio">His keynote will explore the evolving landscape of IT governance, cyber risk, and the regulatory frameworks shaping India's digital future.</p>
-        <div class="ks-socials">
-          <a href="#" class="ks-social" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span>Twitter / X</span>
-          </a>
-          <a href="https://linkedin.com/in/rvittalraj" class="ks-social" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ks-bg"></div>
-  <br> <br>
-</section>
-<div class="sep"></div>
-
-<section class="ks-section ks-alt">
-  <div class="ks-inner">
-        <div class="sect-label" style="color:var(--green-l)">Closing Keynote Speaker</div>
-    <h2 class="sect-heading" style="color:#000000"> BSides Kerala 2026 <span class="red">Closing Keynote</span></h2>
-    <div class="ks-layout ks-reverse">
-      <div class="ks-photo">
-        <div class="ks-accent green"></div>
-        <img src="img/speakers/mu-nair.jpg" alt="">
-      </div>
-      <div class="ks-body">
-        <span class="ks-tag ks-tag-green">Closing Keynote</span>
-        <h3>Lt Gen. M Unnikrishnan Nair <span class="red">PVSM, AVSM, SM (Retd.)</span></h3>
-        <p class="ks-role">Former National Cyber Security Coordinator at National Security Council Secretariat.</p>
-
-        <p class="ks-bio">Lt Gen M Unnikrishnan Nair PVSM, AVSM, SM (retired) is a former Signal Officer in Chief of the Indian
-                Army, where he served for nearly 40 years in multiple assignments. As a Lt Gen, he was also the Commandant of the
-                Military College of Telecommunications Engineering (MICTE) at Mhow, Indore, as also the Chief of Staff,
-                of Army's Central Command.</p>
-          <p class="ks-bio">His closing keynote address will draw on his vast experience at the intersection of military communications, national security, and emerging cyber threats.</p>
-        <div class="ks-socials">
-          <a href="#" class="ks-social ks-social-dark" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span>Twitter / X</span>
-          </a>
-          <a href="https://linkedin.com/in/lt-gen-madhavan-unnikrishnan-nair-6b69a478" class="ks-social ks-social-dark" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="conf-info">
   <div class="conf-split">
 
-   
-    <div class="conf-terminal">
-      <div class="term-bar">
-        <span class="term-dot r"></span>
-        <span class="term-dot y"></span>
-        <span class="term-dot g"></span>
-        <span>bsides@kerala:~</span>
-      </div>
-      <div class="term-body">
-        <div class="term-line"><span class="prompt">$</span> <span class="cmd">./bsides_kerala</span> <span class="flag">--status</span></div>
-        <div class="term-line"><span class="comment"># Conference Recon Report</span></div>
-        <div class="term-line">&nbsp;</div>
-        <div class="term-line"><span class="output">location:</span>    <span class="val-str">"Kochi, Kerala"</span>    <span class="status-ok">[CONFIRMED]</span></div>
-        <div class="term-line"><span class="output">year:</span>        <span class="val-str">"2026"</span></div>
-        <div class="term-line"><span class="output">duration:</span>    <span class="val-str">"Thursday → Saturday"</span></div>
-        <div class="term-line"><span class="output">tickets:</span>     <span class="status-pend">OPEN</span>  <span class="comment"># Register Now</span></div>
-        <div class="term-line"><span class="output">lunch:</span>       <span class="val-str">"Free"</span>           <span class="status-ok">[INCLUDED]</span></div>
-        <div class="term-line"><span class="output">snacks:</span>      <span class="val-str">"Free"</span>           <span class="status-ok">[INCLUDED]</span></div>
-        <div class="term-line">&nbsp;</div>
-        <div class="term-line"><span class="output">tracks:</span>      <span class="val-str">["offensive", "defensive", "ctf", "training"]</span></div>
-        <div class="term-line"><span class="output">vibe:</span>        <span class="val-str">"hacker + enterprise"</span></div>
-        <div class="term-line">&nbsp;</div>
-        <div class="term-line"><span class="prompt">$</span> <span class="term-cursor"></span></div>
-      </div>
-    </div>
 
-   
     <div class="conf-enterprise">
 
       <div class="ent-card">
@@ -251,7 +324,7 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
           </div>
           <span class="ent-card-label">Location</span>
         </div>
-        <h3>Kochi Marriott Hotel</h3>
+        <h3>Marriott Hotel, Kochi</h3>
         <p>Kerala, India</p>
       </div>
 
@@ -262,8 +335,8 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
           </div>
           <span class="ent-card-label">Schedule</span>
         </div>
-        <h3>7-9 May 2026</h3>
-        <p>Thursday to Saturday</p>
+        <h3>6-8 May 2027</h3>
+        <p>Trainings Thursday and Friday, conference Saturday</p>
       </div>
 
       <div class="ent-card">
@@ -273,8 +346,8 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
           </div>
           <span class="ent-card-label">Registration</span>
         </div>
-        <h3>Tickets Open.</h3>
-        <p>Go ahead and register.</p>
+        <h3>Opening soon</h3>
+        <p>Tickets and CFP to be announced.</p>
       </div>
 
       <div class="ent-card">
@@ -282,10 +355,10 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
           <div class="ent-icon green-bg">
             <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
-          <span class="ent-card-label">Perks</span>
+          <span class="ent-card-label">Theme</span>
         </div>
-        <h3>Free Lunch &amp; Snacks</h3>
-        <p>Don't miss it</p>
+        <h3>Theyyam Cyberpunk</h3>
+        <p>The 2027 edition</p>
       </div>
 
     </div>
@@ -295,13 +368,11 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
 
 <div class="sep"></div>
 
-
-
 <!-- JACK DANIEL -->
 <section class="sect">
   <div class="wrap">
-    <div class="sect-label">Featured Speaker</div>
-    <h2 class="sect-heading">A message from <span class="red">Jack Daniel,</span><br>Co-founder of Security BSides!</h2>
+    <div class="sect-label">Security BSides</div>
+    <h2 class="sect-heading">A message from <span class="red">Jack Daniel,</span><br>co-founder of Security BSides</h2>
     <div class="keynote-layout">
       <div class="keynote-photo">
         <div class="accent"></div>
@@ -312,216 +383,39 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
         <p class="role">Co-founder, Security BSides</p>
         <p>Jack Daniel is a storyteller, blacksmith, luthier, woodcarver, comic, bartender, and motorcyclist. In other words, Jack is retired. Jack is also a community builder and historian, he is a co-founder of Security BSides and the creator of the Shoulders of InfoSec Project.</p>
         <p>In a past life, he added things like technologist, security professional, admin, podcaster, and blogger to his bio, but no longer. Jack also used to list things like jobs, such as the many he held at Tenable before retiring.</p>
-        <div class="note">Jack was kind enough to agree to deliver his message virtually for BSides Kerala!</div>
+        
       </div>
     </div>
   </div>
 </section>
 
-<!--
 <div class="sep"></div>
+
+<!-- PAST EDITIONS -->
 <section class="sect sect-alt">
   <div class="wrap">
-    <div class="sect-label">BSides Kerala 2025</div>
-    <h2 class="sect-heading">Inaugural <span class="red">Address 2025</span></h2>
-    <div class="img-frame">
-      <img src="img/inauguration-2025.jpg" alt="BSides Kerala 2025 Inaugural Address">
-    </div>
-  </div>
-</section>
--->
-
-<div class="sep"></div>
-
-<section class="sp-tiers">
-
-  <header class="sp-section-head">
-    <span class="eyebrow">Our Supporters</span>
-    <h2>BSides Kerala 2026 <em>Sponsors</em></h2>
-    <p class="lead">The organisations and partners standing with the community to make BSides Kerala 2026 happen.</p>
-  </header>
-
-
-  <div class="sp-tier is-title">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 01</span>
-        <h3><em>Title</em> Sponsor</h3>
+    <div class="sect-label">Archives</div>
+    <h2 class="sect-heading">Past <span class="red">Editions</span></h2>
+    <div class="past-grid">
+      <div class="card">
+        <div class="card-img"><img src="img/bsides-kerala-2026-og-image.jpg" alt="BSides Kerala 2026" style="aspect-ratio:1.5"></div>
+        <div class="card-body">
+          <h3>BSides Kerala 2026</h3>
+          <p>7-9 May 2026, Kochi Marriott Hotel. Talks, trainings and CTF.</p>
+          <a href="archives/bsides-kerala-2026/">View 2026 archive</a>
+        </div>
       </div>
-      <div class="sp-row r-title">
-        <div class="sp-card xxl has-social">
-          <a class="sp-card-logo" href="https://www.zscaler.com/" target="_blank" rel="noopener">
-            <img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/zscaler.png" alt="Zscaler">
-          </a>
-          <div class="sp-social">
-            <a href="https://www.zscaler.com/" target="_blank" rel="noopener" aria-label="Zscaler website">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-              <span>Website</span>
-            </a>
-            <a href="https://twitter.com/zscaler" target="_blank" rel="noopener" aria-label="Zscaler on X">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span>X</span>
-            </a>
-            <a href="https://www.linkedin.com/company/zscaler/" target="_blank" rel="noopener" aria-label="Zscaler on LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+      <div class="card">
+        <div class="card-img"><img src="img/inauguration-2025.jpg" alt="Inaugural address at BSides Kerala 2025" style="aspect-ratio:1.5"></div>
+        <div class="card-body">
+          <h3>BSides Kerala 2025</h3>
+          <p>8-9 February 2025, Kochi Marriott Hotel. The first edition.</p>
+          <a href="archives/bsides-kerala-2025/">View 2025 archive</a>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="sp-tier is-diamond">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 02</span>
-        <h3><em>Platinum</em> Sponsor</h3>
-      </div>
-      <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
-        <div class="sp-card"><a href="https://www.paloaltonetworks.com/" target="_blank" rel="noopener"><img src="img/sponsors/panw.png" alt="Palo Alto Networks"></a></div>
-        <div class="sp-card"><a href="https://www.redington.co.in/" target="_blank" rel="noopener"><img src="img/sponsors/Redington Logo - Green.png" alt="Redington"></a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 03</span>
-        <h3><em>Gold</em> Sponsors</h3>
-      </div>
-      <div class="sp-row r-gold">
-        <div class="sp-card"><a href="https://www.netskope.com/" target="_blank" rel="noopener"><img src="img/sponsors/netskope.jpg" alt="Netskope"></a></div>
- 
-        <div class="sp-card"><a href="https://www.fortinet.com/" target="_blank" rel="noopener"><img src="img/sponsors/fortinet-savex.jpg" alt="Fortinet"></a></div>
-        <div class="sp-card"><a href="https://cloud.google.com" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/google.png" alt="Google Cloud"></a></div>
-        <div class="sp-card"><a href="https://econz.cloud/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/econz.png" alt="Econz"></a></div>
-
-
-      </div>
-    </div>
-  </div>
-
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 04</span>
-        <h3><em>Networking Dinner</em> Sponsor</h3>
-      </div>
-      <div class="sp-row r-1">
-        <div class="sp-card lg"><a href="https://www.forcepoint.com/" target="_blank" rel="noopener"><img src="img/sponsors/forcepoint.png" alt="Forcepoint"></a></div>
-      </div>
-    </div>
-  </div>
-
-
-    <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 03</span>
-        <h3><em>Silver</em> Sponsors</h3>
-      </div>
-      <div class="sp-row r-gold">
-
-        <div class="sp-card"><a href="https://www.manageengine.com/" target="_blank" rel="noopener"><img src="img/sponsors/ManageEngine.png" alt="ManageEngine"></a></div>
-
-      
-        <div class="sp-card"><a href="https://www.hitachi-systems.com/" target="_blank" rel="noopener"><img src="https://hitachi-systems.co.in/images/6234b2985c8816c7bbc9d9a8.webp" alt="Hitachi Systems"></a></div>
-        <div class="sp-card"><a href="#" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/starone.png" alt="Starone-IT"></a></div>
-        <div class="sp-card"><a href="https://f9infotech.com" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/f9.png" alt="F9 Infotech"></a></div>
-        <div class="sp-card"><a href="https://www.securesolutions.co.in/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/secure-solutions.png" alt="Secure Solutions"></a></div>
-        <div class="sp-card"><a href="https://www.neuralebiz.com/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/neuralnetworks.png" alt="Neural Networks"></a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 05</span>
-        <h3><em>Knowledge</em> Partner</h3>
-      </div>
-      <div class="sp-row r-1">
-        <div class="sp-card lg"><a href="https://kpmg.com" target="_blank" rel="noopener"><img src="img/sponsors/kpmg.jpg" alt="KPMG"></a></div>
-      </div>
-    </div>
-  </div>
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 07</span>
-        <h3><em>CTF &amp; Goodies</em> Sponsor</h3>
-      </div>
-      <div class="sp-row r-1">
-        <div class="sp-card lg"><a href="https://cloudsek.com/" target="_blank" rel="noopener"><img src="img/sponsors/CloudSEK dark horizontal.png" alt="CloudSEK"></a></div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 06</span>
-        <h3><em>CTF</em> Partner</h3>
-      </div>
-      <div class="sp-row r-1">
-        <div class="sp-card lg"><a href="https://www.beaglesecurity.com/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/beagle-blue.svg" alt="Beagle Security"></a></div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 08</span>
-        <h3><em>Associated</em> Partners</h3>
-      </div>
-      <div class="sp-row r-3">
-        <div class="sp-card"><a href="https://www.resecurity.com/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/resecurity.png" alt="Resecurity"></a></div>
-        <div class="sp-card"><a href="https://nxtgen.com/" target="_blank" rel="noopener"><img src="img/sponsors/nextgen-title.png" alt="NxtGen"></a></div>
-        <div class="sp-card"><a href="https://www.oracle.com/" target="_blank" rel="noopener"><img src="img/sponsors/Oracle_Logo_Red.png" alt="Oracle"></a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 09</span>
-        <h3><em>Supporting Community</em> Partners</h3>
-      </div>
-      <div class="sp-row r-2">
-        <div class="sp-card lg"><a href="https://www.cyberdome.kerala.gov.in/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/police-cyberdome.png" alt="Kerala Police Cyberdome"></a></div>
-        <div class="sp-card lg"><a href="https://www.cyberdome.kerala.gov.in/" target="_blank" rel="noopener"><img src="img/sponsors/cyberdiv.png" alt="Cyber Division"></a></div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="sp-tier">
-    <div class="sp-tier-inner">
-      <div class="sp-tier-head">
-        <span class="eyebrow">Tier 10</span>
-        <h3><em>Community</em> Partners</h3>
-      </div>
-      <div class="sp-row r-3">
-        <div class="sp-card"><a href="https://infosecmap.com" target="_blank" rel="noopener"><img src="img/sponsors/infosecmap.png" alt="InfosecMap"></a></div>
-        <div class="sp-card"><a href="https://dc0471.org/" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/defcon-trivandrum.png" alt="DEF CON Trivandrum"></a></div>
-        <div class="sp-card"><a href="https://engage.isaca.org/cochinchapter/home" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/isaca-kochin.jpg" alt="ISACA Kochi"></a></div>
-        <div class="sp-card"><a href="https://engage.isaca.org/trivandrumchapter/home" target="_blank" rel="noopener"><img src="https://bsideskerala.in/archives/bsides-kerala-2025/img/sponsors/isaca-trivandrum.jpg" alt="ISACA Trivandrum"></a></div>
-        <div class="sp-card"><a href="#" target="_blank" rel="noopener"><img src="img/sponsors/itlc.jpg" alt="ITLC"></a></div>
-      </div>
-    </div>
-  </div>
-
 </section>
-
 
 <section class="sect">
   <div class="wrap">
@@ -532,16 +426,16 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
       <div class="venue-map">
         <div class="pin">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Kochi Marriott Hotel</span>
+          <span>Marriott Hotel, Kochi</span>
         </div>
       </div>
       <div class="venue-right">
-        <h3>Kochi Marriott Hotel, Kerala.</h3>
+        <h3>Marriott Hotel, Kochi, Kerala</h3>
         <p class="vsub"></p>
         <div class="vlist">
-          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>7-9 May 2026 - Thursday to Saturday</div>
-          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="4" x2="18" y2="4"/><line x1="6" y1="9" x2="18" y2="9"/><path d="M14 4c1.5 2 1.5 5 0 7H9l7 9"/></svg>Tickets are open - Go ahead and register.</div>
-          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Free Lunch &amp; Snacks - Don't miss it</div>
+          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Trainings: 6-7 May 2027, Thursday and Friday</div>
+          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Conference day: 8 May 2027, Saturday</div>
+          <div class="vitem"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="4" x2="18" y2="4"/><line x1="6" y1="9" x2="18" y2="9"/><path d="M14 4c1.5 2 1.5 5 0 7H9l7 9"/></svg>Tickets and CFP opening soon</div>
         </div>
       </div>
     </div>
@@ -551,11 +445,11 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
 <!-- CTA -->
 <section class="cta-block">
   <div class="inner">
-    <h2>BSides <span class="red">Kerala 2026</span><span class="blink"></span></h2>
+    <h2>BSides <span class="red">Kerala 2027</span><span class="blink"></span></h2>
     <p>Security BSides Kerala Hacking and Cyber Security Community Conference.<br>Be part of the community.</p>
     <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap">
-      <a href="https://konfhub.com/bsides-kerala-2026" class="btn btn-primary">Register Now</a>
-      <a href="contact" class="btn btn-secondary">Contact Us</a>
+      <a href="contact" class="btn btn-primary">Contact Us</a>
+      <a href="archives/" class="btn btn-secondary">Past Editions</a>
     </div>
   </div>
 </section>
@@ -566,7 +460,7 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
     <div class="ft-grid">
 <div class="ft-brand">
   <img src="img/logo.png" alt="BSides Kerala">
-  <p>BSides Kerala is all about building a vibrant cyber security community where learning, sharing, and connecting comes first.</p>
+  <p>BSides Kerala is a community-run cyber security conference in Kerala, organised by volunteers for learning, sharing and meeting people in the field.</p>
 
   <div class="ft-socials">
     <a href="https://x.com/bsideskerala" class="ft-social" aria-label="X (Twitter)" target="_blank" rel="noopener">
@@ -590,16 +484,16 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
   </div>
 </div>
       <div class="ft-col">
-        <h4>Conference 2026</h4>
-        <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
-        <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
+        <h4>Conference 2027</h4>
+        <a href="archives/">Event archives</a>
+        <a href="code-of-conduct">Code of conduct</a>
         <a href="#">Privacy policy</a>
       </div>
       <div class="ft-col">
         <h4>Security BSides</h4>
         <a href="https://bsides.org">Security BSides</a>
         <a href="about-us/index.html">About us</a>
-        <a href="#">All events</a>
+        <a href="archives/">All events</a>
       </div>
       <div class="ft-col">
         <h4>Contact Us</h4>
@@ -608,21 +502,60 @@ He is the architect of Kerala police Cyberdome - a PPP initiative in Cyber secur
       </div>
     </div>
     <div class="ft-bottom">
-      <p>© Copyright <b>BSides Kerala 2026</b>. All Rights Reserved</p>
+      <p>© Copyright <b>BSides Kerala 2027</b>. All Rights Reserved</p>
       <p class="love"><span class="heart">❤</span> With love to the <span class="grn">security</span> community</p>
     </div>
   </div>
 </footer>
 <div class="ft-banner">
-  <img src="img/footer-img.png" alt="BSides Kerala 2026">
+  <img src="img/footer-img.png" alt="BSides Kerala">
 </div>
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-const T=new Date('2026-05-09T08:00:00+05:30');
+const T=new Date('2027-05-08T09:00:00+05:30');
 !function tick(){const d=T-new Date();if(d<=0)return;const p=n=>String(Math.floor(n)).padStart(2,'0');document.getElementById('cd-d').textContent=p(d/864e5);document.getElementById('cd-h').textContent=p(d%864e5/36e5);document.getElementById('cd-m').textContent=p(d%36e5/6e4);document.getElementById('cd-s').textContent=p(d%6e4/1e3);setTimeout(tick,1000)}();
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script>
+// Tagline decode: random glyphs resolve into the real text from left to right.
+(function () {
+  var el = document.querySelector('[data-decode]');
+  if (!el || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var intro = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--kb-intro')) * 1000 || 0;
+  var text = el.textContent, glyphs = '01<>/\\[]{}#$%&*+=?!_', delay = intro + 1200, dur = 1800, start = null;
+  el.setAttribute('aria-label', text);
+  function frame(t) {
+    if (start === null) start = t;
+    var n = Math.floor(Math.max(0, (t - start - delay) / dur) * text.length);
+    if (n >= text.length) { el.textContent = text; return; }
+    var tail = '';
+    for (var i = n; i < text.length; i++) {
+      tail += text[i] === ' ' ? ' ' : glyphs[Math.floor(Math.random() * glyphs.length)];
+    }
+    el.textContent = text.slice(0, n);
+    var s = document.createElement('span');
+    s.className = 'kb-scramble';
+    s.setAttribute('aria-hidden', 'true');
+    s.textContent = tail;
+    el.appendChild(s);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+// Portrait: the info panel sits below the artwork, so reserve room for it.
+(function () {
+  var wrap = document.getElementById('kbWrap'), info = document.getElementById('kbInfo');
+  if (!wrap || !info) return;
+  var mq = window.matchMedia('(max-aspect-ratio: 1/1), (max-height: 500px)');
+  function fit() { wrap.style.paddingBottom = mq.matches ? info.offsetHeight + 'px' : ''; }
+  fit();
+  window.addEventListener('resize', fit);
+  if ('ResizeObserver' in window) new ResizeObserver(fit).observe(info);
+})();
+</script>
+<script src="kathakali-bsides/assets/kathakali-data.js"></script>
+<script src="kathakali-bsides/animation.js" data-assets="kathakali-bsides/assets/"></script>
 </body>
 </html>

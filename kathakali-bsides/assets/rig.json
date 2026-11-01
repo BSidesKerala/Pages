@@ -1,0 +1,86 @@
+{
+  "about": "2D skeletal rig for kathakali.png. Coordinates are source-image pixels (1672 x 941). Each bone is a segment from its head (pivot) to its tail. inherit:false bones follow the parent's position and rotation but not its scale (keeps the face and hands at their true size while the chest breathes).",
+  "bones": [
+    {"name": "world",       "parent": null,          "head": [836, 941], "tail": [836, 940]},
+    {"name": "pelvis",      "parent": "world",       "head": [880, 941], "tail": [870, 760]},
+    {"name": "chest",       "parent": "pelvis",      "head": [870, 760], "tail": [850, 500]},
+    {"name": "neck",        "parent": "chest",       "head": [842, 472], "tail": [836, 440], "inherit": false},
+    {"name": "head",        "parent": "neck",        "head": [836, 440], "tail": [840, 250]},
+
+    {"name": "shoulder_r",  "parent": "chest",       "head": [985, 430], "tail": [1075, 470], "inherit": false},
+    {"name": "upperarm_r",  "parent": "shoulder_r",  "head": [1075, 470], "tail": [1078, 735]},
+    {"name": "forearm_r",   "parent": "upperarm_r",  "head": [1078, 735], "tail": [905, 680]},
+    {"name": "hand_r",      "parent": "forearm_r",   "head": [905, 680], "tail": [812, 668]},
+    {"name": "f1a", "parent": "hand_r", "head": [786, 651], "tail": [718, 652], "group": "f1"},
+    {"name": "f1b", "parent": "f1a",    "head": [718, 652], "tail": [697, 683], "group": "f1"},
+    {"name": "f1c", "parent": "f1b",    "head": [697, 683], "tail": [704, 717], "group": "f1"},
+    {"name": "f2a", "parent": "hand_r", "head": [790, 670], "tail": [745, 676], "group": "f2"},
+    {"name": "f2b", "parent": "f2a",    "head": [745, 676], "tail": [726, 703], "group": "f2"},
+    {"name": "f2c", "parent": "f2b",    "head": [726, 703], "tail": [734, 733], "group": "f2"},
+    {"name": "f3a", "parent": "hand_r", "head": [805, 688], "tail": [780, 698], "group": "f3"},
+    {"name": "f3b", "parent": "f3a",    "head": [780, 698], "tail": [765, 716], "group": "f3"},
+    {"name": "f3c", "parent": "f3b",    "head": [765, 716], "tail": [767, 735], "group": "f3"},
+    {"name": "f4a", "parent": "hand_r", "head": [826, 684], "tail": [810, 700], "group": "f4"},
+    {"name": "f4b", "parent": "f4a",    "head": [810, 700], "tail": [806, 713], "group": "f4"},
+
+    {"name": "shoulder_l",  "parent": "chest",       "head": [770, 440], "tail": [690, 470], "inherit": false},
+    {"name": "upperarm_l",  "parent": "shoulder_l",  "head": [690, 470], "tail": [648, 650]},
+    {"name": "forearm_l",   "parent": "upperarm_l",  "head": [648, 650], "tail": [615, 808]},
+    {"name": "hand_l",      "parent": "forearm_l",   "head": [615, 808], "tail": [505, 795]},
+    {"name": "l1",  "parent": "hand_l", "head": [432, 792], "tail": [428, 740], "group": "l1"},
+    {"name": "l2a", "parent": "hand_l", "head": [472, 797], "tail": [470, 754], "group": "l2"},
+    {"name": "l2b", "parent": "l2a",    "head": [470, 754], "tail": [484, 723], "group": "l2"},
+    {"name": "l3a", "parent": "hand_l", "head": [515, 800], "tail": [514, 760], "group": "l3"},
+    {"name": "l3b", "parent": "l3a",    "head": [514, 760], "tail": [530, 727], "group": "l3"},
+    {"name": "l4a", "parent": "hand_l", "head": [550, 802], "tail": [550, 766], "group": "l4"},
+    {"name": "l4b", "parent": "l4a",    "head": [550, 766], "tail": [560, 741], "group": "l4"},
+    {"name": "l5",  "parent": "hand_l", "head": [583, 802], "tail": [585, 758], "group": "l5"},
+    {"name": "laptop",      "parent": "hand_l",      "head": [520, 782], "tail": [700, 700], "inherit": false},
+
+    {"name": "cloth_a",     "parent": "pelvis",      "head": [790, 790], "tail": [775, 860]},
+    {"name": "cloth_b",     "parent": "cloth_a",     "head": [775, 860], "tail": [760, 941]}
+  ],
+
+  "chains": {
+    "about": "Scarf tails. Joints are simulated as a damped particle chain (springs toward the rest shape, length constraints, periodic wind). The first joint is pinned to the anchor bone.",
+    "t1": {"anchor": "upperarm_r", "layer": "scarf_right_a", "wind": [1, -0.25], "phase": 0.0,
+           "points": [[1180, 445], [1235, 478], [1295, 490], [1350, 468], [1395, 418], [1445, 378], [1505, 372], [1555, 398], [1592, 440]]},
+    "t2": {"anchor": "upperarm_r", "layer": "scarf_right_a", "wind": [1, 0.1], "phase": 0.21,
+           "points": [[1180, 530], [1240, 575], [1305, 600], [1370, 585], [1430, 552], [1495, 540], [1560, 560], [1608, 605], [1630, 668]]},
+    "t3": {"anchor": "upperarm_r", "layer": "scarf_right_b", "wind": [1, 0.2], "phase": 0.43,
+           "points": [[1185, 650], [1245, 712], [1310, 752], [1375, 735], [1440, 712], [1505, 718], [1565, 748], [1615, 795], [1645, 845]]},
+    "t4": {"anchor": "pelvis", "layer": "scarf_right_b", "wind": [1, 0.35], "phase": 0.67,
+           "points": [[1185, 905], [1245, 875], [1310, 856], [1375, 858], [1430, 885], [1475, 925], [1495, 960]]},
+    "tl": {"anchor": "pelvis", "layer": "scarf_left", "wind": [-1, 0.15], "phase": 0.35,
+           "points": [[700, 885], [640, 902], [560, 893], [478, 872], [405, 832], [330, 795], [250, 788], [172, 812], [112, 860], [72, 930]]}
+  },
+
+  "skins": {
+    "about": "How each layer's mesh vertices are bound to bones. auto: inverse-distance weights to bone segments (bones of one finger or tail share a group; vertices bind to their nearest group). regions limit a bone's reach with a feathered polygon.",
+    "scarf_left":    {"mode": "chains", "chains": ["tl"], "cell": 10},
+    "scarf_right_a": {"mode": "chains", "chains": ["t1", "t2"], "cell": 10},
+    "scarf_right_b": {"mode": "chains", "chains": ["t3", "t4"], "cell": 10},
+    "body": {"mode": "auto", "cell": 12, "power": 3,
+      "bones": ["pelvis", "chest", "shoulder_r", "upperarm_r", "forearm_r", "hand_r", "shoulder_l", "upperarm_l", "cloth_a", "cloth_b"],
+      "regions": {
+        "upperarm_r": {"poly": [[985, 395], [1195, 415], [1205, 805], [1060, 805], [1000, 640]], "feather": 22},
+        "forearm_r":  {"poly": [[900, 628], [1092, 640], [1112, 795], [985, 790], [900, 752]], "feather": 16},
+        "hand_r":     {"poly": [[880, 630], [950, 630], [950, 740], [880, 740]], "feather": 10},
+        "shoulder_r": {"poly": [[960, 330], [1190, 380], [1190, 520], [960, 520]], "feather": 30},
+        "shoulder_l": {"poly": [[630, 390], [790, 380], [790, 560], [630, 560]], "feather": 30},
+        "upperarm_l": {"poly": [[625, 470], [720, 470], [720, 760], [600, 760]], "feather": 20},
+        "cloth_a":    {"poly": [[660, 785], [905, 770], [915, 941], [650, 941]], "feather": 18},
+        "cloth_b":    {"poly": [[660, 845], [905, 835], [915, 941], [650, 941]], "feather": 18},
+        "pelvis":     {"poly": [[560, 700], [1250, 700], [1250, 941], [560, 941]], "feather": 60}
+      }
+    },
+    "head":      {"mode": "rigid", "bone": "head"},
+    "neckscarf": {"mode": "gradient", "cell": 12, "from": {"bone": "chest", "at": [0, 490]}, "to": {"bone": "head", "at": [0, 340], "max": 0.55}, "extra": {"bone": "neck", "w": 0.25}},
+    "laptop":    {"mode": "rigid", "bone": "laptop"},
+    "hand_support": {"mode": "auto", "cell": 6, "power": 4,
+      "bones": ["forearm_l", "hand_l", "l1", "l2a", "l2b", "l3a", "l3b", "l4a", "l4b", "l5"]},
+    "hand_typing": {"mode": "auto", "cell": 6, "power": 4,
+      "bones": ["forearm_r", "hand_r", "f1a", "f1b", "f1c", "f2a", "f2b", "f2c", "f3a", "f3b", "f3c", "f4a", "f4b"],
+      "regions": {"forearm_r": {"poly": [[915, 600], [1000, 600], [1000, 760], [915, 760]], "feather": 14}}}
+  }
+}

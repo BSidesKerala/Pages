@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Cyberpunk Kathakali artwork">
+  <!-- ===== KIREETAM (crown halo) ===== -->
+  <circle cx="450" cy="300" r="215" fill="#C2240F" stroke="#FBBF24" stroke-width="8"/>
+  <circle cx="450" cy="300" r="178" fill="none" stroke="#FBBF24" stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round"/>
+  <circle cx="450" cy="300" r="140" fill="#7A1004"/>
+  <circle cx="450" cy="300" r="140" fill="none" stroke="#FF3D2E" stroke-width="5"/>
+  <!-- crown gems -->
+  <g fill="#FBBF24">
+    <circle cx="450" cy="118" r="11"/>
+    <circle cx="332" cy="168" r="9"/><circle cx="568" cy="168" r="9"/>
+    <circle cx="262" cy="268" r="9"/><circle cx="638" cy="268" r="9"/>
+  </g>
+  <g fill="#FF3D2E">
+    <circle cx="390" cy="142" r="7"/><circle cx="510" cy="142" r="7"/>
+    <circle cx="292" cy="212" r="7"/><circle cx="608" cy="212" r="7"/>
+  </g>
+  <!-- spire + antenna -->
+  <path d="M450 36 L430 92 h40 Z" fill="#FBBF24"/>
+  <path d="M450 36 v-18" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="450" cy="8" r="6" fill="#FF3D2E"/>
+  <!-- side fins -->
+  <path d="M232 300 L164 266 L164 334 Z" fill="#C2240F" stroke="#FBBF24" stroke-width="4"/>
+  <path d="M668 300 L736 266 L736 334 Z" fill="#C2240F" stroke="#FBBF24" stroke-width="4"/>
+
+  <!-- ===== FACE ===== -->
+  <ellipse cx="450" cy="520" rx="124" ry="142" fill="#22C55E" stroke="#0E6B33" stroke-width="6"/>
+  <!-- forehead mark -->
+  <path d="M450 408 L436 452 h28 Z" fill="#FBBF24"/>
+  <circle cx="450" cy="398" r="7" fill="#FF3D2E"/>
+  <!-- brows -->
+  <path d="M350 478 Q 398 456 446 476" fill="none" stroke="#0A0A0A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M454 476 Q 502 456 550 478" fill="none" stroke="#0A0A0A" stroke-width="10" stroke-linecap="round"/>
+  <!-- eyes with winged liner -->
+  <path d="M352 512 Q 398 492 444 512 Q 398 534 352 512 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="6"/>
+  <path d="M456 512 Q 502 492 548 512 Q 502 534 456 512 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="6"/>
+  <path d="M350 510 l-24 -8 M550 510 l24 -8" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="398" cy="512" r="10" fill="#0A0A0A"/><circle cx="402" cy="508" r="3.5" fill="#FBBF24"/>
+  <circle cx="502" cy="512" r="10" fill="#0A0A0A"/><circle cx="506" cy="508" r="3.5" fill="#FBBF24"/>
+  <circle cx="344" cy="516" r="4" fill="#FF3D2E"/><circle cx="556" cy="516" r="4" fill="#FF3D2E"/>
+  <!-- visor scanline (cyber) -->
+  <rect x="320" y="498" width="260" height="28" fill="#FBBF24" opacity=".14"/>
+  <!-- nose -->
+  <path d="M450 520 L438 574 h24 Z" fill="#0E6B33"/>
+  <!-- lips -->
+  <path d="M404 604 Q 450 586 496 604 Q 450 634 404 604 Z" fill="#FF3D2E" stroke="#7A1004" stroke-width="4"/>
+
+  <!-- ===== CHUTTI (chin frame arcs) ===== -->
+  <path d="M322 560 Q 450 756 578 560" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M302 536 Q 450 790 598 536" fill="none" stroke="#FBBF24" stroke-width="7" stroke-linecap="round"/>
+  <path d="M282 512 Q 450 824 618 512" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- ear ornaments -->
+  <circle cx="312" cy="556" r="17" fill="#FBBF24" stroke="#7A1004" stroke-width="4"/>
+  <circle cx="588" cy="556" r="17" fill="#FBBF24" stroke="#7A1004" stroke-width="4"/>
+
+  <!-- ===== CIRCUIT TRACES ===== -->
+  <g fill="none" stroke="#FBBF24" stroke-width="3">
+    <polyline points="60,640 150,640 178,612"/>
+    <polyline points="104,692 176,692 198,670"/>
+  </g>
+  <circle cx="60" cy="640" r="6" fill="#FBBF24"/>
+  <circle cx="104" cy="692" r="5" fill="#FBBF24"/>
+  <g fill="none" stroke="#FF3D2E" stroke-width="3">
+    <polyline points="840,640 750,640 722,612"/>
+    <polyline points="796,692 724,692 702,670"/>
+  </g>
+  <circle cx="840" cy="640" r="6" fill="#FF3D2E"/>
+  <circle cx="796" cy="692" r="5" fill="#FF3D2E"/>
+
+  <!-- ===== GLITCH SLICES ===== -->
+  <rect x="96" y="384" width="168" height="11" fill="#FF3D2E" opacity=".8"/>
+  <rect x="86" y="399" width="96" height="5" fill="#FFFFFF" opacity=".5"/>
+  <rect x="640" y="430" width="170" height="11" fill="#FBBF24" opacity=".8"/>
+  <rect x="700" y="445" width="96" height="5" fill="#FFFFFF" opacity=".5"/>
+
+  <!-- HUD marks -->
+  <g stroke="#FBBF24" stroke-width="3" stroke-linecap="round">
+    <path d="M58 72 h24 M70 60 v24"/>
+    <path d="M818 96 h22 M829 85 v22"/>
+    <path d="M90 830 h22 M101 819 v22"/>
+    <path d="M806 850 h22 M817 839 v22"/>
+  </g>
+</svg>

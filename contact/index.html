@@ -10,7 +10,7 @@
   <meta property="og:title" content="BSides Kerala 2026">
   <meta property="og:description" content="Security BSides Kerala 2026">
   <meta property="og:type" content="website, conference, cyber security">
-  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg"/>
+  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
 <link rel="stylesheet" href="../css/style-2026.css">
 <style>.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:800px}
 .contact-card{border:1px solid var(--g200);border-radius:16px;padding:2.5rem;transition:.3s}
@@ -23,6 +23,30 @@
 .contact-card p{font-size:1.1rem;color:var(--g500)}
 .contact-card a{color:var(--red);font-weight:600}
 @media(max-width:600px){.contact-grid{grid-template-columns:1fr}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* match the 2027 homepage: font and top menu */
+*{font-family:'Baloo Chettan 2',sans-serif !important}
+.page-hero h1,.sect-heading,.nav-logo b,.card-body h3{letter-spacing:0 !important;font-weight:800}
+.page-hero h1{text-transform:uppercase}
+.page-hero .label,.sect-label{letter-spacing:.12em !important}
+.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
+.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase;white-space:nowrap}
+.nav-links a{font-weight:800;font-size:1rem;color:#fff;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-links .cta-link{font-weight:800}
+.burger{color:#fff;border-color:rgba(255,255,255,.3)}
+@media(max-width:1100px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;
+    background:rgba(0,0,0,.94);border-bottom:1px solid rgba(255,255,255,.08);padding:1rem 5%;backdrop-filter:blur(16px);gap:.2rem}
+  .nav-links.open .cta-link{margin:.4rem 0 0;text-align:center}
+}
+@media(max-width:480px){.nav-logo b{font-size:1.2rem}.nav-logo img{height:32px}.nav{padding:.6rem 4%}}
+</style>
 </head>
 <body>
 <nav class="nav" id="nav">
@@ -32,15 +56,13 @@
   </a>
   <ul class="nav-links" id="navMenu">
     <li><a href="../">Home</a></li>
-<li><a href="../call-for-papers">CFP</a></li>
-<li><a href="../trainings">Trainings</a></li>
-<li><a href="../speakers">Speakers</a></li>
-<li><a href="../schedule">Schedule</a></li>
-<li><a href="../capture-the-flag">Capture-the-flag</a></li>
-<li><a href="../about-us">About Us</a></li>
-<li><a href="../contact" class="active">Contact</a></li>
-
-    <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
+    <li><a href="../trainings">Trainings</a></li>
+    <li><a href="../speakers">Speakers</a></li>
+    <li><a href="../schedule">Schedule</a></li>
+    <li><a href="../capture-the-flag">Capture-the-flag</a></li>
+    <li><a href="../about-us">About Us</a></li>
+    <li><a href="../contact" class="active">Contact</a></li>
+    <li><a href="../archives/" class="cta-link">Archives</a></li>
   </ul>
   <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
@@ -95,7 +117,7 @@
 </div>
       <div class="ft-col">
         <h4>Conference 2026</h4>
-        <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
+        <a href="../archives/">Event Archives</a>
         <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
         <a href="#">Privacy policy</a>
       </div>
@@ -103,7 +125,7 @@
         <h4>Security BSides</h4>
         <a href="https://bsides.org">Security BSides</a>
         <a href="../about-us/index.html">About us</a>
-        <a href="#">All events</a>
+        <a href="../archives/">All events</a>
       </div>
       <div class="ft-col">
         <h4>Contact Us</h4>

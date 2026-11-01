@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Cyberpunk Kalaripayattu artwork">
+  <!-- ===== CROSSED SWORDS (behind shield) ===== -->
+  <g transform="rotate(-35 450 450)">
+    <rect x="436" y="60" width="28" height="400" rx="10" fill="#FFFFFF" stroke="#FF3D2E" stroke-width="4"/>
+    <path d="M436 60 Q 450 18 464 60 Z" fill="#FFFFFF" stroke="#FF3D2E" stroke-width="4"/>
+    <rect x="406" y="458" width="88" height="20" rx="8" fill="#FBBF24"/>
+    <rect x="438" y="478" width="24" height="64" rx="8" fill="#7A1004"/>
+    <circle cx="450" cy="556" r="14" fill="#FBBF24"/>
+  </g>
+  <g transform="rotate(35 450 450)">
+    <rect x="436" y="60" width="28" height="400" rx="10" fill="#FFFFFF" stroke="#FBBF24" stroke-width="4"/>
+    <path d="M436 60 Q 450 18 464 60 Z" fill="#FFFFFF" stroke="#FBBF24" stroke-width="4"/>
+    <rect x="406" y="458" width="88" height="20" rx="8" fill="#FF3D2E"/>
+    <rect x="438" y="478" width="24" height="64" rx="8" fill="#7A1004"/>
+    <circle cx="450" cy="556" r="14" fill="#FF3D2E"/>
+  </g>
+
+  <!-- ===== ROUND SHIELD ===== -->
+  <circle cx="450" cy="470" r="196" fill="#120606" stroke="#C2240F" stroke-width="12"/>
+  <circle cx="450" cy="470" r="168" fill="none" stroke="#FBBF24" stroke-width="3" stroke-dasharray="5 14" stroke-linecap="round"/>
+  <!-- studs -->
+  <g fill="#FBBF24">
+    <circle cx="450" cy="336" r="9"/><circle cx="545" cy="375" r="9"/><circle cx="584" cy="470" r="9"/>
+    <circle cx="545" cy="565" r="9"/><circle cx="450" cy="604" r="9"/><circle cx="355" cy="565" r="9"/>
+    <circle cx="316" cy="470" r="9"/><circle cx="355" cy="375" r="9"/>
+  </g>
+  <!-- boss -->
+  <circle cx="450" cy="470" r="84" fill="#7A1004" stroke="#FBBF24" stroke-width="6"/>
+  <circle cx="450" cy="470" r="40" fill="#FF3D2E" stroke="#0A0A0A" stroke-width="5"/>
+  <circle cx="450" cy="470" r="12" fill="#FBBF24"/>
+  <!-- circuit on shield -->
+  <g fill="none" stroke="#FBBF24" stroke-width="3">
+    <polyline points="450,386 450,420"/>
+    <polyline points="534,470 500,470"/>
+    <polyline points="450,554 450,520"/>
+    <polyline points="366,470 400,470"/>
+  </g>
+
+  <!-- targeting arcs around shield (cyber) -->
+  <path d="M450 236 A234 234 0 0 1 652 352" fill="none" stroke="#FF3D2E" stroke-width="4" stroke-dasharray="20 14" stroke-linecap="round"/>
+  <path d="M450 704 A234 234 0 0 1 248 588" fill="none" stroke="#FBBF24" stroke-width="4" stroke-dasharray="20 14" stroke-linecap="round"/>
+
+  <!-- ===== GLITCH SLICES ===== -->
+  <rect x="94" y="226" width="170" height="11" fill="#FBBF24" opacity=".8"/>
+  <rect x="84" y="241" width="98" height="5" fill="#FFFFFF" opacity=".5"/>
+  <rect x="640" y="700" width="168" height="11" fill="#FF3D2E" opacity=".8"/>
+  <rect x="700" y="715" width="92" height="5" fill="#FFFFFF" opacity=".5"/>
+
+  <!-- circuit traces -->
+  <g fill="none" stroke="#FBBF24" stroke-width="3">
+    <polyline points="70,790 160,790 188,762"/>
+  </g>
+  <circle cx="70" cy="790" r="6" fill="#FBBF24"/>
+  <g fill="none" stroke="#FF3D2E" stroke-width="3">
+    <polyline points="830,140 740,140 712,168"/>
+  </g>
+  <circle cx="830" cy="140" r="6" fill="#FF3D2E"/>
+
+  <!-- HUD marks -->
+  <g stroke="#FBBF24" stroke-width="3" stroke-linecap="round">
+    <path d="M70 80 h24 M82 68 v24"/>
+    <path d="M812 828 h24 M824 816 v24"/>
+  </g>
+</svg>

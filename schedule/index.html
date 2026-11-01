@@ -3,19 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schedule | BSides Kerala 2026</title>
+<title>Schedule | BSides Kerala</title>
 <meta name="description" content="Security BSides Kerala">
   <meta name="author" content="BSides Kerala">
   <meta name="keywords" content="BSides, Kerala, cyber security, conference">
-  <meta property="og:title" content="BSides Kerala 2026">
-  <meta property="og:description" content="Security BSides Kerala 2026">
+  <meta property="og:title" content="BSides Kerala">
+  <meta property="og:description" content="Security BSides Kerala">
   <meta property="og:type" content="website, conference, cyber security">
-  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg"/>
+  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
 <link rel="stylesheet" href="../css/style-2026.css">
-<link rel="stylesheet" href="../css/schedule.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* match the 2027 homepage */
+*{font-family:'Baloo Chettan 2',sans-serif !important}
+.page-hero h1,.coming-soon h2,.nav-logo b{letter-spacing:0 !important;font-weight:800}
+.page-hero h1{text-transform:uppercase}
+.page-hero .label{letter-spacing:.12em !important}
+.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
+.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase}
+.nav-links a{font-weight:800;font-size:1rem;color:#fff}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-links .cta-link{font-weight:800}
+.burger{color:#fff;border-color:rgba(255,255,255,.3)}
+@media(max-width:900px){.nav-links.open{background:rgba(0,0,0,.92);border-bottom:1px solid rgba(255,255,255,.08)}}
+/* coming soon badge in the page header */
+.cs-pill{display:inline-flex;align-items:center;gap:.6rem;margin:.4rem 0 1.4rem;padding:.45rem 1.2rem;border-radius:999px;
+  background:#DC2626;color:#fff;font-weight:800;font-size:1rem;letter-spacing:.12em !important;text-transform:uppercase}
+.cs-pill::before{content:'';width:9px;height:9px;border-radius:50%;background:#fff;animation:csp 1.6s ease-in-out infinite}
+@keyframes csp{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.cs-pill::before{animation:none}}
+.coming-soon h2{text-transform:uppercase}
+</style>
+<link href="../img/favicon.png" rel="icon">
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 <body>
-
 <nav class="nav" id="nav">
   <a href="../index.html" class="nav-logo">
     <img src="../img/logo.png" alt="BSides Kerala">
@@ -23,508 +47,34 @@
   </a>
   <ul class="nav-links" id="navMenu">
     <li><a href="../">Home</a></li>
-    <li><a href="../call-for-papers">CFP</a></li>
     <li><a href="../trainings">Trainings</a></li>
     <li><a href="../speakers">Speakers</a></li>
     <li><a href="../schedule" class="active">Schedule</a></li>
     <li><a href="../capture-the-flag">Capture-the-flag</a></li>
     <li><a href="../about-us">About Us</a></li>
     <li><a href="../contact">Contact</a></li>
-    <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
+    <li><a href="../archives/" class="cta-link">Archives</a></li>
   </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">&#9776;</button>
+  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
-
 <section class="page-hero">
   <div class="inner">
-    <div class="label">Event Timeline</div>
-    <h1>Conference <span class="red">Schedule</span></h1>
-    <p>Here is the schedule for BSides Kerala 2026. Please be patient as we are still updating the schedule.</p>
+    <div class="label">Schedule</div>
+    <h1>Event <span class="red">Schedule</span></h1>
+    <span class="cs-pill">Coming soon</span>
+    <p>The full conference agenda: talks, trainings and CTF.</p>
   </div>
 </section>
-
-<section class="sect sect-schedule">
+<section class="sect">
   <div class="wrap">
-
-    <div class="sch-date">9 MAY 2026 - KOCHI MARRIOTT HOTEL, KERALA</div>
-
-    <div class="sch-shared">
-      <div class="sch-lbl">All Tracks - Morning</div>
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">08:00 AM</div>
-        <div class="sch-evt-body">
-          <h3>Registration</h3>
-          <p>Registration desk opens. Collect your badges and conference kit.</p>
-        </div>
-      </div>
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">09:30 AM</div>
-        <div class="sch-evt-body">
-          <h3>Inauguration <span class="red">Ceremony</span></h3>
-          <p>BSides Kerala inaugural ceremony will be hosted in the Main Track.</p>
-        </div>
-      </div>
-
-
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">09:30 AM</div>
-        <div class="sch-evt-body">
-          <h3>Welcome Speech</h3>
-          <p>Welcome address by the organizing team.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/a-balakrishnan.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/a-balakrishnan/">A Balakrishnan</a></div><div class="sp-role">BSides Kerala Organizing Team</div></div></div>
-        </div>
-      </div>
-
-         <div class="sch-evt">
-        <div class="sch-evt-time">09:40 AM</div>
-        <div class="sch-evt-body">
-          <h3>Keynote <span class="red">Speaker</span></h3>
-          <p>Keynote address from Manoj Abraham IPS.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/manoj-abraham.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/manoj-abraham/">Manoj Abraham IPS</a></div><div class="sp-role">Director General of Police, Kerala Police | Director of Vigilance and Anti-corruption Bureau </div></div></div>
-        </div>
-      </div>
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">10:00 AM</div>
-        <div class="sch-evt-body">
-          <h3>Inaugural Address</h3>
-          <p>Inaugural address by the chief guest.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/prasad-k-panicker.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/prasad-k-panicker/">Prasad K. Panicker</a></div><div class="sp-role">Executive Chairman of Nayara Energy Limited.</div></div></div>
-        </div>
-      </div>
-
-   
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">10:20 AM</div>
-        <div class="sch-evt-body">
-          <h3>Felicitation</h3>
-          <p>Felicitation ceremony.</p>
-        </div>
-      </div>
-
-            
-<div class="sch-evt">
-  <div class="sch-evt-time">10:20 AM</div>
-  <div class="sch-evt-body">
-    <div style="display:flex; gap:2rem; flex-wrap:wrap; margin-top:1rem;">
-      <div class="sp-row"><img class="sp-img" src="../img/speakers/prakash-p-ips.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/prakash-p/">P Prakash IPS</a></div><div class="sp-role">IGP SCRB and Nodal Officer CCTNS Kerala</div></div></div>
-      <div class="sp-row"><img class="sp-img" src="../img/speakers/umesh-goyal.jpg" alt="Speaker Two"><div><div class="sp-name"><a href="../speakers/2026/umesh-goyal/">Umesh Goyal IPS</a></div><div class="sp-role">SP, Tele Communication Kerala Police</div></div></div>
+    <div class="coming-soon">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <h2>Coming <span class="red">Soon.</span></h2>
+      <p>The schedule for BSides Kerala 2027 has not been published yet. Check back here or follow us on social media for updates.</p>
+      <a href="../archives/bsides-kerala-2026/schedule/" class="btn btn-primary">View 2026 Schedule Archive</a>
     </div>
-  </div>
-</div>
-
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">10:40 AM</div>
-        <div class="sch-evt-body">
-          <h3>Vote of Thanks</h3>
-          <p>Vote of thanks by the organizing team.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/abhijith-b-r.jpg" alt="Abhijith B R"><div><div class="sp-name"><a href="#">Abhijith B R</a></div><div class="sp-role">BSides Kerala Organizing Team</div></div></div>
-        </div>
-      </div>
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">10:50 AM</div>
-        <div class="sch-evt-body">
-          <h3>Networking and Tea/Coffee Break</h3>
-          <p>Networking session and refreshments before track sessions begin.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="sch-lbl">Track Sessions - All Tracks 11:00 AM onwards</div>
-
-    <div class="track-section">
-      <div class="track-header">
-        <span class="track-num">Track 1</span>
-        <span class="track-name">CXO <span class="red">Track</span></span>
-        <div class="track-line"></div>
-      </div>
-      <p class="track-desc">Schedule for Main Track sessions and Panel discussions.</p>
-
-      <div class="tl-item"><div class="tl-time">11:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Panel</span><h4>Hackers, Defenders, and Machines - The Three-Way Contest in the Age of Advanced Artificial Intelligence</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/johnson-jose.jpg" alt="Johnson Jose"><div><div class="sp-name"><a href="../speakers/2026/johnson-jose/">Johnson Jose</a></div><div class="sp-role">Group President and CTO at Federal Bank</div></div></div>
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/sony-a.jpg" alt="Sony A"><div><div class="sp-name"><a href="../speakers/2026/sony-a/">Sony A</a></div><div class="sp-role">Chief General Manager and CIO at South Indian Bank</div></div></div>
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/dr-a-shiju-rawther.jpg" alt="Dr. A Shiju Rawther"><div><div class="sp-name"><a href="../speakers/2026/dr-a-shiju-rawther/">Dr. A Shiju Rawther</a></div><div class="sp-role">Chief Information and Technology Officer at CareEdge Ratings</div></div></div>
-             <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/dipukv.jpg" alt="Dipu"><div><div class="sp-name"><a href="../speakers/2026/dipu-kv/">Dipu KV</a></div><div class="sp-role">Senior President at Bajaj General Insurance</div></div></div>
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/john-varughese.jpg" alt="John Varughese"><div><div class="sp-name"><a href="../speakers/2026/john-varughese/">John Varughese</a></div><div class="sp-role">General Manager at Dhanlaxmi Bank</div></div></div>
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/prince-joseph.jpg" alt="Dr. Prince Joseph"><div><div class="sp-name"><a href="../speakers/2026/prince-joseph/">Dr. Prince Joseph</a></div><div class="sp-role">Group CIO, NesT Group, SFO Technologies</div></div></div>
-           <div class="sp-grid-item is-mod"><img class="sp-img" src="../img/speakers/Suvabrata -profile-2026.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/suvabrata-sinha/">[Moderator] Suvabrata (Suva) Sinha</a></div><div class="sp-role">CISO-in-Residence at Zscaler</div></div></div>
-            
-
-
-          </div>
-        </div></div>
-
-      <div class="tl-item"><div class="tl-time">11:45 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Keynote </span><h4>Strategic Pillars for AI-Resilient Information Security Preparedness</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/vittal-raj.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/vittal-raj/">R Vittal Raj</a></div><div class="sp-role">Founder and Partner at Kumar & Raj Chartered Accountants, Member RBI Standing Committee and Former International Vice President at ISACA</div></div></div>
-        </div></div>
-
-      <div class="tl-item"><div class="tl-time">12:15 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Panel</span><h4>People over Technology - Preparing your cyber workforce for an AI-First enterprise</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-                       <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/vv-jacob.jpg" alt="V V Jacob"><div><div class="sp-name"><a href="../speakers/2026/vv-jacob/"> V V Jacob</a></div><div class="sp-role">Chief General Manager, Malayala Manorama</div></div></div>
-     <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/Shantanu-Mahajan.jpeg" alt="Biju K"><div><div class="sp-name"><a href="../speakers/2026/shantanu-mahajan/">Shantanu Mahajan</a></div><div class="sp-role">Solutions Architect at Netskope</div></div></div>
-
-
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/biju-k.jpg" alt="Biju K"><div><div class="sp-name"><a href="../speakers/2026/biju-k/">Biju K</a></div><div class="sp-role">Chief Data Protection Officer at Federal Bank</div></div></div>
-           
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/deepu-s.jpg" alt="Deepu S"><div><div class="sp-name"><a href="../speakers/2026/deepu-s/">Deepu S</a></div><div class="sp-role">Chief Information Security Officer at Muthoot Microfin Ltd</div></div></div>
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/georgie-kurien.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/georgie-kurien/">Georgie Kurien</a></div><div class="sp-role">Chief Information Security Officer & Head of Cyber Assurance Practice at SecnSure</div></div></div>
-            <div class="sp-grid-item is-mod"><img class="sp-img" src="../img/speakers/adarsh-nair.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/adarsh-nair/">[Moderator] Adarsh Nair</a></div><div class="sp-role">Director and Global Head of Information Security Compliance at UST</div></div></div>
-          </div>
-        </div></div>
-
-        <div class="tl-item is-break"><div class="tl-time">01:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Lunch Break &amp; Networking</h4></div></div>
-
-      <div class="tl-item"><div class="tl-time">02:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Technical Talk</span><h4>Red Team in a Box - Building Autonomous AI Attack Agents </h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/akhil-sharma.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/akhil-sharma/">Akhil Sharma</a></div><div class="sp-role">Founder at ArmurAI</div></div></div>
-        </div></div>
-
-<!--
-      <div class="tl-item"><div class="tl-time">02:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Talk</span><h4>Speaker TBA</h4><p class="tl-tba">Session details will be announced soon.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/bsides-kerala-og-image.jpg" alt="TBA"><div><div class="sp-name">To be announced</div><div class="sp-role">Speaker</div></div></div>
-        </div></div>
-      -->
-    <div class="tl-item"><div class="tl-time">02:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Panel</span><h4>The AI Edge - Beyond the Hype </h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-  
-                       <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/mariam-mammen-mathew.png" alt=""><div><div class="sp-name"><a href="../speakers/2026/mariam-mammen-mathew/">Mariam Mammen Mathew</a></div><div class="sp-role">CEO - Manorama Online at Malayala Manorama </div></div></div>
-
-      
-                        <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/suzannah-muthoot.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/suzannah-muthoot/">Suzannah Muthoot</a></div><div class="sp-role">Executive Director at Muthoot Housing Finance Company Ltd.</div></div></div>
-
-                         <div class="sp-grid-item is-mod"><img class="sp-img" src="../img/speakers/a-balakrishnan.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/a-balakrishnan/">[Moderator] A Balakrishnan</a></div><div class="sp-role">Director at Geojit Financial Services Ltd.</div></div></div>
-
-             </div>
-        </div></div>
-
-    <div class="tl-item"><div class="tl-time">03:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Panel</span><h4>Critical Infrastructure Security: Securing the Invisible Perimeter and IT/OT Convergence</h4><p class="tl-tba"></p>
-          <div class="sp-grid"><div class="sp-grid-item"><img class="sp-img" src="../img/speakers/prakash-p-ips.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/prakash-p/">P Prakash IPS</a></div><div class="sp-role">IGP SCRB and Nodal Officer CCTNS Kerala</div></div></div>
-
-          <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/himanshu-kumar-das.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/himanshu-kumar-das/">Himanshu Kumar Das</a></div><div class="sp-role">Chief Information Security Officer at CRED </div></div></div>
-
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/anil-menon.jpg" alt="Anil Menon"><div><div class="sp-name"><a href="../speakers/2026/anil-menon/">Anil Menon</a></div><div class="sp-role">CIO, Lulu Group India</div></div></div>
-
-  <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/thomas-kurian-ambattu.jpg" alt="Thomas Kurian Ambattu"><div><div class="sp-name"><a href="../speakers/2026/thomas-kurian-ambattu/">Thomas Kurian Ambattu</a></div><div class="sp-role">Business Head - Cyber security at Apeiron Pte Ltd.</div></div></div>
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/jojy-payyanickal.png" alt="Jojy Payyanickal"><div><div class="sp-name"><a href="../speakers/2026/jojy-payyanickal/">Jojy Payyanickal</a></div><div class="sp-role">CISO, Geojit Financial Services</div></div></div>
-
-                             <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/kiran.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/kiran-mohandas/">Kiran Mohandas</a></div><div class="sp-role">Director Sales at Fortinet</div></div></div>
-
-
-                        <div class="sp-grid-item is-mod"><img class="sp-img" src="../img/speakers/rajeev-panicker.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/rajeev-panicker">[Moderator] Rajeev Panicker
-</a></div><div class="sp-role">Global Scheme Manager - Automotive Cyber security at DNV</div></div></div>
-
-
-          </div>
-        </div></div>
-
-
-
-              <div class="tl-item"><div class="tl-time">03:45 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Lightning Talk</span><h4>AI Security and Deepfakes</h4><p class="tl-tba"></p>
-         
-                   <div class="sp-grid">
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/Abhishek-Dashora.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/abhishek-dashora/">Abhishek Dashora</a></div><div class="sp-role">Director - Cyber Defense and Incident Response at KPMG</div></div></div>
-
-      <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/anish-mamachan.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/anish-mamachan/">Anish Mamachan</a></div><div class="sp-role">Manager - Cyber Defense & Incident Response, Digital Trust, KPMG</div></div></div>
-
-          </div>
-
-        </div></div>
-
-
-
-        <!--
-      <div class="tl-item"><div class="tl-time">03:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Talk</span><h4>Speaker TBA</h4><p class="tl-tba">Session details will be announced soon.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/bsides-kerala-og-image.jpg" alt="TBA"><div><div class="sp-name">To be announced</div><div class="sp-role">Speaker</div></div></div>
-        </div></div>
-
-      -->
-
-      <div class="tl-item is-break"><div class="tl-time">04:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Tea/Coffee Break</h4></div></div>
-<!--
-      <div class="tl-item"><div class="tl-time">04:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Talk</span><h4>Speaker TBA</h4><p class="tl-tba">Session details will be announced soon.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/bsides-kerala-og-image.jpg" alt="TBA"><div><div class="sp-name">To be announced</div><div class="sp-role">Speaker</div></div></div>
-        </div></div>
-      -->
-      <div class="tl-item"><div class="tl-time">05:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Panel</span><h4>The Weakest Link? Cloud, Supply Chain Breaches, Securing the AI Economy, and Autonomous Agents</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-  
-                       <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/ajith-balagopal.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/ajith-balagopal/">Ajith Balagopal</a></div><div class="sp-role">Vice President Enterprise Services and Cyber security at Envestnet, Inc. </div></div></div>
-     
- 
-  <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/ananth-subramanian.jpg" alt="Ananth Subramanian"><div><div class="sp-name"><a href="../speakers/2026/ananth-subramanian/">Ananth Subramanian</a></div><div class="sp-role">Executive Vice President and Head of IT at Kotak Mutual Fund</div></div></div>
-
-<div class="sp-grid-item"><img class="sp-img" src="../img/speakers/rushikesh.jpeg" alt=""><div><div class="sp-name"><a href="../speakers/2026/rushikesh-rajendra-dhumal/">Rushikesh R Dhumal</a></div><div class="sp-role">Sr. Solutions Architect AI at Econz </div></div></div>
-                                              
-
- <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/shinoj.jpg" alt=""><div><div class="sp-name"><a href="#">Shinoj Kumar</a></div><div class="sp-role">Chief Information Security Officer at The Muthoot Group </div></div></div>
-
-                       <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/sunil-varkey.jpg" alt="Sunil Varkey"><div><div class="sp-name"><a href="../speakers/2026/sunil-varkey/">Sunil Varkey</a></div><div class="sp-role">CISO, CTO, Former Wipro Fellow, Writer, Speaker, Mentor, Cyber Evangelist</div></div></div>
-
-                        <div class="sp-grid-item is-mod"><img class="sp-img" src="../img/speakers/niranjan-kumar.jpg" alt=""><div><div class="sp-name"><a href="#">[Moderator] Niranjan Kiran Kumar Dhurjaty</a></div><div class="sp-role">Sr. Solution Consultant at Palo Alto Networks</div></div></div>
-
- 
-          </div>
-        </div></div>
-
-      <div class="tl-item"><div class="tl-time">05:45 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Panel</span><h4>Policy vs. Reality: Closing the Gap Between Compliance and Actual Security
-</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-
-
-   <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/vinodh-kumar.jpg" alt=""><div><div class="sp-name"><a href="#"> Vinodhkumar</a></div><div class="sp-role">Chief Technology Officer at Muthoot MCred Limited</div></div></div>
-
-  
-  <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/shibin-chulliparambil.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/shibin-chulliparambil/">Shibin Chulliparambil</a></div><div class="sp-role">Head of Information Technology at Malabar Group</div></div></div> 
-
-
-
-
-  <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/prasad-paulose.jpg" alt=""><div><div class="sp-name"><a href="#">Prasad Paulose</a></div><div class="sp-role">Head of Information Technology & CISO at Agappe Diagnostics Ltd.</div></div></div> 
-
-  <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/robin-joy.jpg" alt=""><div><div class="sp-name"><a href="../speakers/2026/robin-joy/"> Robin Joy</a></div><div class="sp-role">Independent Director at Muthoot Money Ltd. and Emsyne Technologies Pvt. Ltd., Former VP and CIO at V Guard Industries Ltd.</div></div></div>
-
-
-  <div class="sp-grid-item  is-mod"><img class="sp-img" src="../img/speakers/Anoop-Choondal.jpg" alt="Anoop Job Choondal"><div><div class="sp-name"><a href="../speakers/2026/anoop-job-choondal/">[Moderator] Anoop Job Choondal</a></div><div class="sp-role">Director - Cyber Risk & Compliance, Digital Trust, KPMG</div></div></div>
-        </div>
-
-
-
-        </div></div>
-    
-
-    </div>
-
-    <div class="track-divider"></div>
-
-
-      <div class="track-section">
-      <div class="track-header">
-        <span class="track-num">Track 2</span>
-        <span class="track-name">Hacker <span class="red">Ground</span></span>
-        <div class="track-line"></div>
-      </div>
-      <p class="track-desc">Schedule for Hacker Ground sessions, tool demos and hands-on activities.</p>
-
-      <div class="tl-item"><div class="tl-time">11:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Technical Talk</span><h4>Breaking AI Browsers: Hidden APIs, Agentic Chaos, and the Race Toward Secure
-            Architecture</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/kabilan-sakthivel.jpeg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/kabilan-sakthivel/">Kabilan Sakthivel</a></div><div class="sp-role">Security Researcher at Zscaler (squareX)</div></div></div>
-        </div></div>
-
-        <div class="tl-item"><div class="tl-time">11:30 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Technical Talk</span></span><h4>Wait, What Happened? A Beginner’s Guide to Digital Forensics and Incident Response.</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/vipin-george.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/vipin-george/">Vipin George</a></div><div class="sp-role">Cyber Forensic Consultant at LEAs, Kerala Excise</div></div></div>
-        </div></div>
-
-        <div class="tl-item"><div class="tl-time">12:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-panel">Tool demo</span><h4>LLMGoat: Offensive LLM Security Environment</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/litesh-ghute.png" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/litesh-ghute/">Litesh Ghute</a></div><div class="sp-role">Software Engineer (R&D) at INE</div></div></div>
-          <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/g-khartheesvar.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/g-khartheesvar/">G Khartheesvar</a></div><div class="sp-role">Software Engineer at INE</div></div></div>
-          </div>
-        </div></div>
-
-
-       <div class="tl-item"><div class="tl-time">12:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Technical Talk</span><h4>Beyond Individual Vulns: How We Hardened a 200M+ User Platform’s Cloud Backend Without Chasing CVEs</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/dakshita-agarwal.jpeg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/dakshita-agarwal/">Dakshita Agarwal</a></div><div class="sp-role">Senior Security Engineer at Sharechat co</div></div></div>
-        </div></div>
-    
-
-              <div class="tl-item is-break"><div class="tl-time">01:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Lunch Break &amp; Networking</h4></div></div>
-
-              <div class="tl-item"><div class="tl-time">02:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Techncial Talk</span><h4>One Tap to Own Them All: Chaining WebView Flaws into a 1-Click Account Takeover</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/sam-mg-harish.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/sam-mg-harish/">Sam MG Harish</a></div><div class="sp-role">Mobile Security Researcher at Team bi0s</div></div></div>
-        </div></div>
-
-      <div class="tl-item"><div class="tl-time">02:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Technical Talk</span><h4>When Human Eyes and AI Disagree</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/sahil-gupta.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/sahil-gupta/">Sahil Gupta</a></div><div class="sp-role">Senior Cybersecurity Engineer at Siemens</div></div></div>
-        </div></div>
-
-      <div class="tl-item"><div class="tl-time">03:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-demo">Technical Talk</span><h4>The npm Attack Surface in 2026: Account Takeovers, Fake Plugins, and Full C2 Agents</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/sudhanshu-dasgupta.png" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/sudhanshu-dasgupta/">Sudhanshu Dasgupta</a></div><div class="sp-role">Software Engineer at SafeDep</div></div></div>
-        </div></div>
-
-      <div class="tl-item"><div class="tl-time">03:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-talk">Tool Demo</span><h4>Catching Ransomware in the Act: Behavioral Profiling and Entropy Analysis with DB Sherlock</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/taha-kathiria.jpeg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/taha-kathiria/">Taha Kathiria</a></div><div class="sp-role">Cybersecurity Researcher at Dayananda Sagar Academy of Technology and Management and Volunteer at AI-Sec Community</div></div></div>
-        </div></div>
-
-        <div class="tl-item"><div class="tl-time">03:45 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-demo">Tool demo</span><h4>TESTERPy2 - Threat Emulation and Security Testing Platform</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/shana.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/shana-buhaisa">Shana Buhaisa P</a></div><div class="sp-role">Associate Security Consultant at BreachSimRange</div></div></div>
-          <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/auria-theresa-jijo.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/auria-theresa/">Auria Theresa Jijo</a></div><div class="sp-role">Security Researcher Intern</div></div></div>
-          </div>
-        </div></div>
-
-      
-
-                      <div class="tl-item is-break"><div class="tl-time">04:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Tea/Coffee Break</h4></div></div>
-
- 
-      
-     <div class="tl-item"><div class="tl-time">04:30 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-demo">Technical Talk</span><h4>From ClickFix to PXA Stealer: Evolution of Multi-Stage Infostealer Campaigns and the Role of Proactive Threat Hunting</h4><p class="tl-tba"></p>
-        
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/niranjan-jayanand.png" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/niranjan-jayanand/">Niranjan Jayanand</a></div><div class="sp-role">Advanced Threat Hunting Service Lead at Cyberproof</div></div></div>
-        </div></div>
-
-      
-     <div class="tl-item"><div class="tl-time">05:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-demo">Tool Demo</span><h4>DetectOps - Detection Engineering Platform
-</h4><p class="tl-tba"></p>
-        
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/anand-kumar.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/anand-kumar/">Anand Kumar</a></div><div class="sp-role">Detection Engineer (Security Researcher) at Grant Thronton Bharat
-</div></div></div>
-        </div></div>
-    </div>
-
-    <div class="track-divider"></div>
-    
-
-   
-    <div class="track-section">
-      <div class="track-header">
-        <span class="track-num">Track 3</span>
-        <span class="track-name">Hands-On Activity <span class="red">Ground</span></span>
-        <div class="track-line"></div>
-      </div>
-      <p class="track-desc">Schedule for Hands-on activities and live hacking demonstrations.</p>
-
-      <div class="tl-item"><div class="tl-time">11:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-workshop">Hands-On Activity</span><h4>Pins, Pads and Payloads, a hands-on hardware, IoT and OT Security</h4><p class="tl-tba"></p>
-          <div class="sp-grid">
-            <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/season-cheriyan.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/season-cherian/">Season Cherian</a></div><div class="sp-role">Lead Hardware Security Researcher, Traboda Cyber Labs</div></div></div>
-          <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/abhinand-n.png" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/abhinand-n/">Abhinand N</a></div><div class="sp-role">Lead Mobile Security Engineer, Traboda Cyber Labs</div></div></div>
-          <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/sreesankar-s.png" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/sreesankar-s/">Sreesankar S</a></div><div class="sp-role">Security Researcher, Traboda Cyber Labs</div></div></div>
-          <div class="sp-grid-item"><img class="sp-img" src="../img/speakers/vivek-n-j.png" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/vivek-n-j/">Vivek N J</a></div><div class="sp-role">Senior Security Researcher, Traboda Cyber Labs</div></div></div>
-          </div>
-        </div></div>
-
-        <div class="tl-item"><div class="tl-time">11:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-workshop">Hands-On Activity</span><h4>Lockpicking and Physical Security</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/praveen-s.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/praveen-s">Praveen S</a></div><div class="sp-role">Offensive Security Lead at Healthcare Industry, DEF CON Group Trivandrum</div></div></div>
-        </div></div>
-
-        <div class="tl-item"><div class="tl-time">11:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-workshop">Hands-On Activity</span><h4>Offensive Hardware: Hands-On RF, BLE and Wireless Security Lab</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/rahul-thareja.jpeg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/rahul-thareja/">Rahul Thareja</a></div><div class="sp-role">Founder and CEO at C1PH3R-FSocitey</div></div></div>
-        </div></div>
-
-      
-
-      <div class="tl-item is-break"><div class="tl-time">01:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Lunch Break</h4></div></div>
-
-      <div class="tl-item"><div class="tl-time">02:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-workshop">Hands-On Activity</span><h4>Breaking On-Prem Active Directory: A Hands-On Offensive Workshop</h4><p class="tl-tba"></p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/abhisek-rajkumar.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/abhisek-rajkumar/">Abhisek Rajkumar</a></div><div class="sp-role">Security Consultant at NetSPI and Founder of The Abhisek Cast</div></div></div>
-        </div></div>
-
-      <div class="tl-item is-break"><div class="tl-time">04:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Tea/Coffee Break</h4></div></div>
-
-      
-
-    </div>
-
-    <div class="track-divider"></div>
-
-
-    <div class="track-section">
-      <div class="track-header">
-        <span class="track-num">Track 4</span>
-        <span class="track-name">CTF <span class="red">Competition</span></span>
-        <div class="track-line"></div>
-      </div>
-      <p class="track-desc">Capture The Flag competition.</p>
-
-      <div class="tl-item"><div class="tl-time">06:00 AM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-ctf">CTF</span><h4>Capture The Flag Competition Begins</h4><p class="tl-desc">CTF challenge environment goes live. Teams can start solving challenges.</p></div></div>
-
-
-
-      <div class="tl-item is-break"><div class="tl-time">01:15 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Lunch Break</h4></div></div>
-
-      <div class="tl-item"><div class="tl-time">02:15 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-ctf">CTF</span><h4>CTF Continues</h4><p class="tl-desc">Afternoon session. New challenge categories may unlock.</p></div></div>
-
-
-
-      <div class="tl-item is-break"><div class="tl-time">04:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-card"><h4>Tea/Coffee Break</h4></div></div>
-
-      <div class="tl-item"><div class="tl-time">06:00 PM</div><div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-card"><span class="tl-tag tl-tag-ctf">CTF</span><h4>CTF Final Round</h4><p class="tl-desc">Last stretch. Scoreboard freeze before closing ceremony.</p></div></div>
-    </div>
-
-    <div class="track-divider"></div>
-
-
-    <div class="sch-shared">
-      <div class="sch-lbl">All Tracks - Closing</div>
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">06:30 PM</div>
-        <div class="sch-evt-body">
-          <h3>Closing <span class="red">Ceremony</span></h3>
-          <p>BSides Kerala 2026 closing ceremony.</p>
-        </div>
-      </div>
-
-
-
-            <div class="sch-evt">
-        <div class="sch-evt-time">06:45 PM</div>
-        <div class="sch-evt-body">
-          <h3>Closing Keynote</h3>
-          <p>Closing Ceremony Keynote Address</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/munair.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/m-unnikrishnan-nair/">Lt Gen. M Unnikrishnan Nair PVSM, AVSM, SM (Retd.)</a></div><div class="sp-role">Former National Cyber Security Coordinator at National Security Council Secretariat.</div></div></div>
-        </div>
-      </div>
-
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">06:45 PM</div>
-        <div class="sch-evt-body">
-          <h3>Closing Note and Thanks</h3>
-          <p>Closing remarks by the organizing team.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/vv-jacob.jpg" alt="TBA"><div><div class="sp-name"><a href="../speakers/2026/vv-jacob/">V V Jacob</a></div><div class="sp-role">Chief General Manager, Systems at Malayala Manorama Co. Pvt. Ltd.</div></div></div>
-        </div>
-      </div>
-
-      <div class="sch-evt">
-        <div class="sch-evt-time">07:00 PM</div>
-        <div class="sch-evt-body">
-          <h3>Prize <span class="red">Distribution</span></h3>
-          <p>Contests and CTF prize distribution.</p>
-          <div class="sp-row"><img class="sp-img" src="../img/speakers/bsides-kerala-og-image.jpg" alt="Abhijith B R"><div><div class="sp-name">BSides Kerala</div><div class="sp-role">BSides Kerala Organizing Team</div></div></div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
-
 <footer class="ft">
   <div class="ft-inner">
     <div class="ft-grid">
@@ -554,8 +104,8 @@
   </div>
 </div>
       <div class="ft-col">
-        <h4>Conference 2026</h4>
-        <a href="https://konfhub.com/bsides-kerala-2026">Register</a>
+        <h4>BSides Kerala</h4>
+        <a href="../archives/">Event Archives</a>
         <a href="https://bsideskerala.in/code-of-conduct">Code of conduct</a>
         <a href="#">Privacy policy</a>
       </div>
@@ -563,7 +113,7 @@
         <h4>Security BSides</h4>
         <a href="https://bsides.org">Security BSides</a>
         <a href="../about-us/index.html">About us</a>
-        <a href="#">All events</a>
+        <a href="../archives/">All events</a>
       </div>
       <div class="ft-col">
         <h4>Contact Us</h4>
@@ -572,18 +122,16 @@
       </div>
     </div>
     <div class="ft-bottom">
-      <p>&copy; Copyright <b>BSides Kerala 2026</b>. All Rights Reserved</p>
+      <p>&copy; Copyright <b>BSides Kerala</b>. All Rights Reserved</p>
       <p class="love"><span class="heart">&#10084;</span> With love to the <span class="grn">security</span> community</p>
     </div>
   </div>
 </footer>
 <div class="ft-banner">
-  <img src="../img/footer-img.png" alt="BSides Kerala 2026">
+  <img src="../img/footer-img.png" alt="BSides Kerala">
 </div>
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>

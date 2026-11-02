@@ -154,6 +154,7 @@ section.hero h1 .red{color:#DC2626}
   animation:kb-letter-in .7s cubic-bezier(.2,.9,.25,1.2) both calc(var(--kb-intro) + .35s + var(--i) * 70ms),
             kb-glow-wave 3.6s ease-in-out infinite calc(var(--kb-intro) + 1.6s + var(--i) * 110ms)}
 .kb-neon .kb-neon__gap{width:.22em}
+.kb-br{display:none}
 .kb-neon span.kb-neon__year{color:var(--kb-red);text-shadow:.06em .03em 0 #050208}
 .kb-neon span.kb-neon__flicker{
   animation:kb-letter-in .7s cubic-bezier(.2,.9,.25,1.2) both calc(var(--kb-intro) + .35s + var(--i) * 70ms),
@@ -207,6 +208,39 @@ section.hero h1 .red{color:#DC2626}
   .kb-glitch::before,.kb-glitch::after{display:none}
 }
 .ent-card::before{display:none}
+/* portrait phones/tablets: taller artwork, cropped at the sides around the performer */
+@media (max-aspect-ratio:1/1){
+  .kb-wrap{overflow:hidden;overflow:clip}
+  .kb-wrap{position:relative;padding-top:calc(76px + max(100vw / 1.7768, 62vh)) !important}
+  .kb-stage{position:absolute;top:76px;left:50%;width:max(100vw, calc(62vh * var(--kb-ratio)));max-width:none;margin:0;transform:translateX(-50%)}
+  .kb-hero{left:50%;right:auto;width:min(100vw,100%);transform:translateX(-50%);bottom:3vw}
+  .kb-hero__line{font-size:15vw}
+}
+/* portrait: full-screen artwork with title, tagline and the three cards on top of it, like desktop */
+@media (max-aspect-ratio:1/1){
+  .kb-wrap{padding-top:calc(76px + max(100vw / 1.7768, 100vh - 76px)) !important;padding-bottom:0 !important}
+  @supports (height:100svh){.kb-wrap{padding-top:calc(76px + max(100vw / 1.7768, 100svh - 76px)) !important}}
+  .kb-stage{width:max(100vw, calc((100vh - 76px) * var(--kb-ratio)))}
+  @supports (height:100svh){.kb-stage{width:max(100vw, calc((100svh - 76px) * var(--kb-ratio)))}}
+  .kb-stage::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;z-index:1;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(5,2,8,0),rgba(5,2,8,.6) 45%,rgba(5,2,8,.9))}
+  .kb-hero{z-index:2;bottom:max(56px,10vh)}
+  .kb-hero__line{font-size:17vw}
+  .kb-hero__title{line-height:.84}
+  .kb-neon span.kb-neon__gap{display:none}
+  .kb-hero br.kb-br{display:inline}
+  .kb-hero__info{position:static;padding:0 12px;display:flex;flex-direction:column;align-items:center;width:100%}
+  .kb-hero__tagline{margin:8px 0 12px;font-size:clamp(12px,3.3vw,18px);max-width:94%;line-height:1.3}
+  .kb-cards{grid-template-columns:repeat(3,1fr);width:100%;max-width:620px;border-radius:14px}
+  .kb-card{padding:10px 4px 9px;gap:3px}
+  .kb-card + .kb-card{border-top:0;border-left:1px solid rgba(255,255,255,.14)}
+  .kb-pill{font-size:clamp(8px,2.2vw,12px);letter-spacing:.1em;padding:1px 7px 0;border-width:1px}
+  .kb-card__main{font-size:clamp(13px,3.7vw,24px);line-height:1.15}
+  .kb-card__sub{font-size:clamp(10px,2.7vw,15px)}
+}
+.ent-icon.red-bg,.ent-icon.green-bg{background:transparent !important}
+.ent-icon.red-bg{border:1px solid rgba(220,38,38,.35)}
+.ent-icon.green-bg{border:1px solid rgba(34,197,94,.4)}
 /* responsive fixes */
 .nav-links a{white-space:nowrap}
 @media(max-width:1100px){
@@ -239,6 +273,7 @@ section.hero h1 .red{color:#DC2626}
   .kb-card__main{font-size:max(2.35cqw,15px)}
   .kb-hero__tagline{font-size:max(1.72cqw,12px)}
 }</style>
+<style>/* footer artwork on black */.ft-banner{background:#000}.ft-banner img{filter:invert(1) brightness(.88) contrast(1.05)}</style>
 </head>
 <body>
 
@@ -272,7 +307,7 @@ section.hero h1 .red{color:#DC2626}
       <h1 class="kb-hero__title" id="hero-title">
         <span class="kb-hero__line kb-hero__line--top kb-glitch" data-text="BSIDES">BSIDES</span>
         <span class="kb-hero__line kb-hero__line--bottom" aria-label="Kerala 2027">
-          <span class="kb-neon" aria-hidden="true"><span class="kb-neon__word kb-glitch" data-text="KERALA"><span style="--i: 0">K</span><span style="--i: 1">E</span><span style="--i: 2">R</span><span class="kb-neon__flicker" style="--i: 3">A</span><span style="--i: 4">L</span><span style="--i: 5">A</span></span><span class="kb-neon__gap"> </span><span class="kb-neon__year" style="--i: 6">2</span><span class="kb-neon__year" style="--i: 7">0</span><span class="kb-neon__year" style="--i: 8">2</span><span class="kb-neon__year" style="--i: 9">7</span></span>
+          <span class="kb-neon" aria-hidden="true"><span class="kb-neon__word kb-glitch" data-text="KERALA"><span style="--i: 0">K</span><span style="--i: 1">E</span><span style="--i: 2">R</span><span class="kb-neon__flicker" style="--i: 3">A</span><span style="--i: 4">L</span><span style="--i: 5">A</span></span><span class="kb-neon__gap"> </span><br class="kb-br"><span class="kb-neon__year" style="--i: 6">2</span><span class="kb-neon__year" style="--i: 7">0</span><span class="kb-neon__year" style="--i: 8">2</span><span class="kb-neon__year" style="--i: 9">7</span></span>
         </span>
       </h1>
 
@@ -282,7 +317,7 @@ section.hero h1 .red{color:#DC2626}
         <ul class="kb-cards">
           <li class="kb-card">
             <span class="kb-pill">Trainings</span>
-            <strong class="kb-card__main">6-7 May 2027</strong>
+            <strong class="kb-card__main">6–7 May 2027</strong>
             <span class="kb-card__sub">Thursday and Friday</span>
           </li>
           <li class="kb-card kb-card--hot">
@@ -355,10 +390,10 @@ section.hero h1 .red{color:#DC2626}
           <div class="ent-icon green-bg">
             <svg viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
-          <span class="ent-card-label">Theme</span>
+          <span class="ent-card-label">Edition</span>
         </div>
-        <h3>Theyyam Cyberpunk</h3>
-        <p>The 2027 edition</p>
+        <h3>Third edition</h3>
+        <p>The third edition of BSides Kerala</p>
       </div>
 
     </div>
@@ -445,7 +480,7 @@ section.hero h1 .red{color:#DC2626}
 <!-- CTA -->
 <section class="cta-block">
   <div class="inner">
-    <h2>BSides <span class="red">Kerala 2027</span><span class="blink"></span></h2>
+    <h2>BSides <span class="red">Kerala 2027</span></h2>
     <p>Security BSides Kerala Hacking and Cyber Security Community Conference.<br>Be part of the community.</p>
     <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap">
       <a href="contact" class="btn btn-primary">Contact Us</a>

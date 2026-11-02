@@ -11,7 +11,6 @@
 .sect-dark .sect-head .lead{color:var(--g400)}
 
 .ctf-hero{background:var(--black);color:#fff;padding:9rem 5% 5rem;position:relative;overflow:hidden}
-.ctf-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
 .ctf-hero-inner{max-width:1200px;margin:0 auto;position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
 .ctf-hero-text .hero-label{display:inline-flex;align-items:center;gap:.6rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--red);background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);padding:.45rem 1rem;border-radius:6px;margin-bottom:1.6rem}
 .ctf-hero-text .hero-label::before{content:'';width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 1.6s infinite;box-shadow:0 0 8px var(--red)}

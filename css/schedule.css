@@ -2,7 +2,6 @@
 .sect-schedule .wrap{max-width:1000px}
 
 .sch-date{font-family:'JetBrains Mono',monospace;font-size:.88rem;color:var(--red);letter-spacing:.08em;margin-bottom:2.5rem;display:flex;align-items:center;gap:.6rem}
-.sch-date::before{content:'';width:28px;height:2px;background:var(--red)}
 
 .sch-shared{margin-bottom:3rem}
 .sch-lbl{font-family:'JetBrains Mono',monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--g500);margin-bottom:1rem}

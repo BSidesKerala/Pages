@@ -22,7 +22,6 @@ img{max-width:100%;height:auto;display:block}
 .page-hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(220,38,38,.15),transparent 70%);top:-20%;right:-5%}
 .page-hero .inner{position:relative;z-index:1;max-width:1200px;margin:0 auto}
 .page-hero .label{font-family:'JetBrains Mono',monospace;font-size:.85rem;text-transform:uppercase;letter-spacing:.16em;color:var(--green-l);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
-.page-hero .label::before{content:'';width:24px;height:2px;background:var(--green-l)}
 .page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.92;letter-spacing:.05em;margin-bottom:1rem}
 .page-hero h1 .red{color:var(--red)}
 .page-hero p{font-size:clamp(1.1rem,1.8vw,1.35rem);color:rgba(255,255,255,.5);max-width:600px;line-height:1.7}
@@ -30,7 +29,6 @@ img{max-width:100%;height:auto;display:block}
 .sect-alt{background:var(--g50)}
 .wrap{max-width:1200px;margin:0 auto}
 .sect-label{font-family:'JetBrains Mono',monospace;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;color:var(--green);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
-.sect-label::before{content:'';width:24px;height:2px;background:var(--green)}
 .sect-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);line-height:.98;letter-spacing:.04em;margin-bottom:1.5rem}
 .sect-heading .red{color:var(--red)}
 .sect-text{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--g600);line-height:1.7;max-width:700px;margin-bottom:2rem}

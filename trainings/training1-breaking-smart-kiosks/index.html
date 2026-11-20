@@ -24,9 +24,8 @@
 .td-content h3 .red{color:var(--red)}
 .td-content p{font-size:1.05rem;color:var(--g600);line-height:1.8;margin-bottom:1rem}
 .td-content ul{margin:0 0 1.5rem 0;padding:0;list-style:none}
-.td-content ul li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:1.02rem;color:var(--g600);line-height:1.7;border-bottom:1px solid var(--g100)}
+.td-content ul li{padding:.5rem 0;font-size:1.02rem;color:var(--g600);line-height:1.7;border-bottom:1px solid var(--g100)}
 .td-content ul li:last-child{border-bottom:none}
-.td-content ul li::before{content:'›';position:absolute;left:0;color:var(--red);font-weight:700;font-size:1.2rem}
 
 /* ── day tabs ── */
 .td-days{display:flex;gap:.5rem;margin-bottom:1.5rem}
@@ -42,10 +41,9 @@
 .td-info-box h4{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;color:var(--black);margin-bottom:.6rem}
 .td-info-box h4 .red{color:var(--red)}
 .td-info-box p{font-size:1.02rem;color:var(--g600);line-height:1.7;margin:0}
-.td-info-box ul{margin:.5rem 0 0;padding:0;list-style:none}
-.td-info-box ul li{position:relative;padding:.35rem 0 .35rem 1.3rem;font-size:1rem;color:var(--g600);line-height:1.6}
-.td-info-box ul li::before{content:'›';position:absolute;left:0;color:var(--red);font-weight:700;font-size:1.1rem}
-.td-info-box.highlight{background:rgba(220,38,38,.03);border-color:rgba(220,38,38,.12)}
+.td-info-box ul{margin:.5rem 0 0;padding:0 0 0 1.2rem;list-style:disc}
+.td-info-box ul li{padding:.3rem 0;font-size:1rem;color:var(--g600);line-height:1.6}
+.td-info-box.highlight{border-color:rgba(220,38,38,.3)}
 .td-info-box.highlight h4{color:var(--red)}
 
 /* ── trainer profiles ── */
@@ -63,7 +61,7 @@
 /* ── social links ── */
 .td-socials{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
 .td-social{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:500;color:var(--g500);padding:.35rem .75rem;border:1px solid var(--g200);border-radius:8px;transition:.2s}
-.td-social:hover{color:var(--red);border-color:var(--red);background:rgba(220,38,38,.03)}
+.td-social:hover{color:var(--red);border-color:var(--red)}
 .td-social svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
 
 /* ── breadcrumb ── */
@@ -127,7 +125,7 @@
     <div class="td-meta">
       <div class="td-meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        7 &ndash; 8 May 2026
+        7 - 8 May 2026
       </div>
       <div class="td-meta-sep"></div>
       <div class="td-meta-item">
@@ -142,7 +140,7 @@
       <div class="td-meta-sep"></div>
       <div class="td-meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Beginner &ndash; Intermediate
+        Beginner - Intermediate
       </div>
       <div class="td-meta-sep"></div>
       <div class="td-meta-item">
@@ -265,7 +263,7 @@
           </div>
           <div class="td-trainer-body">
             <h3>Kartik Lalan</h3>
-            <div class="td-trainer-role">Product Security Architect @ Security Centre of Excellence – Philips Innovation Campus.</div>
+            <div class="td-trainer-role">Product Security Architect @ Security Centre of Excellence, Philips Innovation Campus.</div>
             <p>Product Security Architect at Security Centre of Excellence, Philips Innovation Campus. He holds an M.Tech. in Computer Science with Specialization in Information &amp; Network Security.</p>
             <p>Kartik conducts frequent talks and workshops on InfoSec topics at several notable conferences and community events including C0C0N, Nullcon, DEF CON Blue and Hardware Villages, OWASP AppSec Days, BSides Delhi and Bangalore chapters, DroidCon-IN, and other community meetups. Kartik loves to write technical blogs in his leisure time.</p>
             <div class="td-socials">

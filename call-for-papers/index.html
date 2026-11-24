@@ -3,21 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Call for Papers | BSides Kerala 2026</title>
+<title>Call for Papers | BSides Kerala 2027</title>
 <meta name="description" content="Security BSides Kerala">
   <meta name="author" content="BSides Kerala">
   <meta name="keywords" content="BSides, Kerala, cyber security, conference">
-  <meta property="og:title" content="BSides Kerala 2026">
-  <meta property="og:description" content="Security BSides Kerala 2026">
+  <meta property="og:title" content="BSides Kerala 2027">
+  <meta property="og:description" content="Security BSides Kerala 2027">
   <meta property="og:type" content="website, conference, cyber security">
   <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
-<link rel="stylesheet" href="../css/style-2026.css">
+<link rel="stylesheet" href="../css/style-2027.css">
 <style>
-/* plain topic tags and empty-state icon: no chevron marker, no tinted fills */
-.topic-tag::before{content:none}
-.topic-tag:hover{background:transparent}
-.coming-soon .icon{background:transparent;border:1px solid rgba(220,38,38,.35)}
+@media(max-width:768px) {
+      .sect .wrap[style*='grid-template-columns'] {
+        display: block !important
+      }
+
+      .sect .wrap[style*='grid-template-columns']>div:last-child {
+        margin-top: 2rem
+      }
+    }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    @media(max-width:768px) {
+      .sect .wrap[style*='grid-template-columns'] {
+        display: block !important
+      }
+
+      .sect .wrap[style*='grid-template-columns']>div:last-child {
+        margin-top: 2rem
+      }
+    }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* match the 2027 homepage: font and top menu */
+*{font-family:'Baloo Chettan 2',sans-serif !important}
+.page-hero h1,.sect-heading,.nav-logo b,.card-body h3{letter-spacing:0 !important;font-weight:800}
+.page-hero h1{text-transform:uppercase}
+.page-hero .label,.sect-label{letter-spacing:.12em !important}
+.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
+.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase;white-space:nowrap}
+.nav-links a{font-weight:800;font-size:1rem;color:#fff;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-links .cta-link{font-weight:800}
+.burger{color:#fff;border-color:rgba(255,255,255,.3)}
+@media(max-width:1100px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;
+    background:rgba(0,0,0,.94);border-bottom:1px solid rgba(255,255,255,.08);padding:1rem 5%;backdrop-filter:blur(16px);gap:.2rem}
+  .nav-links.open .cta-link{margin:.4rem 0 0;text-align:center}
+}
+@media(max-width:480px){.nav-logo b{font-size:1.2rem}.nav-logo img{height:32px}.nav{padding:.6rem 4%}}
+</style>
+<style>
+/* organizing team: slight whole-card glitch on hover */
+.team-glitch .card:hover{animation:card-glitch 2.4s steps(1) infinite;transform:none}
+@keyframes card-glitch{
+  0%,100%{transform:none;filter:none}
+  4%{transform:translateX(-2px);filter:none}
+  7%{transform:translateX(1px);filter:none}
+  10%{transform:none;filter:none}
+  52%{transform:translateX(2px);filter:none}
+  55%{transform:none;filter:none}
+}
+@media (prefers-reduced-motion:reduce){.team-glitch .card:hover{animation:none}}
+</style><style>
+/* organizing team: social icons */
+.team-glitch{align-items:stretch;grid-auto-rows:auto}
+.team-glitch .card{display:flex;flex-direction:column;overflow:visible;min-height:0}
+.team-glitch .card-img{overflow:hidden;flex:none}
+.team-glitch .card-body{flex:1;display:flex;flex-direction:column}
+.team-glitch .team-social{margin-top:auto}
+.team-glitch .card-body{padding:.75rem .85rem .75rem}
+.team-glitch .card-body h3{font-size:1.5rem;line-height:1.15;margin-bottom:.35rem}
+.team-glitch .card-body p{font-size:.88rem;line-height:1.45}
+.team-glitch .card-body p{margin-bottom:0}
+.team-social{display:flex;justify-content:center;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--g200)}
+.team-social a{width:34px;height:34px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--g200);color:var(--g500);transition:.2s}
+.team-social a svg{width:16px;height:16px;fill:currentColor}
+.team-social a:hover{background:#0A66C2;border-color:#0A66C2;color:#fff}
+.team-social a[aria-label$=" on X"]:hover{background:#000;border-color:#000}
+.team-social a[aria-label$=" website"]:hover{background:#DC2626;border-color:#DC2626}
+</style><style>
+/* organizing team section on dark */
+.team-dark{background:#09090B}
+.team-dark .sect-heading{color:#fff}
+.team-dark .sect-text{color:rgba(255,255,255,.7)}
+.team-dark .sect-label{color:#22C55E}
+.team-dark .card{border:0;border-radius:0;background:#fff;padding:6px 6px 0;box-shadow:none}
+.team-dark .card-img,.team-dark .card-img img{border-radius:0}
+.team-dark .card:hover{transform:translateY(-4px)}
+</style>
+<style>/* staff cards on white */.staff-grid .card{border:1px solid var(--g200);border-radius:0;padding:6px 6px 0;background:#fff}.staff-grid .card-img,.staff-grid .card-img img{border-radius:0}</style>
 </head>
 <body>
 <nav class="nav" id="nav">
@@ -25,37 +108,34 @@
     <img src="../img/logo.png" alt="BSides Kerala">
     <b>BSides <em>Kerala</em></b>
   </a>
-  <ul class="nav-links" id="navMenu">
+<ul class="nav-links" id="navMenu">
     <li><a href="../">Home</a></li>
-<li><a href="../call-for-papers" class="active">CFP</a></li>
-<li><a href="../trainings">Trainings</a></li>
-<li><a href="../speakers">Speakers</a></li>
-<li><a href="../schedule">Schedule</a></li>
-<li><a href="../capture-the-flag">Capture-the-flag</a></li>
-<li><a href="../about-us">About Us</a></li>
-<li><a href="../contact">Contact</a></li>
-
-    <li><a href="https://konfhub.com/bsides-kerala-2026" class="cta-link">Register</a></li>
+    <li><a href="../trainings">Trainings</a></li>
+    <li><a href="../speakers">Speakers</a></li>
+    <li><a href="../schedule">Schedule</a></li>
+    <li><a href="../capture-the-flag">Capture-the-flag</a></li>
+    <li><a href="../about-us">About Us</a></li>
+    <li><a href="../contact">Contact</a></li>
+    <li><a href="../archives/" class="cta-link">Archives</a></li>
   </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+    <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
 <section class="page-hero">
   <div class="inner">
     <div class="label">Submit Your Research</div>
     <h1>Call For <span class="red">Papers</span></h1>
-    <p>Submit your talks and workshops for BSides Kerala 2026.</p>
+    <p>Submit your talks and workshops for BSides Kerala 2027.</p>
   </div>
 </section>
+<div class="sep"></div>
 <section class="sect">
   <div class="wrap">
-    <div class="coming-soon">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-      <h2>CFP is <span class="red">Closed.</span></h2>
-      <p>Submit your talks/workshops for BSides Kerala 2026</p>
-      <a href="cfp-bsides-kerala-2026/" class="btn btn-primary">CFP has been closed.</a>
-    </div>
+      <div class="row justify-content-center">
+        <p> <iframe loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSeWFWZi48aLpjgzpYVI-bXSo-ZpheT60dF5uP7a0Ytc1HGKFw/viewform?embedded=true"  width="100%" height="2500" frameborder="0" marginwidth="0" marginheight="0">Loading…</iframe> </p>
+      </div>
   </div>
 </section>
+
 <div class="sep"></div>
 
 <section class="sect">
@@ -72,7 +152,7 @@
     <div class="sect-label">Benefits</div>
     <h2 class="sect-heading">Speaker <span class="red">Benefits</span></h2>
     <div style="font-size:1.1rem;color:var(--g600);line-height:1.9;max-width:700px">
-      <p>CFP closes on: <b style="color:var(--red)">10 April, 2026</b></p>
+      <p>CFP closes on: <b style="color:var(--red)">10 April, 2027</b></p>
       <p style="margin-top:1rem">If your talk/workshop gets selected, you will get full access to the conference. Speaking at BSides Kerala is a great way to meet others interested in your topic and share ideas across.</p>
       <p style="margin-top:.8rem">BSides Kerala will promote your presentation, link to your social media, blog, or web pages you desire.</p>
       <p style="margin-top:.8rem">For speakers from overseas, we will take care of your accommodation and <b>USD500</b> as honorarium.</p>

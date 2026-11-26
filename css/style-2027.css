@@ -90,3 +90,27 @@ img{max-width:100%;height:auto;display:block}
 .ft-social svg{width:16px;height:16px}
 .ft-social:hover{border-color:var(--red);background:var(--red);color:#fff;transform:translateY(-2px)}
 .ft-social:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+
+/* ─── PHOTO GALLERY ─── */
+.gallery-sect{background:#09090B;color:#fff;overflow:hidden}
+.gallery-sect .sect-heading{color:#fff}
+.gallery-sect .sect-label{color:#22C55E}
+.gallery-sect .sect-text{color:rgba(255,255,255,.7)}
+.gallery-year{margin-top:2.8rem}
+.gallery-year:first-of-type{margin-top:2rem}
+.gallery-year-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.1rem}
+.gallery-year-title{font-size:clamp(1.35rem,2.4vw,1.8rem);font-weight:800;letter-spacing:0}
+.gallery-year-title .red{color:var(--red)}
+.gallery-marquee{position:relative;padding:14px 0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;user-select:none;mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.gallery-marquee::-webkit-scrollbar{display:none}
+.gallery-marquee.dragging{cursor:grabbing}
+.gallery-track{display:flex;width:max-content}
+.gallery-group{display:flex;gap:1.1rem;padding-right:1.1rem}
+.gallery-item{position:relative;flex:none;width:clamp(250px,28vw,360px);aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#141418;transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .3s ease,box-shadow .35s ease}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.gallery-item:hover{transform:scale(1.06);z-index:2;border-color:rgba(255,255,255,.35);box-shadow:0 12px 32px rgba(0,0,0,.55)}
+.gallery-item:hover img{transform:scale(1.12)}
+@media (prefers-reduced-motion:reduce){
+  .gallery-marquee{mask-image:none;-webkit-mask-image:none}
+}

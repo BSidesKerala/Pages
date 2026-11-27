@@ -5,78 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Speakers | BSides Kerala</title>
 <meta name="description" content="Security BSides Kerala">
-  <meta name="author" content="BSides Kerala">
-  <meta name="keywords" content="BSides, Kerala, cyber security, conference">
-  <meta property="og:title" content="BSides Kerala">
-  <meta property="og:description" content="Security BSides Kerala">
-  <meta property="og:type" content="website, conference, cyber security">
-  <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
-<link rel="stylesheet" href="../css/style-2027.css">
-<style>
-/* plain empty-state icon: no tinted tile */
-.coming-soon .icon{background:transparent;border:1px solid rgba(220,38,38,.35)}
-</style>
+<meta name="author" content="BSides Kerala">
+<meta name="keywords" content="BSides, Kerala, cyber security, conference">
+<meta property="og:title" content="BSides Kerala">
+<meta property="og:description" content="Security BSides Kerala">
+<meta property="og:type" content="website, conference, cyber security">
+<meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-/* match the 2027 homepage */
-*{font-family:'Baloo Chettan 2',sans-serif !important}
-.page-hero h1,.coming-soon h2,.nav-logo b{letter-spacing:0 !important;font-weight:800}
-.page-hero h1{text-transform:uppercase}
-.page-hero .label{letter-spacing:.12em !important}
-.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
-.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase}
-.nav-links a{font-weight:800;font-size:1rem;color:#fff}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
-.nav-links .cta-link{font-weight:800}
-.burger{color:#fff;border-color:rgba(255,255,255,.3)}
-@media(max-width:900px){.nav-links.open{background:rgba(0,0,0,.92);border-bottom:1px solid rgba(255,255,255,.08)}}
-/* coming soon badge in the page header */
-.cs-pill{display:inline-flex;align-items:center;gap:.6rem;margin:.4rem 0 1.4rem;padding:.45rem 1.2rem;border-radius:999px;
-  background:#DC2626;color:#fff;font-weight:800;font-size:1rem;letter-spacing:.12em !important;text-transform:uppercase}
-.coming-soon h2{text-transform:uppercase}
-</style>
-<link href="../img/favicon.png" rel="icon">
-<link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="icon" href="../img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 </head>
 <body>
-<nav class="nav" id="nav">
-  <a href="../index.html" class="nav-logo">
-    <img src="../img/logo.png" alt="BSides Kerala">
-    <b>BSides <em>Kerala</em></b>
-  </a>
+<nav class="nav" aria-label="Main">
+  <a href="../" class="nav-logo"><img src="../img/logo.png" alt=""><span class="nav-name">BSides <span>Kerala</span></span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu"><span></span></button>
   <ul class="nav-links" id="navMenu">
     <li><a href="../">Home</a></li>
-    <li><a href="../call-for-papers">Call for papers</a></li>
-    <li><a href="../trainings">Trainings</a></li>
-    <li><a href="../speakers" class="active">Speakers</a></li>
-    <li><a href="../schedule">Schedule</a></li>
-    <li><a href="../capture-the-flag">Capture-the-flag</a></li>
-    <li><a href="../about-us">About Us</a></li>
-    <li><a href="../contact">Contact</a></li>
-    <li><a href="../archives/" class="cta-link">Archives</a></li>
+    <li><a href="../call-for-papers/">Call for papers</a></li>
+    <li><a href="../trainings/">Trainings</a></li>
+    <li><a href="../speakers/" aria-current="page">Speakers</a></li>
+    <li><a href="../schedule/">Schedule</a></li>
+    <li><a href="../capture-the-flag/">Capture the flag</a></li>
+    <li><a href="../about-us/">About us</a></li>
+    <li><a href="../contact/">Contact</a></li>
+    <li><a href="#" class="nav-cta">Register now</a></li>
   </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
+<main>
 <section class="page-hero">
   <div class="inner">
-    <div class="label">Speakers</div>
-    <h1>BSides Kerala <span class="red">Speakers</span></h1>
-    <span class="cs-pill">Coming soon</span>
+    <h1>BSides Kerala speakers</h1>
     <p>Talks by researchers and practitioners from the security community.</p>
   </div>
 </section>
-<section class="sect">
+<section class="sect plain">
   <div class="wrap">
-    <div class="coming-soon">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
-      <h2>Coming <span class="red">Soon.</span></h2>
-      <p>The speaker line-up for BSides Kerala 2027 has not been announced yet. Check back here or follow us on social media for updates.</p>
-      <a href="../archives/bsides-kerala-2026/speakers/" class="btn btn-primary">View 2026 Speakers Archive</a>
+    <div class="prose">
+      <p class="lede">The speaker line-up for BSides Kerala 2027 has not been announced yet. Check back here or follow us on social media for updates.</p>
+      <div class="actions"><a href="../archives/bsides-kerala-2026/speakers/" class="btn btn-outline">View 2026 speakers archive</a></div>
     </div>
   </div>
 </section>
+</main>
 <footer class="ft">
   <div class="ft-inner">
     <div class="ft-grid">
@@ -105,34 +78,31 @@
         </div>
       </div>
       <div class="ft-col">
-        <h4>Conference 2027</h4>
+        <h2>Conference 2027</h2>
         <a href="../archives/">Event archives</a>
         <a href="../code-of-conduct/">Code of conduct</a>
         <a href="#">Privacy policy</a>
       </div>
       <div class="ft-col">
-        <h4>Security BSides</h4>
+        <h2>Security BSides</h2>
         <a href="https://bsides.org">Security BSides</a>
         <a href="../about-us/">About us</a>
-        <a href="../archives/">All events</a>
       </div>
       <div class="ft-col">
-        <h4>Contact Us</h4>
-        <a href="tel:+919292011337"><b>Phone:</b> +91 929201 1337</a>
-        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
+        <h2>Contact us</h2>
+        <a href="tel:+919292011337">+91 929201 1337</a>
+        <a href="mailto:hello@bsideskerala.in">hello@bsideskerala.in</a>
       </div>
     </div>
     <div class="ft-bottom">
-      <p>&copy; Copyright <b>BSides Kerala 2027</b>. All Rights Reserved</p>
-      <p class="love"><span class="heart">&#10084;</span> With love to the <span class="grn">security</span> community</p>
+      <p>&copy; Copyright BSides Kerala 2027. All Rights Reserved</p>
+      <p>&#10084; With love to the security community</p>
     </div>
   </div>
 </footer>
 <div class="ft-banner">
-  <img src="../img/footer-img.png" alt="BSides Kerala">
+  <img src="../img/footer-img.png" alt="Line drawing of Kerala landmarks, a spice seller, Kalaripayattu fighters and Pulikali drummers">
 </div>
-<script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-</script>
+<script src="../js/site.js"></script>
 </body>
 </html>

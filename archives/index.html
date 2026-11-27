@@ -11,134 +11,61 @@
 <meta property="og:description" content="Browse past editions of Security BSides Kerala.">
 <meta property="og:type" content="website">
 <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2026-og-image.jpg">
-<link rel="stylesheet" href="../css/style-2027.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-/* match the 2027 homepage */
-*{font-family:'Baloo Chettan 2',sans-serif !important}
-.page-hero h1,.cta-block h2,.year-card-body h2,.nav-logo b{letter-spacing:0 !important;font-weight:800}
-.page-hero h1{text-transform:uppercase}
-.page-hero .label{letter-spacing:.12em !important}
-.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
-.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase}
-.nav-links a{font-weight:800;font-size:1rem;color:#fff}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
-.nav-links .cta-link{font-weight:800}
-.burger{color:#fff;border-color:rgba(255,255,255,.3)}
-@media(max-width:900px){.nav-links.open{background:rgba(0,0,0,.92);border-bottom:1px solid rgba(255,255,255,.08)}}
-
-/* ARCHIVE GRID */
-.archive-sect{padding:5rem 5%}
-.archive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem}
-.year-card{display:flex;flex-direction:column;border:1px solid var(--g200);border-radius:18px;overflow:hidden;background:var(--white);transition:.3s;position:relative}
-.year-card:hover{box-shadow:0 16px 50px rgba(0,0,0,.1);transform:translateY(-6px);border-color:var(--g300)}
-.year-card-img{position:relative;overflow:hidden;background:var(--black2)}
-.year-card-img img{width:100%;aspect-ratio:1.91;object-fit:cover;transition:.4s}
-.year-card:hover .year-card-img img{transform:scale(1.04)}
-.year-badge{position:absolute;top:1rem;left:1rem;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.08em;background:var(--red);color:#fff;padding:.15rem .9rem;border-radius:8px;z-index:2}
-.year-card-body{padding:1.6rem 1.6rem 1.8rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
-.year-card-body h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;line-height:1}
-.year-card-body h2 em{font-style:normal;color:var(--red)}
-.year-meta{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--green);letter-spacing:.04em}
-.year-card-body p{font-size:.98rem;color:var(--g500);line-height:1.6;flex:1}
-.year-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.8rem;font-weight:700;color:var(--red);font-size:1rem}
-.year-link::after{content:'→';transition:.2s}
-.year-card:hover .year-link::after{transform:translateX(4px)}
-
-/* CTA */
-.cta-block{background:var(--black);color:#fff;text-align:center;padding:5rem 5%}
-.cta-block h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:.05em;margin-bottom:1rem}
-.cta-block h2 .red{color:var(--red)}
-.cta-block p{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.1rem}
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem;padding:.95rem 2.3rem;border-radius:10px;transition:.3s}
-.btn-primary{background:var(--red);color:#fff}
-.btn-primary:hover{background:var(--red-h);box-shadow:0 8px 30px rgba(220,38,38,.35);transform:translateY(-2px)}
-
-/* CTA */
-.cta-block{background:var(--black);color:#fff;text-align:center;padding:5rem 5%}
-.cta-block h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:.05em;margin-bottom:1rem}
-.cta-block h2 .red{color:var(--red)}
-.cta-block p{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.1rem}
-@media(max-width:900px){.archive-grid{grid-template-columns:1fr}}
-</style>
-<link href="../img/favicon.png" rel="icon">
-<link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="icon" href="../img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 </head>
 <body>
-
-<nav class="nav" id="nav">
-  <a href="../index.html" class="nav-logo">
-    <img src="../img/logo.png" alt="BSides Kerala">
-    <b>BSides <em>Kerala</em></b>
-  </a>
+<nav class="nav" aria-label="Main">
+  <a href="../" class="nav-logo"><img src="../img/logo.png" alt=""><span class="nav-name">BSides <span>Kerala</span></span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu"><span></span></button>
   <ul class="nav-links" id="navMenu">
     <li><a href="../">Home</a></li>
-    <li><a href="../call-for-papers">Call for papers</a></li>
-    <li><a href="../trainings">Trainings</a></li>
-    <li><a href="../speakers">Speakers</a></li>
-    <li><a href="../schedule">Schedule</a></li>
-    <li><a href="../capture-the-flag">Capture-the-flag</a></li>
-    <li><a href="../about-us">About Us</a></li>
-    <li><a href="../contact">Contact</a></li>
-    <li><a href="../archives/" class="cta-link">Archives</a></li>
+    <li><a href="../call-for-papers/">Call for papers</a></li>
+    <li><a href="../trainings/">Trainings</a></li>
+    <li><a href="../speakers/">Speakers</a></li>
+    <li><a href="../schedule/">Schedule</a></li>
+    <li><a href="../capture-the-flag/">Capture the flag</a></li>
+    <li><a href="../about-us/">About us</a></li>
+    <li><a href="../contact/">Contact</a></li>
+    <li><a href="#" class="nav-cta">Register now</a></li>
   </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
-
+<main>
 <section class="page-hero">
   <div class="inner">
-    <div class="label">Event Archives</div>
-    <h1>BSides Kerala <span class="red">Archives</span></h1>
+    <h1>BSides Kerala archives</h1>
     <p>Past editions of Security BSides Kerala, with speakers, schedules, trainings and CTF from each year.</p>
   </div>
 </section>
-
-<section class="archive-sect">
+<section class="sect plain">
   <div class="wrap">
-    <div class="archive-grid">
-
-      <!-- 2026 -->
-      <a href="bsides-kerala-2026/" class="year-card">
-        <div class="year-card-img">
-          <span class="year-badge">2026</span>
-          <img src="bsides-kerala-2026/img/bsides-kerala-2026-og-image.jpg" alt="BSides Kerala 2026" loading="lazy">
-        </div>
-        <div class="year-card-body">
-          <h2>BSides <em>Kerala 2026</em></h2>
-          <div class="year-meta">7–9 May 2026 · Kochi Marriott Hotel</div>
+    <ul class="editions">
+      <li>
+        <a class="yr" href="bsides-kerala-2026/" aria-label="BSides Kerala 2026 archive">2026</a>
+        <div>
+          <h3>7 to 9 May 2026, Kochi Marriott Hotel</h3>
           <p>Three days of talks, trainings and CTF at Kochi Marriott Hotel. Keynotes by Manoj Abraham IPS, R. Vittal Raj and Lt Gen. M Unnikrishnan Nair (Retd.), with an inaugural address by Prasad K. Panicker.</p>
-          <span class="year-link">View 2026 archive</span>
+          <p><a href="bsides-kerala-2026/">View 2026 archive</a></p>
         </div>
-      </a>
-
-      <!-- 2025 -->
-      <a href="bsides-kerala-2025/" class="year-card">
-        <div class="year-card-img">
-          <span class="year-badge">2025</span>
-          <img src="bsides-kerala-2025/img/bsides-kerala-og-image.jpg" alt="BSides Kerala 2025" loading="lazy">
-        </div>
-        <div class="year-card-body">
-          <h2>BSides <em>Kerala 2025</em></h2>
-          <div class="year-meta">8–9 February 2025 · Kochi Marriott Hotel</div>
+        <img src="bsides-kerala-2026/img/bsides-kerala-2026-og-image.jpg" alt="BSides Kerala 2026 artwork" loading="lazy">
+      </li>
+      <li>
+        <a class="yr" href="bsides-kerala-2025/" aria-label="BSides Kerala 2025 archive">2025</a>
+        <div>
+          <h3>8 and 9 February 2025, Kochi Marriott Hotel</h3>
           <p>The first edition of BSides Kerala, with a full day of talks and a dedicated trainings day.</p>
-          <span class="year-link">View 2025 archive</span>
+          <p><a href="bsides-kerala-2025/">View 2025 archive</a></p>
         </div>
-      </a>
-
-    </div>
+        <img src="bsides-kerala-2025/img/bsides-kerala-og-image.jpg" alt="BSides Kerala 2025 artwork" loading="lazy">
+      </li>
+    </ul>
   </div>
 </section>
-
-<section class="cta-block">
-  <div class="inner">
-    <h2>BSides <span class="red">Kerala</span></h2>
-    <p>Visit the main site for the upcoming edition.</p>
-    <a href="../" class="btn btn-primary">BSides Kerala Home</a>
-  </div>
-</section>
-
+</main>
 <footer class="ft">
   <div class="ft-inner">
     <div class="ft-grid">
@@ -167,35 +94,31 @@
         </div>
       </div>
       <div class="ft-col">
-        <h4>Conference 2027</h4>
+        <h2>Conference 2027</h2>
         <a href="../archives/">Event archives</a>
         <a href="../code-of-conduct/">Code of conduct</a>
         <a href="#">Privacy policy</a>
       </div>
       <div class="ft-col">
-        <h4>Security BSides</h4>
+        <h2>Security BSides</h2>
         <a href="https://bsides.org">Security BSides</a>
         <a href="../about-us/">About us</a>
-        <a href="../archives/">All events</a>
       </div>
       <div class="ft-col">
-        <h4>Contact Us</h4>
-        <a href="tel:+919292011337"><b>Phone:</b> +91 929201 1337</a>
-        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
+        <h2>Contact us</h2>
+        <a href="tel:+919292011337">+91 929201 1337</a>
+        <a href="mailto:hello@bsideskerala.in">hello@bsideskerala.in</a>
       </div>
     </div>
     <div class="ft-bottom">
-      <p>&copy; Copyright <b>BSides Kerala 2027</b>. All Rights Reserved</p>
-      <p class="love"><span class="heart">&#10084;</span> With love to the <span class="grn">security</span> community</p>
+      <p>&copy; Copyright BSides Kerala 2027. All Rights Reserved</p>
+      <p>&#10084; With love to the security community</p>
     </div>
   </div>
 </footer>
 <div class="ft-banner">
-  <img src="../img/footer-img.png" alt="BSides Kerala">
+  <img src="../img/footer-img.png" alt="Line drawing of Kerala landmarks, a spice seller, Kalaripayattu fighters and Pulikali drummers">
 </div>
-
-<script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-</script>
+<script src="../js/site.js"></script>
 </body>
 </html>

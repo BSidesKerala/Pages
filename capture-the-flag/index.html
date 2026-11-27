@@ -11,287 +11,153 @@
 <meta property="og:description" content="Capture-the-flag competition at BSides Kerala 2027, organized by BSides Kerala.">
 <meta property="og:type" content="website">
 <meta property="og:image" itemprop="image" content="https://bsideskerala.in/img/bsides-kerala-2027-og-image.jpg"/>
-<link rel="icon" href="../img/favicon.png">
-<link rel="stylesheet" href="../css/style-2027.css">
-<link rel="stylesheet" href="css/ctf.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-/* match the 2027 homepage: font and top menu */
-*{font-family:'Baloo Chettan 2',sans-serif !important}
-.nav-logo b,h1,h2,h3{letter-spacing:0 !important;font-weight:800}
-.nav{background:rgba(0,0,0,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav.sticky{background:rgba(0,0,0,.82);box-shadow:none}
-.nav-logo b{color:#fff;font-size:1.55rem;text-transform:uppercase;white-space:nowrap}
-.nav-links a{font-weight:800;font-size:1rem;color:#fff;white-space:nowrap}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
-.nav-links .cta-link{font-weight:800}
-.burger{color:#fff;border-color:rgba(255,255,255,.3)}
-@media(max-width:1100px){
-  .nav-links{display:none}
-  .burger{display:block}
-  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;
-    background:rgba(0,0,0,.94);border-bottom:1px solid rgba(255,255,255,.08);padding:1rem 5%;backdrop-filter:blur(16px);gap:.2rem}
-  .nav-links.open .cta-link{margin:.4rem 0 0;text-align:center}
-}
-@media(max-width:480px){.nav-logo b{font-size:1.2rem}.nav-logo img{height:32px}.nav{padding:.6rem 4%}}
-
-.ctf-hero h1{text-transform:uppercase}
-.hero-tagline{margin:0 0 1rem;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.9);line-height:1.5;max-width:680px}
-.meta-pill .k{display:none}
-.prize-card p{color:inherit}
-.sponsor-tbu{margin:0;padding:1.6rem 3rem;border:2px dashed #cfd6e0;border-radius:14px;font-weight:800;font-size:1.25rem;color:#52525B}
-.ctas .btn{display:inline-flex;align-items:center;font-weight:800;padding:.9rem 2rem;border-radius:10px}
-.ctas .btn-red{background:var(--red);color:#fff;border:2px solid var(--red)}
-.ctas .btn-red:hover{background:var(--red-h);border-color:var(--red-h)}
-.ctas .btn-ol{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
-.ctas .btn-ol:hover{border-color:#fff}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="css/ctf.css">
+<link rel="icon" href="../img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 </head>
 <body>
-
-<nav class="nav" id="nav">
-  <a href="../index.html" class="nav-logo">
-    <img src="../img/logo.png" alt="BSides Kerala">
-    <b>BSides <em>Kerala</em></b>
-  </a>
+<nav class="nav" aria-label="Main">
+  <a href="../" class="nav-logo"><img src="../img/logo.png" alt=""><span class="nav-name">BSides <span>Kerala</span></span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu"><span></span></button>
   <ul class="nav-links" id="navMenu">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../call-for-papers">Call for papers</a></li>
-    <li><a href="../trainings">Trainings</a></li>
-    <li><a href="../speakers">Speakers</a></li>
-    <li><a href="../schedule">Schedule</a></li>
-    <li><a href="../capture-the-flag" class="active">Capture-the-flag</a></li>
-    <li><a href="../about-us">About Us</a></li>
-    <li><a href="../contact">Contact</a></li>
-    <li><a href="../archives/" class="cta-link">Archives</a></li>
+    <li><a href="../">Home</a></li>
+    <li><a href="../call-for-papers/">Call for papers</a></li>
+    <li><a href="../trainings/">Trainings</a></li>
+    <li><a href="../speakers/">Speakers</a></li>
+    <li><a href="../schedule/">Schedule</a></li>
+    <li><a href="../capture-the-flag/" aria-current="page">Capture the flag</a></li>
+    <li><a href="../about-us/">About us</a></li>
+    <li><a href="../contact/">Contact</a></li>
+    <li><a href="#" class="nav-cta">Register now</a></li>
   </ul>
-  <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
 </nav>
-
-<section class="ctf-hero">
-  <div class="ctf-hero-inner">
-    <div class="ctf-hero-text">
-      <h1><span class="blk">BSides Kerala</span><span class="red">CTF</span></h1>
-      <p class="hero-tagline">Capture-the-flag competition organized by BSides Kerala.<br>8 May 2027, 9:00 AM to 6:00 PM</p>
-      <p class="desc">A hands-on capture-the-flag competition at BSides Kerala 2027, held on the conference day. The challenges are modeled on real-world targets rather than textbook puzzles.</p>
-      <div class="hero-meta">
-        <span class="meta-pill">Onsite</span>
-        <span class="meta-pill">Teams or solo</span>
-        <span class="meta-pill">Open to attendees</span>
-      </div>
-    </div>
-    <div class="ctf-hero-art">
-      <div class="art-placeholder">
-        <img src="images/kathakali.png" alt="BSides Kerala CTF" class="art-img">
-      </div>
+<main>
+<section class="page-hero ctf-head">
+  <div class="inner">
+    <h1>BSides Kerala CTF</h1>
+    <p class="when">8 May 2027, 9:00 AM to 6:00 PM</p>
+    <p>A hands-on capture-the-flag competition at BSides Kerala 2027, held on the conference day. The challenges are modeled on real-world targets rather than textbook puzzles.</p>
+  </div>
+</section>
+<section class="sect plain">
+  <div class="wrap split">
+    <h2>When and where</h2>
+    <dl class="facts">
+      <div><dt>Date</dt><dd>8 May 2027<span>Saturday, the conference day</span></dd></div>
+      <div><dt>Time</dt><dd>9 AM to 6 PM<span>Single-day competition</span></dd></div>
+      <div><dt>Venue</dt><dd>Kochi Marriott<span>Kerala, India</span></dd></div>
+      <div><dt>Entry</dt><dd>Teams or solo<span>Onsite, open to attendees</span></dd></div>
+    </dl>
+  </div>
+</section>
+<section class="sect plain">
+  <div class="wrap">
+    <h2>Rules of engagement</h2>
+    <p class="sect-text">Read these rules before the competition starts.</p>
+    <ol class="rules">
+      <li>
+        <h3>Eligibility &amp; Registration</h3>
+        <ul>
+            <li>Open to all registered BSides Kerala 2027 attendees with a valid conference ticket.</li>
+            <li>CTF registration is required separately at the event check-in desk.</li>
+            <li>Slots are limited and assigned on a first-come, first-served basis.</li>
+            <li>Bring a valid photo ID for verification at check-in and prize collection.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Team Formation</h3>
+        <ul>
+            <li>The maximum team size will be announced before the event. Solo entries are allowed.</li>
+            <li>Team composition locks at the start of the competition. No substitutions afterward.</li>
+            <li>Each team nominates a captain, who is accountable for compliance with these rules.</li>
+            <li>One team per participant. Multi-team play is forbidden and grounds for disqualification.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Equipment &amp; Access</h3>
+        <ul>
+            <li>Bring your own laptop with your offensive toolkit pre-installed. Internet access on-site is not guaranteed for downloads.</li>
+            <li>VPN credentials and lab access are issued at check-in, not before.</li>
+            <li>Power outlets are available at the venue. Bring a charger and a backup if you have one.</li>
+            <li>Conference Wi-Fi is provided but is not the CTF network. Connect to the lab VPN to access the range.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Allowed Techniques</h3>
+        <ul>
+            <li>Any offensive technique is allowed against in-scope range targets.</li>
+            <li>Public exploits, custom tooling and exploitation frameworks (Metasploit, Impacket, Sliver, etc.) are all allowed.</li>
+            <li>Automated scanning and brute-forcing against challenge boxes is permitted, within reason.</li>
+            <li>Teams may share write-ups and tooling after the competition ends, not during.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Out of Scope</h3>
+        <ul>
+            <li>No attacks against other participants, their devices, or their accounts.</li>
+            <li>No attacks against the venue network, conference infrastructure, or any system not explicitly listed in scope.</li>
+            <li>No DoS or resource exhaustion against shared infrastructure or the scoring platform.</li>
+            <li>No attacks against the scoreboard, the CTF platform, or organizer systems.</li>
+            <li>Persistent backdoors on shared boxes that block other teams are forbidden.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Scoring &amp; Tiebreakers</h3>
+        <ul>
+            <li>Each flag carries a fixed point value based on category and difficulty.</li>
+            <li>First-blood bonus awarded to the first team to capture each flag.</li>
+            <li>Tiebreakers resolved by total time-to-capture across all flags.</li>
+            <li>Live scoreboard available throughout the competition. Updates may have a small lag.</li>
+            <li>Organizer decisions on scoring disputes are final.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Disqualification</h3>
+        <ul>
+            <li>Flag sharing or collusion between teams is an immediate DQ.</li>
+            <li>Any out-of-scope attack results in immediate DQ, no warnings.</li>
+            <li>Disrupting other teams' access or progress results in DQ.</li>
+            <li>Repeated platform abuse or attacks against organizer infrastructure result in DQ and ejection from the venue.</li>
+            <li>Disqualified teams forfeit any prize eligibility.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Conduct &amp; Disputes</h3>
+        <ul>
+            <li>The BSides Kerala Code of Conduct applies for the entire duration of the CTF.</li>
+            <li>Direct any complaints or disputes to the CTF organizers at the help desk rather than raising them publicly.</li>
+            <li>If you find a bug in the platform or the range itself, report it privately. Do not exploit it for points.</li>
+            <li>Be respectful to other competitors, the organizers, and the venue staff.</li>
+            <li>Organizer decisions on conduct issues are final and binding.</li>
+        </ul>
+      </li>
+    </ol>
+    <p class="rule-note">By participating, you agree to abide by these rules and the <a href="../code-of-conduct/">BSides Kerala Code of Conduct</a>. Rules may be updated before the event; the version on this page is the one that applies. Questions? <a href="../contact/">Contact the organizers</a>.</p>
+  </div>
+</section>
+<section class="sect plain">
+  <div class="wrap split">
+    <h2>Prizes</h2>
+    <div class="prose">
+      <p>Prizes for the top three teams will be announced before the event.</p>
+      <p>The CTF prize sponsor has not been announced yet.</p>
     </div>
   </div>
 </section>
-
-<section class="sect">
-  <div class="sect-inner">
-    <div class="sect-head reveal">
-      <h2>When and <span class="red">Where</span></h2>
-    </div>
-    <div class="info-strip reveal">
-      <div class="info-cell">
-        <div class="lbl">event</div>
-        <div class="val">BSides Kerala <span class="red">2027</span></div>
-        <div class="sub">On the conference day</div>
-      </div>
-      <div class="info-cell">
-        <div class="lbl">date</div>
-        <div class="val">8 May 2027</div>
-        <div class="sub">Saturday</div>
-      </div>
-      <div class="info-cell">
-        <div class="lbl">time</div>
-        <div class="val">9 AM to 6 PM</div>
-        <div class="sub">Single-day competition</div>
-      </div>
-      <div class="info-cell">
-        <div class="lbl">venue</div>
-        <div class="val">Kochi Marriott</div>
-        <div class="sub">Kerala, India</div>
-      </div>
+<section class="sect plain">
+  <div class="wrap split">
+    <h2>Take part</h2>
+    <div class="prose">
+      <p>The CTF is open to all BSides Kerala 2027 attendees. You can enter as a team or on your own. Tickets for the conference open soon.</p>
+      <div class="actions"><a href="../contact/" class="btn btn-outline">Contact the organizers</a></div>
     </div>
   </div>
 </section>
-
-<section class="sect sect-grey">
-  <div class="sect-inner">
-    <div class="sect-head reveal">
-      <h2>Rules of <span class="red">Engagement</span></h2>
-      <p class="lead">Read these rules before the competition starts.</p>
-    </div>
-
-    <div class="rules-grid">
-
-      <div class="rule-card light reveal">
-        <div class="rule-head">
-          <span class="rule-num">01</span>
-          <h3>Eligibility &amp; Registration</h3>
-        </div>
-        <ul class="rule-list">
-          <li>Open to all registered BSides Kerala 2027 attendees with a valid conference ticket.</li>
-          <li>CTF registration is required separately at the event check-in desk.</li>
-          <li>Slots are limited and assigned on a first-come, first-served basis.</li>
-          <li>Bring a valid photo ID for verification at check-in and prize collection.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card dark reveal">
-        <div class="rule-head">
-          <span class="rule-num">02</span>
-          <h3>Team Formation</h3>
-        </div>
-        <ul class="rule-list">
-          <li>The maximum team size will be announced before the event. Solo entries are allowed.</li>
-          <li>Team composition locks at the start of the competition. No substitutions afterward.</li>
-          <li>Each team nominates a captain, who is accountable for compliance with these rules.</li>
-          <li>One team per participant. Multi-team play is forbidden and grounds for disqualification.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card light reveal">
-        <div class="rule-head">
-          <span class="rule-num">03</span>
-          <h3>Equipment &amp; Access</h3>
-        </div>
-        <ul class="rule-list">
-          <li>Bring your own laptop with your offensive toolkit pre-installed. Internet access on-site is not guaranteed for downloads.</li>
-          <li>VPN credentials and lab access are issued at check-in, not before.</li>
-          <li>Power outlets are available at the venue. Bring a charger and a backup if you have one.</li>
-          <li>Conference Wi-Fi is provided but is not the CTF network. Connect to the lab VPN to access the range.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card dark reveal">
-        <div class="rule-head">
-          <span class="rule-num">04</span>
-          <h3>Allowed Techniques</h3>
-        </div>
-        <ul class="rule-list">
-          <li>Any offensive technique is allowed against in-scope range targets.</li>
-          <li>Public exploits, custom tooling and exploitation frameworks (Metasploit, Impacket, Sliver, etc.) are all allowed.</li>
-          <li>Automated scanning and brute-forcing against challenge boxes is permitted, within reason.</li>
-          <li>Teams may share write-ups and tooling after the competition ends, not during.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card light reveal">
-        <div class="rule-head">
-          <span class="rule-num">05</span>
-          <h3>Out of Scope</h3>
-        </div>
-        <ul class="rule-list">
-          <li>No attacks against other participants, their devices, or their accounts.</li>
-          <li>No attacks against the venue network, conference infrastructure, or any system not explicitly listed in scope.</li>
-          <li>No DoS or resource exhaustion against shared infrastructure or the scoring platform.</li>
-          <li>No attacks against the scoreboard, the CTF platform, or organizer systems.</li>
-          <li>Persistent backdoors on shared boxes that block other teams are forbidden.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card dark reveal">
-        <div class="rule-head">
-          <span class="rule-num">06</span>
-          <h3>Scoring &amp; Tiebreakers</h3>
-        </div>
-        <ul class="rule-list">
-          <li>Each flag carries a fixed point value based on category and difficulty.</li>
-          <li>First-blood bonus awarded to the first team to capture each flag.</li>
-          <li>Tiebreakers resolved by total time-to-capture across all flags.</li>
-          <li>Live scoreboard available throughout the competition. Updates may have a small lag.</li>
-          <li>Organizer decisions on scoring disputes are final.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card light reveal">
-        <div class="rule-head">
-          <span class="rule-num">07</span>
-          <h3>Disqualification</h3>
-        </div>
-        <ul class="rule-list">
-          <li>Flag sharing or collusion between teams is an immediate DQ.</li>
-          <li>Any out-of-scope attack results in immediate DQ, no warnings.</li>
-          <li>Disrupting other teams' access or progress results in DQ.</li>
-          <li>Repeated platform abuse or attacks against organizer infrastructure result in DQ and ejection from the venue.</li>
-          <li>Disqualified teams forfeit any prize eligibility.</li>
-        </ul>
-      </div>
-
-      <div class="rule-card dark reveal">
-        <div class="rule-head">
-          <span class="rule-num">08</span>
-          <h3>Conduct &amp; Disputes</h3>
-        </div>
-        <ul class="rule-list">
-          <li>The BSides Kerala Code of Conduct applies for the entire duration of the CTF.</li>
-          <li>Direct any complaints or disputes to the CTF organizers at the help desk rather than raising them publicly.</li>
-          <li>If you find a bug in the platform or the range itself, report it privately. Do not exploit it for points.</li>
-          <li>Be respectful to other competitors, the organizers, and the venue staff.</li>
-          <li>Organizer decisions on conduct issues are final and binding.</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="rule-note reveal">
-      <strong>By participating, you agree</strong> to abide by these rules and the <a href="../code-of-conduct">BSides Kerala Code of Conduct</a>. Rules may be updated before the event; the version on this page is the one that applies. Questions? <a href="../contact">Contact the organizers</a>.
-    </div>
-  </div>
-</section>
-
-<section class="sect sect-grey">
-  <div class="sect-inner">
-    <div class="sect-head reveal">
-      <h2>The <span class="red">Prizes</span></h2>
-      <p class="lead">Prizes for the top three teams will be announced before the event.</p>
-    </div>
-    <div class="prize-grid">
-      <div class="prize-card dark reveal">
-        <div class="prize-rank">2nd Place</div>
-        <div class="prize-medal">02</div>
-        <p>To be announced</p>
-      </div>
-      <div class="prize-card first reveal">
-        <div class="prize-rank">1st Place</div>
-        <div class="prize-medal">01</div>
-        <p>To be announced</p>
-      </div>
-      <div class="prize-card dark reveal">
-        <div class="prize-rank">3rd Place</div>
-        <div class="prize-medal">03</div>
-        <p>To be announced</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sect" style="background:#f4f7fb;">
-  <div class="sect-inner">
-    <div class="sect-head reveal">
-      <h2>CTF Prize <span class="red">Sponsor</span></h2>
-    </div>
-    <div class="partner-panel reveal" style="display:flex;justify-content:center;align-items:center;padding:2rem 0;background:#f4f7fb;">
-      <p class="sponsor-tbu">To be updated</p>
-    </div>
-  </div>
-</section>
-
-<section class="ctf-cta-section">
-  <div class="cta-inner">
-    <h2>Take part in the <span class="red">CTF</span></h2>
-    <p>The CTF is open to all BSides Kerala 2027 attendees. You can enter as a team or on your own. Tickets for the conference open soon.</p>
-    <div class="ctas">
-      <a href="../contact" class="btn btn-red">Contact the Organizers</a>
-      <a href="../index.html" class="btn btn-ol">BSides Kerala 2027</a>
-    </div>
-  </div>
-</section>
-
+</main>
 <footer class="ft">
   <div class="ft-inner">
     <div class="ft-grid">
@@ -320,37 +186,31 @@
         </div>
       </div>
       <div class="ft-col">
-        <h4>Conference 2027</h4>
+        <h2>Conference 2027</h2>
         <a href="../archives/">Event archives</a>
         <a href="../code-of-conduct/">Code of conduct</a>
         <a href="#">Privacy policy</a>
       </div>
       <div class="ft-col">
-        <h4>Security BSides</h4>
+        <h2>Security BSides</h2>
         <a href="https://bsides.org">Security BSides</a>
         <a href="../about-us/">About us</a>
-        <a href="../archives/">All events</a>
       </div>
       <div class="ft-col">
-        <h4>Contact Us</h4>
-        <a href="tel:+919292011337"><b>Phone:</b> +91 929201 1337</a>
-        <a href="mailto:hello@bsideskerala.in"><b>email:</b> hello@bsideskerala.in</a>
+        <h2>Contact us</h2>
+        <a href="tel:+919292011337">+91 929201 1337</a>
+        <a href="mailto:hello@bsideskerala.in">hello@bsideskerala.in</a>
       </div>
     </div>
     <div class="ft-bottom">
-      <p>&copy; Copyright <b>BSides Kerala 2027</b>. All Rights Reserved</p>
-      <p class="love"><span class="heart">&#10084;</span> With love to the <span class="grn">security</span> community</p>
+      <p>&copy; Copyright BSides Kerala 2027. All Rights Reserved</p>
+      <p>&#10084; With love to the security community</p>
     </div>
   </div>
 </footer>
 <div class="ft-banner">
-  <img src="../img/footer-img.png" alt="BSides Kerala">
+  <img src="../img/footer-img.png" alt="Line drawing of Kerala landmarks, a spice seller, Kalaripayattu fighters and Pulikali drummers">
 </div>
-
-<script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sticky',scrollY>60));
-const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+<script src="../js/site.js"></script>
 </body>
 </html>

@@ -85,15 +85,15 @@
 .gallery-item{flex:none;width:clamp(260px,30vw,400px);aspect-ratio:16/10;overflow:hidden;border-radius:var(--r);background:#17131C}
 .gallery-item img{width:100%;height:100%;object-fit:cover;pointer-events:none}
 
-/* ---------- community partners: a grey band between the gallery and the venue.
-   Sized for ten or more logos. The heading sits above and the logos fill the
-   width below it in a grid of equal white tiles, each with a black outline and
-   a hard black shadow. The white tile keeps every logo readable on the grey,
-   whatever its shape or its own background. Add a partner by adding another
-   <li> to the list. ---------- */
-.partners p{margin-top:.4rem;font-weight:600}
-.partners ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.5rem;margin-top:2rem;padding-right:5px;list-style:none}
-.partners a{display:flex;align-items:center;justify-content:center;aspect-ratio:2/1;padding:.9rem 1.1rem;background:#fff;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+/* ---------- past sponsors and community partners: two logo walls between the
+   gallery and the venue, the first on white and the second on grey. Both use
+   the same layout. The heading sits above and the logos fill the width below
+   it in a grid of equal white tiles, each with a black outline and a hard
+   black shadow. The white tile keeps every logo readable whatever its shape or
+   its own background. Add a logo by adding another <li> to the list; use a
+   <span> in place of the link when there is no website to point to. ---------- */
+.partners p{margin-top:.4rem;font-weight:600}.partners ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.5rem;margin-top:2rem;padding-right:5px;list-style:none}
+.partners li > *{display:flex;align-items:center;justify-content:center;aspect-ratio:2/1;padding:.9rem 1.1rem;background:#fff;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
 .partners a:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .partners img{width:100%;height:100%;object-fit:contain}
 /* the tile presses into its shadow under the pointer */
@@ -104,13 +104,14 @@
 @media(max-width:560px){.partners ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}}
 
 /* ---------- venue ---------- */
-/* Two equal halves running the full width of the window, after the venue block
-   on the 2025 page: the map on the left, and on the right the hotel's name and
-   logo over a darkened photo of its ceiling. The section has no padding and no
-   heading strip, so the block reaches both edges, starts straight under the
-   community partners and sits on the footer. */
-.venue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-.venue iframe{height:100%;min-height:480px;background:var(--wash)}
+/* Two equal halves in one block, after the venue
+   block on the 2025 page: the map on the left, and on the right the hotel's
+   name and logo over a darkened photo of its ceiling. The block has the same
+   black outline and hard shadow as the cards above it. */
+/* wider than the 1320px page column, but still short of the window edges */
+.venue-sect > .wrap{max-width:1600px;padding-right:5px}
+.venue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.venue iframe{height:100%;min-height:440px;background:var(--wash)}
 .venue-info{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(1.75rem,4.5vw,4rem);color:#fff;--link:var(--sun);--focus:var(--sun);
   background:linear-gradient(rgba(5,2,8,.74),rgba(5,2,8,.74)),url(../img/venue-info-bg.jpg) center/cover}
 .venue-info h2{font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.12;max-width:20ch;text-wrap:balance}
@@ -119,3 +120,11 @@
 .venue-info img + p{margin-top:1.5rem;font-weight:600}
 .venue-info a{color:var(--sun)}
 @media(max-width:820px){.venue{grid-template-columns:minmax(0,1fr)}.venue iframe{min-height:300px}}
+
+/* ---------- where BSides came from: three matching cards, each sitting on the
+   same offset yellow block as the organizing team cards on the About page ---------- */
+.origin-cards{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.75rem;margin-top:1.75rem;padding:0 8px 8px 0}
+.origin-cards li{background:#fff;border:1px solid var(--ink);padding:1.6rem 1.7rem 1.75rem;box-shadow:8px 8px 0 var(--sun)}
+.origin-cards h3{font-size:clamp(1.4rem,1.9vw,1.65rem);line-height:1.12}
+.origin-cards p{margin-top:.7rem;color:var(--muted)}
+@media(max-width:900px){.origin-cards{grid-template-columns:minmax(0,1fr)}}

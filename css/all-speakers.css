@@ -1,0 +1,62 @@
+/* All speakers: one full-width wall of everyone who has spoken or taught at
+   BSides Kerala. Loaded after css/site.css and uses its colours and type.
+
+   The wall runs edge to edge with no gaps: photos sit flush against each other
+   and against the sides of the window. Each person's name is on a black plate
+   pinned over the bottom edge of their photo, like the name strip on a
+   conference badge, with their title underneath. Where a person has a profile
+   page the whole tile is a link, and its plate turns yellow under the pointer. */
+
+/* the header text lines up with the search bar instead of the centred column */
+.all-speakers .page-hero .inner{max-width:none}
+.all-speakers .page-hero h1{max-width:16ch}
+
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* ---------- search bar: stays under the menu while the wall scrolls ---------- */
+.wall-bar{position:sticky;top:var(--nav-h);z-index:50;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.25rem;padding:.8rem var(--gutter) .7rem;background:#fff;border-bottom:2px solid var(--ink)}
+.wall-bar[hidden]{display:none}
+.wall-search{flex:1 1 13rem;max-width:24rem}
+.wall-search input{width:100%;font:inherit;font-size:1.0625rem;line-height:1.2;padding:.5rem .9rem .35rem;border:2px solid var(--ink);border-radius:var(--r);background:#fff;color:var(--ink)}
+.wall-search input::placeholder{color:var(--muted);opacity:1}
+.wall-count{margin-left:auto;font-weight:600;color:var(--muted)}
+
+/* ---------- the wall ---------- */
+.wall{--pad:1rem;--gap:clamp(1.75rem,2.2vw,2.25rem);--band:8px;--gapline:3px;--thin:2px;display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:calc(var(--gap) + .5rem) var(--gap);padding:var(--gap) calc(var(--gap) + var(--band)) var(--gap) var(--gap);list-style:none}
+/* isolate keeps the photo's negative z-index inside its own tile, so the plate
+   and title paint over it without needing a position of their own.
+
+   The frame is a kasavu border, the edging of a Kerala mundu or sari: a broad
+   gold band with one thin line running beside it. Here it wraps the bottom and
+   right of each card in yellow, then a sliver of white, then a thin black line.
+   The three stacked shadows draw those three stripes. */
+.person{position:relative;isolation:isolate;background:#fff;border:var(--thin) solid var(--ink);
+  box-shadow:
+    var(--band) var(--band) 0 var(--sun),
+    calc(var(--band) + var(--gapline)) calc(var(--band) + var(--gapline)) 0 #fff,
+    calc(var(--band) + var(--gapline) + var(--thin)) calc(var(--band) + var(--gapline) + var(--thin)) 0 var(--ink)}
+.person[hidden]{display:none}
+.person > img{position:relative;z-index:-1;width:100%;aspect-ratio:1;object-fit:cover;object-position:center top;background:var(--wash)}
+
+/* the name plate: starts at the tile's left edge and overlaps the photo by a fixed amount,
+   so a name that runs to two or three lines grows downward, away from the face */
+.person h2{margin:-1.15rem var(--pad) 0 0;font-size:1.2rem;line-height:1.15}
+.person h2 > *{display:inline-block;padding:.5rem .85rem .32rem var(--pad);background:var(--ink);color:#fff;text-decoration:none}
+/* the whole tile opens the speaker's page */
+.person h2 > a::after{content:"";position:absolute;inset:0}
+.person h2 > a:hover{background:var(--sun);color:var(--ink)}
+.person h2 > a:focus-visible{outline:none;background:var(--sun);color:var(--ink)}
+.person h2 > a:focus-visible::after{outline:3px solid var(--focus);outline-offset:-3px}
+
+.person > p{padding:.6rem var(--pad) 1.1rem;font-size:1rem;line-height:1.35;color:var(--muted);max-width:34ch}
+
+.wall-empty{padding:var(--space) var(--gutter);font-size:1.25rem;font-weight:500}
+.wall-empty button{font:inherit;font-weight:700;padding:0;border:0;background:none;color:var(--link);text-decoration:underline;text-underline-offset:.18em;cursor:pointer}
+
+@media(max-width:700px){
+  .wall{--pad:.75rem;--gap:1.1rem;--band:5px;--gapline:2px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .person h2{margin-top:-1rem;font-size:1.05rem}
+  .person h2 > *{padding:.42rem .65rem .26rem var(--pad)}
+  .person > p{padding-bottom:.9rem;font-size:.9375rem}
+  .wall-count{margin-left:0}
+}

@@ -131,3 +131,13 @@
 .k-faces.wide p{font-size:1.0625rem}
 @media(max-width:900px){.k-faces.wide{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){.k-faces.wide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* a portrait slot: shows the name on a colour block until its photo file exists */
+.k-face-ph{position:relative;display:grid;place-items:center;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r);background:var(--sun);container-type:inline-size}
+.k-face-ph span{font-weight:800;font-size:24cqw;line-height:1;color:var(--ink)}
+.k-face-ph::after{content:"";position:absolute;inset:0;background:var(--photo) 50% 18% / cover no-repeat}
+
+/* a list whose items each lead with a photo */
+.k-list.pics{border-top:0;gap:2rem clamp(1.5rem,3vw,2.5rem)}
+.k-list.pics li{padding:0;border-bottom:0}
+.k-list.pics img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);margin-bottom:.8rem}

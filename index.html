@@ -20,8 +20,24 @@
 <link rel="preload" href="kathakali-bsides/assets/kathakali.png" as="image">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<script>document.documentElement.classList.add('loading');</script>
 </head>
 <body>
+<div class="loader" id="loader" role="status"><span class="loader-ring"></span><span class="loader-text">Loading</span></div>
+<script>
+(function(){
+  var done=false;
+  function hide(){
+    if(done)return;done=true;
+    document.documentElement.classList.remove('loading');
+    var l=document.getElementById('loader');
+    if(l)setTimeout(function(){l.remove();},400);
+  }
+  window.addEventListener('load',hide);
+  // never keep visitors waiting on a slow image or the map
+  setTimeout(hide,4000);
+})();
+</script>
 <nav class="nav" aria-label="Main">
   <a href="./" class="nav-logo"><img src="img/logo.png" alt=""><span class="nav-name">BSides <span>Kerala</span></span></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu"><span></span></button>
@@ -90,7 +106,7 @@
 <section class="sect plain">
   <div class="wrap welcome">
     <h2>Welcome to Security BSides Kerala 2027</h2>
-    <p class="lede">The hacking and cyber security community conference: the perfect collaboration of hackers, makers, security professionals and security industry leaders.</p>
+    <p class="lede">The hacking and cyber security community conference. The perfect collaboration of hackers, makers, security professionals and security industry leaders.</p>
     <p class="note">Tickets and CFP opening soon. This is the third edition of BSides Kerala.</p>
   </div>
 </section>
@@ -277,16 +293,27 @@
   })();
   </script>
 </section>
-<section class="sect plain">
-  <div class="wrap venue">
-    <iframe src="https://maps.google.com/maps?q=Kochi+Marriott+Hotel,+Lulu+International+Shopping+Mall,+Edappally,+Kochi,+Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Map showing Kochi Marriott Hotel" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+<section class="sect on-ink partners-sect">
+  <div class="wrap partners">
     <div>
-      <h2>Venue</h2>
-      <p class="lede">Kochi Marriott Hotel</p>
-      <p>Lulu International Shopping Mall, Edappally, Kochi, Kerala</p>
-      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Kochi+Marriott+Hotel+Edappally+Kochi">Open in Google Maps</a></p>
+      <h2>Community partners</h2>
+      <p>Security communities that support BSides Kerala.</p>
     </div>
+    <ul>
+      <li><a href="https://dc0471.org/" target="_blank" rel="noopener"><img src="img/sponsors/defcon-trivandrum.png" alt="DEF CON Group Trivandrum, DC0471" width="857" height="350" loading="lazy"></a></li>
+    </ul>
   </div>
+</section>
+<section class="venue-sect" aria-label="Venue">
+    <div class="venue">
+      <iframe src="https://maps.google.com/maps?q=Kochi+Marriott+Hotel,+Lulu+International+Shopping+Mall,+Edappally,+Kochi,+Kerala&t=k&z=16&ie=UTF8&iwloc=&output=embed" title="Map showing Kochi Marriott Hotel" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="venue-info">
+        <h2>Kochi Marriott Hotel, Edappally, Kerala</h2>
+        <p>Lulu International Shopping Mall, Edappally, Kochi</p>
+        <img src="img/marriott-kochi.png" alt="Marriott Kochi logo" width="680" height="461" loading="lazy">
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Kochi+Marriott+Hotel+Edappally+Kochi">Open in Google Maps</a></p>
+      </div>
+    </div>
 </section>
 </main>
 <footer class="ft">
